@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4619BDF4207C4D4F00065016 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4619BDF3207C4D4F00065016 /* AppDelegate.m */; };
-		4619BDF7207C4D4F00065016 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4619BDF6207C4D4F00065016 /* ViewController.m */; };
 		4619BDFA207C4D4F00065016 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4619BDF8207C4D4F00065016 /* Main.storyboard */; };
-		4619BDFC207C4D5200065016 /* image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4619BDFB207C4D5200065016 /* image.xcassets */; };
 		4619BDFF207C4D5200065016 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4619BDFD207C4D5200065016 /* LaunchScreen.storyboard */; };
 		4619BE02207C4D5200065016 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4619BE01207C4D5200065016 /* main.m */; };
 		4619BE0C207C4D5200065016 /* __MONOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4619BE0B207C4D5200065016 /* __MONOTests.m */; };
@@ -38,10 +36,7 @@
 		4619BDEF207C4D4F00065016 /* 高仿MONO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "高仿MONO.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4619BDF2207C4D4F00065016 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4619BDF3207C4D4F00065016 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4619BDF5207C4D4F00065016 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4619BDF6207C4D4F00065016 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4619BDF9207C4D4F00065016 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4619BDFB207C4D5200065016 /* image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = image.xcassets; sourceTree = "<group>"; };
 		4619BDFE207C4D5200065016 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4619BE00207C4D5200065016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4619BE01207C4D5200065016 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -103,10 +98,7 @@
 			children = (
 				4619BDF2207C4D4F00065016 /* AppDelegate.h */,
 				4619BDF3207C4D4F00065016 /* AppDelegate.m */,
-				4619BDF5207C4D4F00065016 /* ViewController.h */,
-				4619BDF6207C4D4F00065016 /* ViewController.m */,
 				4619BDF8207C4D4F00065016 /* Main.storyboard */,
-				4619BDFB207C4D5200065016 /* image.xcassets */,
 				4619BDFD207C4D5200065016 /* LaunchScreen.storyboard */,
 				4619BE00207C4D5200065016 /* Info.plist */,
 				4619BE01207C4D5200065016 /* main.m */,
@@ -236,7 +228,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4619BDFF207C4D5200065016 /* LaunchScreen.storyboard in Resources */,
-				4619BDFC207C4D5200065016 /* image.xcassets in Resources */,
 				4619BDFA207C4D4F00065016 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,7 +253,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4619BDF7207C4D4F00065016 /* ViewController.m in Sources */,
 				4619BE02207C4D5200065016 /* main.m in Sources */,
 				4619BDF4207C4D4F00065016 /* AppDelegate.m in Sources */,
 			);
