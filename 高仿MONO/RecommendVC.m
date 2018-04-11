@@ -7,17 +7,30 @@
 //
 
 #import "RecommendVC.h"
-
-@interface RecommendVC ()
-
+#import "SPPageMenu.h"
+@interface RecommendVC ()<SPPageMenuDelegate>{
+    UIButton *rightBarButton;
+}
+@property(nonatomic,strong) SPPageMenu *pageMenu;
 @end
 
 @implementation RecommendVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    _pageMenu = [SPPageMenu pageMenuWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 40) trackerStyle:SPPageMenuTrackerStyleLine];
+    _pageMenu.contentInset = UIEdgeInsetsMake(0, -10, - 2, -6);
+    [_pageMenu setFunctionButtonTitle:@"" image:[UIImage imageNamed:@"btn-player"] imagePosition:SPItemImagePositionRight imageRatio:0 forState:UIControlStateNormal];
+    _pageMenu.showFuntionButton = YES;
+    [_pageMenu setItems:@[@"早午茶",@"我的关注",@"猜你喜欢",@"视频",@"音乐",@"画册"] selectedItemIndex:0];
+    _pageMenu.delegate = self;
+    _pageMenu.backgroundColor = [UIColor clearColor];
+    _pageMenu.dividingLine.hidden = YES;
+
+    [self.navigationItem setTitleView:_pageMenu];
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

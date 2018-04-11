@@ -9,7 +9,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "CYLTabBarController.h"
+@class CYLTabBarController;
 @interface MNTabbarConfig : NSObject
 @property(nonatomic,strong) CYLTabBarController *tabbarController;
 

@@ -22,6 +22,7 @@
 		4619BE7A207CF95300065016 /* MNTabbarConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4619BE79207CF95300065016 /* MNTabbarConfig.m */; };
 		4619BE7D207CF99F00065016 /* MNNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4619BE7C207CF99F00065016 /* MNNavigationController.m */; };
 		4619BE80207D0A4300065016 /* MNBaseTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4619BE7F207D0A4300065016 /* MNBaseTabbarController.m */; };
+		46E67BD1207E55E20089AD25 /* SPPageMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E67BCF207E55E20089AD25 /* SPPageMenu.m */; };
 		F32AEF373ABABF531789A361 /* libPods-高仿MONO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC183F150C2C571F8B7BC729 /* libPods-高仿MONO.a */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,9 @@
 		4619BE7C207CF99F00065016 /* MNNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNNavigationController.m; sourceTree = "<group>"; };
 		4619BE7E207D0A4300065016 /* MNBaseTabbarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNBaseTabbarController.h; sourceTree = "<group>"; };
 		4619BE7F207D0A4300065016 /* MNBaseTabbarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNBaseTabbarController.m; sourceTree = "<group>"; };
+		46E67BCD207DFAE00089AD25 /* MNPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNPrefix.pch; sourceTree = "<group>"; };
+		46E67BCF207E55E20089AD25 /* SPPageMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPageMenu.m; sourceTree = "<group>"; };
+		46E67BD0207E55E20089AD25 /* SPPageMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPageMenu.h; sourceTree = "<group>"; };
 		5243C0A2A91906272ED2C674 /* Pods-高仿MONO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-高仿MONO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-高仿MONO/Pods-高仿MONO.debug.xcconfig"; sourceTree = "<group>"; };
 		F3B1967B1A214406558A4F20 /* libPods-高仿MONOUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-高仿MONOUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC183F150C2C571F8B7BC729 /* libPods-高仿MONO.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-高仿MONO.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +135,7 @@
 		4619BDF1207C4D4F00065016 /* 高仿MONO */ = {
 			isa = PBXGroup;
 			children = (
+				46E67BCE207E55D60089AD25 /* Third */,
 				4619BDF2207C4D4F00065016 /* AppDelegate.h */,
 				4619BDF3207C4D4F00065016 /* AppDelegate.m */,
 				4619BE66207CF7F600065016 /* MNBaseController.h */,
@@ -147,6 +152,7 @@
 				4619BE79207CF95300065016 /* MNTabbarConfig.m */,
 				4619BE7B207CF99F00065016 /* MNNavigationController.h */,
 				4619BE7C207CF99F00065016 /* MNNavigationController.m */,
+				46E67BCD207DFAE00089AD25 /* MNPrefix.pch */,
 				4619BE75207CF8D800065016 /* MineVC.h */,
 				4619BE76207CF8D800065016 /* MineVC.m */,
 				4619BE24207C577900065016 /* image.xcassets */,
@@ -174,6 +180,15 @@
 				4619BE18207C4D5200065016 /* Info.plist */,
 			);
 			path = "高仿MONOUITests";
+			sourceTree = "<group>";
+		};
+		46E67BCE207E55D60089AD25 /* Third */ = {
+			isa = PBXGroup;
+			children = (
+				46E67BD0207E55E20089AD25 /* SPPageMenu.h */,
+				46E67BCF207E55E20089AD25 /* SPPageMenu.m */,
+			);
+			path = Third;
 			sourceTree = "<group>";
 		};
 		D2F38477866417EDCCBEF3EE /* Frameworks */ = {
@@ -206,6 +221,7 @@
 				4619BDEB207C4D4F00065016 /* Sources */,
 				4619BDEC207C4D4F00065016 /* Frameworks */,
 				4619BDED207C4D4F00065016 /* Resources */,
+				C8D952CA877CA71F43817E55 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -340,6 +356,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C8D952CA877CA71F43817E55 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-高仿MONO/Pods-高仿MONO-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-高仿MONO/Pods-高仿MONO-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -348,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4619BE68207CF7F600065016 /* MNBaseController.m in Sources */,
+				46E67BD1207E55E20089AD25 /* SPPageMenu.m in Sources */,
 				4619BE02207C4D5200065016 /* main.m in Sources */,
 				4619BE7A207CF95300065016 /* MNTabbarConfig.m in Sources */,
 				4619BE80207D0A4300065016 /* MNBaseTabbarController.m in Sources */,

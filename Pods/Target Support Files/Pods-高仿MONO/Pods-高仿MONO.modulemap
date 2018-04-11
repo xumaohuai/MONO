@@ -1,0 +1,6 @@
+module Pods___MONO [system] {
+  umbrella header "Pods-高仿MONO-umbrella.h"
+
+  export *
+  module * { export * }
+}

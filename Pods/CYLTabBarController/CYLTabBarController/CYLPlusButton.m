@@ -48,7 +48,7 @@ UIViewController *CYLPlusChildViewController = nil;
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
-+ (void)registerSubclass {
++(void)registerSubclass {
     [self registerPlusButton];
 }
 #pragma clang diagnostic pop

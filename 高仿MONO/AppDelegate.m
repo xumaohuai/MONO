@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "MNTabbarConfig.h"
 #import "MNBaseTabbarController.h"
+#import <CYLTabBarController.h>
 @interface AppDelegate ()
 
 @end

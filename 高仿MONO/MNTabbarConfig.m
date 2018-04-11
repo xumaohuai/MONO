@@ -12,6 +12,7 @@
 #import "CommunityVC.h"
 #import "MineVC.h"
 #import "MNNavigationController.h"
+#import <CYLTabBarController.h>
 #define CYL_DEPRECATED(explain) __attribute__((deprecated(explain)))
 #define CYL_IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
 
