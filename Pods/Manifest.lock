@@ -1,18 +1,22 @@
 PODS:
+  - CYLTabBarController (1.17.6)
   - SDWebImage (4.3.3):
     - SDWebImage/Core (= 4.3.3)
   - SDWebImage/Core (4.3.3)
 
 DEPENDENCIES:
-  - SDWebImage
+  - CYLTabBarController (~> 1.17.6)
+  - SDWebImage (~> 4.3.3)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - CYLTabBarController
     - SDWebImage
 
 SPEC CHECKSUMS:
+  CYLTabBarController: c374643dea6dadece8bdff9c70f7387f8ffd7d08
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
 
-PODFILE CHECKSUM: cb79d8660014c1a1c12177736f8fb70dedf64f93
+PODFILE CHECKSUM: ca238bb2001001dbe4b3457ca18971b973cd6d58
 
 COCOAPODS: 1.5.0

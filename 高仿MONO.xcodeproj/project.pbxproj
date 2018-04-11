@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		12CC720F615CE8789CB39343 /* libPods-高仿MONOUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3B1967B1A214406558A4F20 /* libPods-高仿MONOUITests.a */; };
-		1F3FA65FCB49F1803ACED2BA /* libPods-高仿MONOTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0485C679BF6EEF99B13F787E /* libPods-高仿MONOTests.a */; };
 		4619BDF4207C4D4F00065016 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4619BDF3207C4D4F00065016 /* AppDelegate.m */; };
 		4619BDFA207C4D4F00065016 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4619BDF8207C4D4F00065016 /* Main.storyboard */; };
 		4619BDFF207C4D5200065016 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4619BDFD207C4D5200065016 /* LaunchScreen.storyboard */; };
@@ -16,6 +14,14 @@
 		4619BE0C207C4D5200065016 /* __MONOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4619BE0B207C4D5200065016 /* __MONOTests.m */; };
 		4619BE17207C4D5200065016 /* __MONOUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4619BE16207C4D5200065016 /* __MONOUITests.m */; };
 		4619BE25207C577A00065016 /* image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4619BE24207C577900065016 /* image.xcassets */; };
+		4619BE68207CF7F600065016 /* MNBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4619BE67207CF7F600065016 /* MNBaseController.m */; };
+		4619BE6E207CF88200065016 /* RecommendVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4619BE6D207CF88200065016 /* RecommendVC.m */; };
+		4619BE71207CF8A200065016 /* DiscoverVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4619BE70207CF8A200065016 /* DiscoverVC.m */; };
+		4619BE74207CF8C100065016 /* CommunityVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4619BE73207CF8C100065016 /* CommunityVC.m */; };
+		4619BE77207CF8D800065016 /* MineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4619BE76207CF8D800065016 /* MineVC.m */; };
+		4619BE7A207CF95300065016 /* MNTabbarConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4619BE79207CF95300065016 /* MNTabbarConfig.m */; };
+		4619BE7D207CF99F00065016 /* MNNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4619BE7C207CF99F00065016 /* MNNavigationController.m */; };
+		4619BE80207D0A4300065016 /* MNBaseTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4619BE7F207D0A4300065016 /* MNBaseTabbarController.m */; };
 		F32AEF373ABABF531789A361 /* libPods-高仿MONO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC183F150C2C571F8B7BC729 /* libPods-高仿MONO.a */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +45,6 @@
 /* Begin PBXFileReference section */
 		0485C679BF6EEF99B13F787E /* libPods-高仿MONOTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-高仿MONOTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EB01A41710D1FA94CA97BC6 /* Pods-高仿MONO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-高仿MONO.release.xcconfig"; path = "Pods/Target Support Files/Pods-高仿MONO/Pods-高仿MONO.release.xcconfig"; sourceTree = "<group>"; };
-		403FB80FA2CEA38087D66DF1 /* Pods-高仿MONOUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-高仿MONOUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-高仿MONOUITests/Pods-高仿MONOUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4619BDEF207C4D4F00065016 /* 高仿MONO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "高仿MONO.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4619BDF2207C4D4F00065016 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4619BDF3207C4D4F00065016 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -54,11 +59,24 @@
 		4619BE16207C4D5200065016 /* __MONOUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __MONOUITests.m; sourceTree = "<group>"; };
 		4619BE18207C4D5200065016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4619BE24207C577900065016 /* image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = image.xcassets; sourceTree = "<group>"; };
-		4DE53A6C2CFF495D63B17079 /* Pods-高仿MONOTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-高仿MONOTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-高仿MONOTests/Pods-高仿MONOTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4619BE66207CF7F600065016 /* MNBaseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNBaseController.h; sourceTree = "<group>"; };
+		4619BE67207CF7F600065016 /* MNBaseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNBaseController.m; sourceTree = "<group>"; };
+		4619BE6C207CF88200065016 /* RecommendVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecommendVC.h; sourceTree = "<group>"; };
+		4619BE6D207CF88200065016 /* RecommendVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecommendVC.m; sourceTree = "<group>"; };
+		4619BE6F207CF8A200065016 /* DiscoverVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiscoverVC.h; sourceTree = "<group>"; };
+		4619BE70207CF8A200065016 /* DiscoverVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiscoverVC.m; sourceTree = "<group>"; };
+		4619BE72207CF8C100065016 /* CommunityVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunityVC.h; sourceTree = "<group>"; };
+		4619BE73207CF8C100065016 /* CommunityVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunityVC.m; sourceTree = "<group>"; };
+		4619BE75207CF8D800065016 /* MineVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineVC.h; sourceTree = "<group>"; };
+		4619BE76207CF8D800065016 /* MineVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineVC.m; sourceTree = "<group>"; };
+		4619BE78207CF95300065016 /* MNTabbarConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNTabbarConfig.h; sourceTree = "<group>"; };
+		4619BE79207CF95300065016 /* MNTabbarConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNTabbarConfig.m; sourceTree = "<group>"; };
+		4619BE7B207CF99F00065016 /* MNNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNNavigationController.h; sourceTree = "<group>"; };
+		4619BE7C207CF99F00065016 /* MNNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNNavigationController.m; sourceTree = "<group>"; };
+		4619BE7E207D0A4300065016 /* MNBaseTabbarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNBaseTabbarController.h; sourceTree = "<group>"; };
+		4619BE7F207D0A4300065016 /* MNBaseTabbarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNBaseTabbarController.m; sourceTree = "<group>"; };
 		5243C0A2A91906272ED2C674 /* Pods-高仿MONO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-高仿MONO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-高仿MONO/Pods-高仿MONO.debug.xcconfig"; sourceTree = "<group>"; };
-		8FCB5A94B4F357099F94E8D3 /* Pods-高仿MONOTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-高仿MONOTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-高仿MONOTests/Pods-高仿MONOTests.release.xcconfig"; sourceTree = "<group>"; };
 		F3B1967B1A214406558A4F20 /* libPods-高仿MONOUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-高仿MONOUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F84BBF3E65650491CC1FD975 /* Pods-高仿MONOUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-高仿MONOUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-高仿MONOUITests/Pods-高仿MONOUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FC183F150C2C571F8B7BC729 /* libPods-高仿MONO.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-高仿MONO.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -75,7 +93,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F3FA65FCB49F1803ACED2BA /* libPods-高仿MONOTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +100,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12CC720F615CE8789CB39343 /* libPods-高仿MONOUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +133,22 @@
 			children = (
 				4619BDF2207C4D4F00065016 /* AppDelegate.h */,
 				4619BDF3207C4D4F00065016 /* AppDelegate.m */,
+				4619BE66207CF7F600065016 /* MNBaseController.h */,
+				4619BE67207CF7F600065016 /* MNBaseController.m */,
+				4619BE7E207D0A4300065016 /* MNBaseTabbarController.h */,
+				4619BE7F207D0A4300065016 /* MNBaseTabbarController.m */,
+				4619BE6C207CF88200065016 /* RecommendVC.h */,
+				4619BE6D207CF88200065016 /* RecommendVC.m */,
+				4619BE6F207CF8A200065016 /* DiscoverVC.h */,
+				4619BE70207CF8A200065016 /* DiscoverVC.m */,
+				4619BE72207CF8C100065016 /* CommunityVC.h */,
+				4619BE73207CF8C100065016 /* CommunityVC.m */,
+				4619BE78207CF95300065016 /* MNTabbarConfig.h */,
+				4619BE79207CF95300065016 /* MNTabbarConfig.m */,
+				4619BE7B207CF99F00065016 /* MNNavigationController.h */,
+				4619BE7C207CF99F00065016 /* MNNavigationController.m */,
+				4619BE75207CF8D800065016 /* MineVC.h */,
+				4619BE76207CF8D800065016 /* MineVC.m */,
 				4619BE24207C577900065016 /* image.xcassets */,
 				4619BDF8207C4D4F00065016 /* Main.storyboard */,
 				4619BDFD207C4D5200065016 /* LaunchScreen.storyboard */,
@@ -159,10 +191,6 @@
 			children = (
 				5243C0A2A91906272ED2C674 /* Pods-高仿MONO.debug.xcconfig */,
 				1EB01A41710D1FA94CA97BC6 /* Pods-高仿MONO.release.xcconfig */,
-				4DE53A6C2CFF495D63B17079 /* Pods-高仿MONOTests.debug.xcconfig */,
-				8FCB5A94B4F357099F94E8D3 /* Pods-高仿MONOTests.release.xcconfig */,
-				F84BBF3E65650491CC1FD975 /* Pods-高仿MONOUITests.debug.xcconfig */,
-				403FB80FA2CEA38087D66DF1 /* Pods-高仿MONOUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -192,7 +220,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4619BE1E207C4D5200065016 /* Build configuration list for PBXNativeTarget "高仿MONOTests" */;
 			buildPhases = (
-				E7BEE18D561A89EFBFAC1630 /* [CP] Check Pods Manifest.lock */,
 				4619BE03207C4D5200065016 /* Sources */,
 				4619BE04207C4D5200065016 /* Frameworks */,
 				4619BE05207C4D5200065016 /* Resources */,
@@ -211,7 +238,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4619BE21207C4D5200065016 /* Build configuration list for PBXNativeTarget "高仿MONOUITests" */;
 			buildPhases = (
-				89F74EFEA0D9D6CF10D04E0A /* [CP] Check Pods Manifest.lock */,
 				4619BE0E207C4D5200065016 /* Sources */,
 				4619BE0F207C4D5200065016 /* Frameworks */,
 				4619BE10207C4D5200065016 /* Resources */,
@@ -314,42 +340,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		89F74EFEA0D9D6CF10D04E0A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-高仿MONOUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E7BEE18D561A89EFBFAC1630 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-高仿MONOTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -357,8 +347,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4619BE68207CF7F600065016 /* MNBaseController.m in Sources */,
 				4619BE02207C4D5200065016 /* main.m in Sources */,
+				4619BE7A207CF95300065016 /* MNTabbarConfig.m in Sources */,
+				4619BE80207D0A4300065016 /* MNBaseTabbarController.m in Sources */,
+				4619BE74207CF8C100065016 /* CommunityVC.m in Sources */,
 				4619BDF4207C4D4F00065016 /* AppDelegate.m in Sources */,
+				4619BE71207CF8A200065016 /* DiscoverVC.m in Sources */,
+				4619BE77207CF8D800065016 /* MineVC.m in Sources */,
+				4619BE6E207CF88200065016 /* RecommendVC.m in Sources */,
+				4619BE7D207CF99F00065016 /* MNNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,7 +529,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6EUCP69KUN;
 				INFOPLIST_FILE = "高仿MONO/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.MONO.star.--MONO";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -546,7 +547,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6EUCP69KUN;
 				INFOPLIST_FILE = "高仿MONO/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.MONO.star.--MONO";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -555,13 +559,16 @@
 		};
 		4619BE1F207C4D5200065016 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DE53A6C2CFF495D63B17079 /* Pods-高仿MONOTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6EUCP69KUN;
 				INFOPLIST_FILE = "高仿MONOTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.MONO.star.--MONOTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -571,13 +578,16 @@
 		};
 		4619BE20207C4D5200065016 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8FCB5A94B4F357099F94E8D3 /* Pods-高仿MONOTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6EUCP69KUN;
 				INFOPLIST_FILE = "高仿MONOTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.MONO.star.--MONOTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -587,12 +597,15 @@
 		};
 		4619BE22207C4D5200065016 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F84BBF3E65650491CC1FD975 /* Pods-高仿MONOUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6EUCP69KUN;
 				INFOPLIST_FILE = "高仿MONOUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.MONO.star.--MONOUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -602,12 +615,15 @@
 		};
 		4619BE23207C4D5200065016 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 403FB80FA2CEA38087D66DF1 /* Pods-高仿MONOUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6EUCP69KUN;
 				INFOPLIST_FILE = "高仿MONOUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.MONO.star.--MONOUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
