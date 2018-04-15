@@ -8,6 +8,7 @@
 
 #import "RecommendVC.h"
 #import "SPPageMenu.h"
+#import "MNNetworkTool.h"
 @interface RecommendVC ()<SPPageMenuDelegate>{
     UIButton *rightBarButton;
 }
@@ -18,19 +19,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _pageMenu = [SPPageMenu pageMenuWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 40) trackerStyle:SPPageMenuTrackerStyleLine];
-    _pageMenu.contentInset = UIEdgeInsetsMake(0, -10, - 2, -6);
-    [_pageMenu setFunctionButtonTitle:@"" image:[UIImage imageNamed:@"btn-player"] imagePosition:SPItemImagePositionRight imageRatio:0 forState:UIControlStateNormal];
-    _pageMenu.showFuntionButton = YES;
-    [_pageMenu setItems:@[@"早午茶",@"我的关注",@"猜你喜欢",@"视频",@"音乐",@"画册"] selectedItemIndex:0];
-    _pageMenu.delegate = self;
-    _pageMenu.backgroundColor = [UIColor clearColor];
-    _pageMenu.dividingLine.hidden = YES;
-
-    [self.navigationItem setTitleView:_pageMenu];
+   
+    [MNNetworkTool requstWithUrl:@"recommendation/?init=1" Param:nil MNNetSet:[MNNetSet readCache] Success:^(id responseObj) {
+        NSLog(@"%@",responseObj);
+    } Failed:^{
+        
+    }];
+    [self.navigationItem setTitleView:self.pageMenu];
 }
 
-
+-(SPPageMenu *)pageMenu
+{
+    if (!_pageMenu) {
+        _pageMenu = [SPPageMenu pageMenuWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 40) trackerStyle:SPPageMenuTrackerStyleLine];
+        _pageMenu.contentInset = UIEdgeInsetsMake(0, -10, - 2, -6);
+        [_pageMenu setFunctionButtonTitle:@"" image:[UIImage imageNamed:@"btn-player"] imagePosition:SPItemImagePositionRight imageRatio:0 forState:UIControlStateNormal];
+        _pageMenu.showFuntionButton = YES;
+        [_pageMenu setItems:@[@"早午茶",@"我的关注",@"猜你喜欢",@"视频",@"音乐",@"画册"] selectedItemIndex:0];
+        _pageMenu.delegate = self;
+        _pageMenu.backgroundColor = [UIColor clearColor];
+        _pageMenu.dividingLine.hidden = YES;
+    }
+    return _pageMenu;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

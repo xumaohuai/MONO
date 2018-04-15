@@ -7,9 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "MNTabbarConfig.h"
 #import "MNBaseTabbarController.h"
-#import <CYLTabBarController.h>
 @interface AppDelegate ()
 
 @end
@@ -21,8 +19,7 @@
     self.window.frame = [UIScreen mainScreen].bounds;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyWindow];
-    MNTabbarConfig *tabbarConfig = [[MNTabbarConfig alloc]init];
-    self.window.rootViewController = tabbarConfig.tabbarController;
+    self.window.rootViewController = [[MNBaseTabbarController alloc]init];
     return YES;
 }
 

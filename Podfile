@@ -18,6 +18,5 @@ pod 'SVProgressHUD'
 #pod 'NJKWebViewProgress','~>1.2.0'
 pod 'IQKeyboardManager'
 pod 'FDFullscreenPopGesture'
-#pod 'SPPageMenu', '~> 2.5.3'
 
 end

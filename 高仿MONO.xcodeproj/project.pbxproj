@@ -22,6 +22,7 @@
 		4619BE7A207CF95300065016 /* MNTabbarConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4619BE79207CF95300065016 /* MNTabbarConfig.m */; };
 		4619BE7D207CF99F00065016 /* MNNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4619BE7C207CF99F00065016 /* MNNavigationController.m */; };
 		4619BE80207D0A4300065016 /* MNBaseTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4619BE7F207D0A4300065016 /* MNBaseTabbarController.m */; };
+		46D543102083382B00C38643 /* MNNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D5430F2083382A00C38643 /* MNNetworkTool.m */; };
 		46E67BD1207E55E20089AD25 /* SPPageMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E67BCF207E55E20089AD25 /* SPPageMenu.m */; };
 		F32AEF373ABABF531789A361 /* libPods-高仿MONO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC183F150C2C571F8B7BC729 /* libPods-高仿MONO.a */; };
 /* End PBXBuildFile section */
@@ -76,6 +77,8 @@
 		4619BE7C207CF99F00065016 /* MNNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNNavigationController.m; sourceTree = "<group>"; };
 		4619BE7E207D0A4300065016 /* MNBaseTabbarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNBaseTabbarController.h; sourceTree = "<group>"; };
 		4619BE7F207D0A4300065016 /* MNBaseTabbarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNBaseTabbarController.m; sourceTree = "<group>"; };
+		46D5430E2083382900C38643 /* MNNetworkTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNNetworkTool.h; sourceTree = "<group>"; };
+		46D5430F2083382A00C38643 /* MNNetworkTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNNetworkTool.m; sourceTree = "<group>"; };
 		46E67BCD207DFAE00089AD25 /* MNPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNPrefix.pch; sourceTree = "<group>"; };
 		46E67BCF207E55E20089AD25 /* SPPageMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPageMenu.m; sourceTree = "<group>"; };
 		46E67BD0207E55E20089AD25 /* SPPageMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPageMenu.h; sourceTree = "<group>"; };
@@ -138,6 +141,7 @@
 				46E67BCE207E55D60089AD25 /* Third */,
 				4619BDF2207C4D4F00065016 /* AppDelegate.h */,
 				4619BDF3207C4D4F00065016 /* AppDelegate.m */,
+				46D5430D2083380800C38643 /* Tool */,
 				4619BE66207CF7F600065016 /* MNBaseController.h */,
 				4619BE67207CF7F600065016 /* MNBaseController.m */,
 				4619BE7E207D0A4300065016 /* MNBaseTabbarController.h */,
@@ -180,6 +184,15 @@
 				4619BE18207C4D5200065016 /* Info.plist */,
 			);
 			path = "高仿MONOUITests";
+			sourceTree = "<group>";
+		};
+		46D5430D2083380800C38643 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				46D5430E2083382900C38643 /* MNNetworkTool.h */,
+				46D5430F2083382A00C38643 /* MNNetworkTool.m */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 		46E67BCE207E55D60089AD25 /* Third */ = {
@@ -386,6 +399,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4619BE68207CF7F600065016 /* MNBaseController.m in Sources */,
+				46D543102083382B00C38643 /* MNNetworkTool.m in Sources */,
 				46E67BD1207E55E20089AD25 /* SPPageMenu.m in Sources */,
 				4619BE02207C4D5200065016 /* main.m in Sources */,
 				4619BE7A207CF95300065016 /* MNTabbarConfig.m in Sources */,
@@ -565,16 +579,18 @@
 			baseConfigurationReference = 5243C0A2A91906272ED2C674 /* Pods-高仿MONO.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6EUCP69KUN;
 				INFOPLIST_FILE = "高仿MONO/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.MONO.star.--MONO";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -583,16 +599,18 @@
 			baseConfigurationReference = 1EB01A41710D1FA94CA97BC6 /* Pods-高仿MONO.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6EUCP69KUN;
 				INFOPLIST_FILE = "高仿MONO/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.MONO.star.--MONO";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
