@@ -1,0 +1,46 @@
+//
+//  MNPrefix.pch
+//  高仿MONO
+//
+//  Created by 徐茂怀 on 2018/4/17.
+//  Copyright © 2018年 徐茂怀. All rights reserved.
+//
+
+#ifndef MNPrefix_pch
+#define MNPrefix_pch
+
+#ifdef __OBJC__
+#import "UIView+Additions.h"
+#import "SDAutoLayout.h"
+#import <ReactiveCocoa.h>
+#import "NSDictionary+Additions.h"
+#import "UIImageView+WebLoad.h"
+#import "MBProgressHUD+Message.h"
+#import "UIColor+Additions.h"
+#endif 
+
+
+
+#define iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+#define IOS11 ([[UIDevice currentDevice].systemVersion intValue] >= 11 ? YES : NO)
+#define SCREEN_HEIGHT     ([[UIScreen mainScreen] bounds].size.height)
+#define SCREEN_WIDTH      ([[UIScreen mainScreen] bounds].size.width)
+#define WEAKSELF __weak typeof(&*self) weakSelf = self;
+#define ImageNamed(_pointer) [UIImage imageNamed:[UIUtil imageName:_pointer］
+#define LIGHTFONT(F) [UIFont systemFontOfSize:F weight:UIFontWeightLight]
+#define REGULARFONT(F) [UIFont systemFontOfSize:F weight:UIFontWeightRegular]
+
+#define KStatusBarHeight (iPhoneX ? 24.f:0.f)
+#define KStatusBarMargin (iPhoneX ? 22.f:0.f)
+#define KTabBarHeight    (iPhoneX ? 83.f:49.f)
+
+#define pageMenuH 40
+#define NaviH (SCREEN_HEIGHT == 812 ? 88 : 64) // 812是iPhoneX的高度
+#define KWaterSpace     3.0
+#define KMarginLeft     12.0
+#define KMarginRight    12.0
+
+#define BaseUrl @"http://mmmono.com/api/v3/"
+#define DiscoveryNextNewRecommend   BaseURL@"/discover/nextNewRecommend"
+
+#endif
