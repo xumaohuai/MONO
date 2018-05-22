@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MNBaseTabbarController.h"
-#import <RTRootNavigationController.h>
+
 @interface AppDelegate ()
 
 @end
@@ -21,8 +21,11 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyWindow];
     self.window.rootViewController = [[MNBaseTabbarController alloc]init];
+//    [[LKImageCacheManager defaultManager]clearAll];
+    
     return YES;
 }
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

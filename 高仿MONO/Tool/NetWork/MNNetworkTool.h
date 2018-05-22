@@ -51,4 +51,10 @@ typedef void (^FailedBlock)(void);
             MNNetSet:(MNNetSet *)mnnetSet
              Success:(SuccessBlock)success
               Failed:(FailedBlock)failed;
+
+-(void)getTokenSuccess:(void (^)(void))success;
+-(void)getVideoUrlWithId:(NSString *)Id
+                 Success:(void (^)(NSString *url))success;
+
+
 @end

@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <YYWebImage.h>
 @interface MNBaseTableViewCell : UITableViewCell
-
 @end

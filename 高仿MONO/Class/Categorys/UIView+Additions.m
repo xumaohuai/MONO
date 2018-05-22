@@ -120,6 +120,7 @@
 {
     return self.frame.origin.y + self.frame.size.height;
 }
+
 - (CGFloat)maxY{
     return CGRectGetMaxY(self.frame);
 }

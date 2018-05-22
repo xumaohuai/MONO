@@ -780,7 +780,19 @@ Class cellContVClass()
 - (void)setupAutoSizeWithHorizontalPadding:(CGFloat)hPadding buttonHeight:(CGFloat)buttonHeight
 {
     self.fixedHeight = @(buttonHeight);
- self.imageView.sd_layout.leftEqualToView(self).topEqualToView(self).heightIs(buttonHeight).widthIs(self.imageView.width);
+    
+    self.titleLabel.sd_layout
+    .leftSpaceToView(self, hPadding)
+    .topEqualToView(self)
+    .heightIs(buttonHeight);
+    
+    [self.titleLabel setSingleLineAutoResizeWithMaxWidth:MAXFLOAT];
+    [self setupAutoWidthWithRightView:self.titleLabel rightMargin:hPadding];
+}
+- (void)setupAutoSizeWitImagehHorizontalPadding:(CGFloat)hPadding buttonHeight:(CGFloat)buttonHeight
+{
+    self.fixedHeight = @(buttonHeight);
+    self.imageView.sd_layout.leftEqualToView(self).topEqualToView(self).heightIs(buttonHeight).widthIs(self.imageView.width);
     
     self.titleLabel.sd_layout
     .leftSpaceToView(self.imageView, hPadding)

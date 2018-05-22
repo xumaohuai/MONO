@@ -17,9 +17,19 @@
 #import "UIImageView+WebLoad.h"
 #import "MBProgressHUD+Message.h"
 #import "UIColor+Additions.h"
+#import "CommendMethod.h"
+#import "MNMusicPlayer.h"
+#import "MonoEnum.h"
 #endif 
 
-
+#ifndef dispatch_main_async_safe
+#define dispatch_main_async_safe(block)\
+if (strcmp(dispatch_queue_get_label(DISPATCH_CURRENT_QUEUE_LABEL), dispatch_queue_get_label(dispatch_get_main_queue())) == 0) {\
+block();\
+} else {\
+dispatch_async(dispatch_get_main_queue(), block);\
+}
+#endif
 
 #define iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
 #define IOS11 ([[UIDevice currentDevice].systemVersion intValue] >= 11 ? YES : NO)
@@ -29,6 +39,7 @@
 #define ImageNamed(_pointer) [UIImage imageNamed:[UIUtil imageName:_pointer］
 #define LIGHTFONT(F) [UIFont systemFontOfSize:F weight:UIFontWeightLight]
 #define REGULARFONT(F) [UIFont systemFontOfSize:F weight:UIFontWeightRegular]
+#define THINFONT(F) [UIFont systemFontOfSize:F weight:UIFontWeightThin]
 
 #define KStatusBarHeight (iPhoneX ? 24.f:0.f)
 #define KStatusBarMargin (iPhoneX ? 22.f:0.f)

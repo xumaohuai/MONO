@@ -122,10 +122,12 @@
 
 - (void)clearHeightCacheOfIndexPaths:(NSArray *)indexPaths
 {
+    @weakify(self)
     [indexPaths enumerateObjectsUsingBlock:^(NSIndexPath *indexPath, NSUInteger idx, BOOL *stop) {
+        @strongify(self)
         NSString *cacheKey = [self cacheKeyForIndexPath:indexPath];
-        [_cacheDictionary removeObjectForKey:cacheKey];
-        [_subviewFrameCacheDict removeObjectForKey:cacheKey];
+        [self->_cacheDictionary removeObjectForKey:cacheKey];
+        [self.subviewFrameCacheDict removeObjectForKey:cacheKey];
     }];
 }
 
@@ -228,11 +230,13 @@
         }];
         [tempHeightCaches insertObjects:objsToInsert atIndexes:indexSet];
         [tempFrameCaches insertObjects:objsToInsert atIndexes:indexSet];
+        @weakify(self)
         [tempHeightCaches enumerateObjectsUsingBlock:^(NSNumber *heightCache, NSUInteger idx, BOOL *stop) {
             if (![heightCache isKindOfClass:[NSNull class]]) {
+                @strongify(self)
                 NSString *key = [NSString stringWithFormat:@"%zd-%zd", section, idx];
-                [_cacheDictionary setValue:heightCache forKey:key];
-                [_subviewFrameCacheDict setValue:[tempFrameCaches objectAtIndex:idx] forKey:key];
+                [self->_cacheDictionary setValue:heightCache forKey:key];
+                [self.subviewFrameCacheDict setValue:[tempFrameCaches objectAtIndex:idx] forKey:key];
             }
         }];
     }

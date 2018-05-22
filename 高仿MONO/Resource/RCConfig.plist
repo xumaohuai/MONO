@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>File</key>
+	<dict>
+		<key>RelativePath</key>
+		<string>Documents/MyFile</string>
+	</dict>
+	<key>Voice</key>
+	<dict>
+		<key>AudioEncodingBitRate</key>
+		<real>7950</real>
+	</dict>
+	<key>Image</key>
+	<dict>
+		<key>ImageQuality</key>
+		<real>0.85</real>
+		<key>ImageWidth</key>
+		<integer>960</integer>
+		<key>ImageHeight</key>
+		<integer>960</integer>
+	</dict>
+	<key>CustomerService</key>
+	<dict>
+		<key>SuspendWhenLeave</key>
+		<true/>
+	</dict>
+</dict>
+</plist>

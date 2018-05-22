@@ -67,7 +67,7 @@ typedef SDAutoLayoutModel *(^MarginEqualToView)(UIView *toView);
 typedef SDAutoLayoutModel *(^WidthHeight)(CGFloat value);
 typedef SDAutoLayoutModel *(^WidthHeightEqualToView)(UIView *toView, CGFloat ratioValue);
 typedef SDAutoLayoutModel *(^AutoHeightWidth)(CGFloat ratioValue);
-typedef SDAutoLayoutModel *(^SameWidthHeight)();
+typedef SDAutoLayoutModel *(^SameWidthHeight)(void);
 typedef SDAutoLayoutModel *(^Offset)(CGFloat value);
 typedef void (^SpaceToSuperView)(UIEdgeInsets insets);
 
@@ -371,7 +371,11 @@ typedef void (^SpaceToSuperView)(UIEdgeInsets insets);
  * hPadding：左右边距
  */
 - (void)setupAutoSizeWithHorizontalPadding:(CGFloat)hPadding buttonHeight:(CGFloat)buttonHeight;
-
+/*
+ * 设置button根据单行文字自适应(带图片的button)
+ * hPadding：左右边距
+ */
+- (void)setupAutoSizeWitImagehHorizontalPadding:(CGFloat)hPadding buttonHeight:(CGFloat)buttonHeight;
 @end
 
 

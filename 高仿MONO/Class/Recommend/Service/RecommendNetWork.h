@@ -10,9 +10,10 @@
 typedef void (^SuccessBlock)(id responseObj);
 typedef void (^FailedBlock)(void);
 @interface RecommendNetWork : MNNetworkTool
-+(void)getGuessLikeWithPage:(NSInteger)page
-                  loadCache:(BOOL)loadCache
-                    Success:(SuccessBlock)success
-                     Failed:(FailedBlock)failed;
++(void)getRecommendDataWithRecommendType:(RecommendType)recommendType
+                                WithPage:(NSInteger)page
+                               loadCache:(BOOL)loadCache
+                                 Success:(SuccessBlock)success
+                                  Failed:(FailedBlock)failed;
 
 @end

@@ -9,5 +9,5 @@
 #import "MNBaseController.h"
 
 @interface RecommendTypeVC : MNBaseController
-
+@property(nonatomic,assign) RecommendType recommendType;
 @end

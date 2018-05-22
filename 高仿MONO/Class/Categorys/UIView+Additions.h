@@ -28,7 +28,7 @@
 //右侧 X
 @property (nonatomic,assign)CGFloat rightX;
 //底部 Y
-@property (nonatomic,assign)CGFloat bottomY;
+@property (nonatomic,assign,readonly)CGFloat bottomY;
 - (CGFloat)maxY;
 - (void)layerBordeColor:(UIColor *)color
             borderWidth:(CGFloat)borderWidth

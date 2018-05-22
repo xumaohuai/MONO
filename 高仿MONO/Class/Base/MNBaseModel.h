@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-//#import <YYModel.h>
-#import <NSObject+YYModel.h>
+#import <YYModel.h>
 @interface MNBaseModel : NSObject
 
 

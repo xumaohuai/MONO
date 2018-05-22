@@ -38,16 +38,6 @@
 #pragma mark - 懒加载
 -(UIScrollView *)scrollView
 {
-    //猜你喜欢
-//    http://mmmono.com/api/v3/recommendation/?init=1
-//    http://mmmono.com/api/v3/recommendation/?start=1
-//    //视频
-//    http://mmmono.com/api/v3/tab/?start=2%2C0&tab_id=7&tab_type=3
-//    http://mmmono.com/api/v3/tab/?start=2%2C10&tab_id=7&tab_type=3
-//    http://mmmono.com/api/v3/tab/?start=2%2C20&tab_id=7&tab_type=3
-//    //音乐
-//    http://mmmono.com/api/v3/tab/?tab_id=8&tab_type=3
-//    http://mmmono.com/api/v3/tab/?start=0%2C10&tab_id=8&tab_type=3
     if(!_scrollView){
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - NaviH  - KTabBarHeight)];
     scrollView.delegate = self;
@@ -115,6 +105,7 @@
             case 0:
         {
             RecommendTypeVC *VC = [[RecommendTypeVC alloc] init];
+            VC.recommendType = RecommendTypeTea;
             VC.view.frame = CGRectMake(SCREEN_WIDTH * index, 0, SCREEN_WIDTH, self.scrollView.height);
             [self.scrollView addSubview:VC.view];
             [self addChildViewController:VC];
@@ -125,6 +116,7 @@
             case 1:
         {
             RecommendTypeVC *VC = [[RecommendTypeVC alloc] init];
+            VC.recommendType = RecommendTypeAttention;
             VC.view.frame = CGRectMake(SCREEN_WIDTH * index, 0, SCREEN_WIDTH, self.scrollView.height);
             [self.scrollView addSubview:VC.view];
             [self addChildViewController:VC];
@@ -135,6 +127,7 @@
             case 2:
         {
             RecommendTypeVC *VC = [[RecommendTypeVC alloc] init];
+            VC.recommendType = RecommendTypeLike;
             VC.view.frame = CGRectMake(SCREEN_WIDTH * index, 0, SCREEN_WIDTH, self.scrollView.height);
             [self.scrollView addSubview:VC.view];
             [self addChildViewController:VC];
@@ -145,6 +138,7 @@
             case 3:
         {
             RecommendTypeVC *VC = [[RecommendTypeVC alloc] init];
+            VC.recommendType = RecommendTypeVideo;
             VC.view.frame = CGRectMake(SCREEN_WIDTH * index, 0, SCREEN_WIDTH, self.scrollView.height);
             [self.scrollView addSubview:VC.view];
             [self addChildViewController:VC];
@@ -155,6 +149,7 @@
             case 4:
         {
             RecommendTypeVC *VC = [[RecommendTypeVC alloc] init];
+            VC.recommendType = RecommendTypeMusic;
             VC.view.frame = CGRectMake(SCREEN_WIDTH * index, 0, SCREEN_WIDTH, self.scrollView.height);
             [self.scrollView addSubview:VC.view];
             [self addChildViewController:VC];
@@ -165,6 +160,7 @@
             case 5:
         {
             RecommendTypeVC *VC = [[RecommendTypeVC alloc] init];
+            VC.recommendType = RecommendTypePicture;
             VC.view.frame = CGRectMake(SCREEN_WIDTH * index, 0, SCREEN_WIDTH, self.scrollView.height);
             [self.scrollView addSubview:VC.view];
             [self addChildViewController:VC];

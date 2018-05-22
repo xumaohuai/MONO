@@ -7,17 +7,29 @@
 //
 
 #import "MNBaseModel.h"
-#import "Sort.h"
-#import "User.h"
-#import "Thumb.h"
-typedef NS_ENUM(NSInteger,MeowType){
-        MeowTypeMusic  = 8,//音乐
-        MeowTypeRead = 4,//阅读
-        MeowTypeReadThird = 5,//阅读(来自第三方)
-        MeowTypeTileAndImage = 3,//图片与标题
-        MeowTypeOneImage = 2//一张大图
-};
+@class MNBaseTableViewCell;
 
+@interface Sort : MNBaseModel
+@property (nonatomic,assign) NSInteger Id;
+@property (nonatomic,copy) NSString *name;//类型名称
+@end
+
+@interface Thumb : MNBaseModel
+@property (nonatomic,copy) NSString *raw;//大图地址(已被裁切好了,不用再裁切了,尼玛,人家的UI!!!!!!)
+@property (nonatomic,assign) NSInteger width;
+@property (nonatomic,assign) NSInteger height;
+@property (nonatomic,copy) NSString *format;//图片类型
+@property (nonatomic,assign) NSInteger error_code;
+
+@end
+
+@interface User : MNBaseModel
+@property (nonatomic,copy) NSString *avatar_url;//头像地址
+@property (nonatomic,copy) NSString *user_id;//作者id
+@property (nonatomic,copy) NSString *name;//作者名称
+@property (nonatomic,assign) BOOL is_anonymous;
+
+@end
 
 @interface RecommendModel : MNBaseModel
 @property(nonatomic,strong) NSString *Id;
@@ -31,10 +43,27 @@ typedef NS_ENUM(NSInteger,MeowType){
 @property (nonatomic,copy) NSString *text;
 @property(nonatomic,strong) User *user;
 @property(nonatomic,strong) Sort *category;
+@property(nonatomic,strong) Thumb *thumb;
+@property(nonatomic,strong) Thumb *logo_url_thumb;
+@property(nonatomic,strong) Thumb *album_cover;
+@property (nonatomic,assign) unsigned music_duration;//歌曲总长(秒)
+@property (nonatomic,assign) unsigned video_duration;
+
+
 @property (nonatomic,copy) NSString *song_name;//歌曲名
 @property (nonatomic,copy) NSString *artist;//歌手名
 @property (nonatomic,copy) NSString *music_url;//歌曲地址
+@property (nonatomic,assign) CGFloat cellHeight;
+@property (nonatomic,copy) NSString *author;
+@property(nonatomic,strong) NSArray<Thumb*> *pics;
+@property(nonatomic,strong) NSArray<Thumb*> *images;
+@property (assign, nonatomic, getter = isFadedOut) BOOL hasShine;
+@property(nonatomic,strong) NSURL *videoUrl;
+
+//获取cell的identifier
+@property (nonatomic,copy) NSString *cellIdentifier;
 
 @end
+
 
 

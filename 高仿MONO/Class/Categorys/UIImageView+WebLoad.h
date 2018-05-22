@@ -10,4 +10,5 @@
 
 @interface UIImageView (WebLoad)
 -(void)setAvatarWithUrlString:(NSString *)urlString;
+-(void)setBrowseImageWithUrlString:(NSString *)urlString;
 @end

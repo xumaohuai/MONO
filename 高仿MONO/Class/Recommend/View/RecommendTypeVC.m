@@ -32,6 +32,7 @@
 #pragma mark - 配置刷新控件
 -(void)setRefreshView{
     _vm = [RecommendVM new];
+    _vm.recommendType = _recommendType;
     [_vm bindViewToViewModel:self.tableView];
     WEAKSELF
     _refreshHeader = [MNRefreshBlackHeader headerWithRefreshingBlock:^{

@@ -9,9 +9,32 @@
 #import "RecommendNetWork.h"
 
 @implementation RecommendNetWork
-+(void)getGuessLikeWithPage:(NSInteger)page loadCache:(BOOL)loadCache Success:(SuccessBlock)success Failed:(FailedBlock)failed
+
++(void)getRecommendDataWithRecommendType:(RecommendType)recommendType WithPage:(NSInteger)page loadCache:(BOOL)loadCache Success:(SuccessBlock)success Failed:(FailedBlock)failed
 {
-    NSString *url = [NSString stringWithFormat:@"recommendation/?init=%ld",page];
+    NSString *url = @"";
+    switch (recommendType) {
+        case RecommendTypeTea:
+            url = [NSString stringWithFormat:@"tea/2018-04-28/full/"];
+            break;
+        case RecommendTypeAttention:
+            url = [NSString stringWithFormat:@"recommendation/?start=%ld",page];
+            break;
+        case RecommendTypeLike:
+            url = [NSString stringWithFormat:@"recommendation/?start=%ld",page];
+            break;
+        case RecommendTypeVideo:
+            url = [NSString stringWithFormat:@"tab/?start=%zd%%2C10&tab_id=7&tab_type=3",page];
+            break;
+        case RecommendTypeMusic:
+            url = [NSString stringWithFormat:@"tab/?start=%zd%%2C10&tab_id=8&tab_type=3",page];
+            break;
+        case RecommendTypePicture:
+            url = [NSString stringWithFormat:@"tab/?start=%zd%%2C10&tab_id=9&tab_type=3",page];
+            break;
+        default:
+            break;
+    }
     MNNetSet *set = [[MNNetSet alloc]init];
     set.readCache = loadCache;
     if(page == 1) {set.saveCache = YES;};

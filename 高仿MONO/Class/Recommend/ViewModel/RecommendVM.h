@@ -12,4 +12,6 @@
 @property (nonatomic,strong,readonly) RACCommand *recommendCommand;
 - (void)bindViewToViewModel:(UIView *)view;
 @property(nonatomic,strong) NSMutableArray<RecommendModel *> *dataArray;
+@property (nonatomic,assign) RecommendType recommendType;
+
 @end

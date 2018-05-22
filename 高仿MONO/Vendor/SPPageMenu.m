@@ -192,6 +192,7 @@
 @end
 
 @interface SPPageMenu()
+@property(nonatomic,strong) CABasicAnimation *anim;
 @property (nonatomic, assign) SPPageMenuTrackerStyle trackerStyle;
 @property (nonatomic, strong) NSArray *items;
 @property (nonatomic, strong) UIImageView *tracker;
@@ -523,7 +524,22 @@
     _selectedItemIndex = 0;
     _showFuntionButton = NO;
     _needTextColorGradients = YES;
-    
+    _anim = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    _anim.fromValue = [NSNumber numberWithFloat:0.f];
+    _anim.toValue = [NSNumber numberWithFloat: M_PI *2];
+    _anim.duration = 0.8;
+    _anim.autoreverses = NO;
+    _anim.fillMode = kCAFillModeForwards;
+    _anim.repeatCount = MAXFLOAT;
+    @weakify(self)
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"stopMusic" object:nil] subscribeNext:^(NSNotification *notification) {
+        @strongify(self)
+        [self.functionButton.layer removeAnimationForKey:@"rotaion"];
+    }];
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"playMusic" object:nil] subscribeNext:^(NSNotification *notification) {
+        @strongify(self)
+        [self.functionButton.layer addAnimation:self.anim forKey:@"rotaion"];
+    }];
     // 必须先添加分割线，再添加backgroundView;假如先添加backgroundView,那也就意味着backgroundView是SPPageMenu的第一个子控件,而scrollView又是backgroundView的第一个子控件,当外界在由导航控制器管理的控制器中将SPPageMenu添加为第一个子控件时，控制器会不断的往下遍历第一个子控件的第一个子控件，直到找到为scrollView为止,一旦发现某子控件的第一个子控件为scrollView,会将scrollView的内容往下偏移64;这时控制器中必须设置self.automaticallyAdjustsScrollViewInsets = NO;为了避免这样做，这里将分割线作为第一个子控件
     SPPageMenuLine *dividingLine = [[SPPageMenuLine alloc] init];
     dividingLine.backgroundColor = [UIColor grayColor];
@@ -1001,13 +1017,13 @@
     CGFloat dividingLineY = self.bounds.size.height-dividingLineH;
     self.dividingLine.frame = CGRectMake(dividingLineX, dividingLineY, dividingLineW, dividingLineH);
 
-    CGFloat functionButtonH = backgroundViewH-dividingLineH - 15;
+    CGFloat functionButtonH = backgroundViewH-dividingLineH - 5;
     CGFloat functionButtonW = functionButtonH;
     CGFloat functionButtonX = backgroundViewW-functionButtonW;
     CGFloat functionButtonY = 0;
     self.functionButton.frame = CGRectMake(functionButtonX, functionButtonY, functionButtonW, functionButtonH);
     self.functionButton.centerY = self.backgroundView.centerY;
-    self.functionButton.imageEdgeInsets = UIEdgeInsetsMake(0, 4, 0, 0);
+    self.functionButton.imageEdgeInsets = UIEdgeInsetsMake(0, 4, 0, 4);
     self.shadowLine.frame = CGRectMake(functionButtonX, functionButtonY+functionButtonH/5, functionButtonW, functionButtonH-functionButtonH/5*2);
     
     

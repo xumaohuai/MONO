@@ -7,11 +7,20 @@
 //
 
 #import "UIImageView+WebLoad.h"
-#import <UIImageView+WebCache.h>
+#import <YYWebImage.h>
 
 @implementation UIImageView (WebLoad)
 -(void)setAvatarWithUrlString:(NSString *)urlString
 {
-    [self sd_setImageWithURL:[NSURL URLWithString:urlString] placeholderImage:[UIImage imageNamed:@"avatorCover_icon_normal"]];
+    [self yy_setImageWithURL:[NSURL URLWithString:urlString] placeholder:[UIImage imageNamed:@""]];
 }
+
+-(void)setBrowseImageWithUrlString:(NSString *)urlString
+{
+    
+//    [self yy_setImageWithURL:[NSURL URLWithString:urlString] placeholder:nil];
+//    [self yy_setImageWithURL:[NSURL URLWithString:urlString] options:YYWebImageOptionProgressiveBlur｜YYWebImageOptionSetImageWithFadeAnimation];
+//    [(YYAnimatedImageView *)self sd_setImageWithURL:[NSURL URLWithString:urlString] placeholderImage:[UIImage imageNamed:@"content-mask"]];
+}
+
 @end
