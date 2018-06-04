@@ -50,6 +50,11 @@
 		4643205320C0EA35005E62F7 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4643205220C0EA35005E62F7 /* FileManager.m */; };
 		4643205620C0EFD6005E62F7 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4643205520C0EFD6005E62F7 /* BaseModel.m */; };
 		4643205920C4E22E005E62F7 /* MNPhotoContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4643205820C4E22E005E62F7 /* MNPhotoContainerView.m */; };
+		4643208220C50E0F005E62F7 /* ZZCACircleProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 4643207920C50E0E005E62F7 /* ZZCACircleProgress.m */; };
+		4643208320C50E0F005E62F7 /* NSTimer+timerBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 4643207A20C50E0E005E62F7 /* NSTimer+timerBlock.m */; };
+		4643208420C50E0F005E62F7 /* ZZCircleProgress.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4643207B20C50E0E005E62F7 /* ZZCircleProgress.bundle */; };
+		4643208520C50E0F005E62F7 /* ZZCountingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4643207D20C50E0E005E62F7 /* ZZCountingLabel.m */; };
+		4643208620C50E0F005E62F7 /* ZZCircleProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 4643208120C50E0E005E62F7 /* ZZCircleProgress.m */; };
 		465503A120A1976300E8C8B2 /* YBImageBrowserAnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 4655037D20A1976300E8C8B2 /* YBImageBrowserAnimatedTransitioning.m */; };
 		465503A220A1976300E8C8B2 /* YBImageBrowserFunctionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4655038020A1976300E8C8B2 /* YBImageBrowserFunctionModel.m */; };
 		465503A320A1976300E8C8B2 /* YBImageBrowserFunctionBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4655038120A1976300E8C8B2 /* YBImageBrowserFunctionBar.m */; };
@@ -67,11 +72,6 @@
 		465503AF20A1976300E8C8B2 /* YBImageBrowserProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4655039C20A1976300E8C8B2 /* YBImageBrowserProgressBar.m */; };
 		465503B020A1976400E8C8B2 /* YBImageBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 465503A020A1976300E8C8B2 /* YBImageBrowser.bundle */; };
 		4655041B20A4285000E8C8B2 /* PhotoProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4655041A20A4285000E8C8B2 /* PhotoProgressView.m */; };
-		4655043820A5874100E8C8B2 /* ZZCACircleProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 4655042F20A5874100E8C8B2 /* ZZCACircleProgress.m */; };
-		4655043920A5874100E8C8B2 /* NSTimer+timerBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 4655043020A5874100E8C8B2 /* NSTimer+timerBlock.m */; };
-		4655043A20A5874100E8C8B2 /* ZZCircleProgress.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4655043120A5874100E8C8B2 /* ZZCircleProgress.bundle */; };
-		4655043B20A5874100E8C8B2 /* ZZCountingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4655043320A5874100E8C8B2 /* ZZCountingLabel.m */; };
-		4655043C20A5874100E8C8B2 /* ZZCircleProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 4655043720A5874100E8C8B2 /* ZZCircleProgress.m */; };
 		4699B67220A93AF7008E1E87 /* RecommendMusicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4699B67120A93AF7008E1E87 /* RecommendMusicCell.m */; };
 		4699B67620A967AB008E1E87 /* MusicCDView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4699B67520A967AB008E1E87 /* MusicCDView.m */; };
 		4699B67A20A98882008E1E87 /* MNMusicPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4699B67920A98882008E1E87 /* MNMusicPlayer.m */; };
@@ -216,6 +216,15 @@
 		4643205520C0EFD6005E62F7 /* BaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		4643205720C4E22E005E62F7 /* MNPhotoContainerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNPhotoContainerView.h; sourceTree = "<group>"; };
 		4643205820C4E22E005E62F7 /* MNPhotoContainerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNPhotoContainerView.m; sourceTree = "<group>"; };
+		4643207920C50E0E005E62F7 /* ZZCACircleProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZCACircleProgress.m; sourceTree = "<group>"; };
+		4643207A20C50E0E005E62F7 /* NSTimer+timerBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+timerBlock.m"; sourceTree = "<group>"; };
+		4643207B20C50E0E005E62F7 /* ZZCircleProgress.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZZCircleProgress.bundle; sourceTree = "<group>"; };
+		4643207C20C50E0E005E62F7 /* ZZCircleProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZCircleProgress.h; sourceTree = "<group>"; };
+		4643207D20C50E0E005E62F7 /* ZZCountingLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZCountingLabel.m; sourceTree = "<group>"; };
+		4643207E20C50E0E005E62F7 /* NSTimer+timerBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+timerBlock.h"; sourceTree = "<group>"; };
+		4643207F20C50E0E005E62F7 /* ZZCACircleProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZCACircleProgress.h; sourceTree = "<group>"; };
+		4643208020C50E0E005E62F7 /* ZZCountingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZCountingLabel.h; sourceTree = "<group>"; };
+		4643208120C50E0E005E62F7 /* ZZCircleProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZCircleProgress.m; sourceTree = "<group>"; };
 		4655037C20A1976300E8C8B2 /* YBImageBrowserAnimatedTransitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBImageBrowserAnimatedTransitioning.h; sourceTree = "<group>"; };
 		4655037D20A1976300E8C8B2 /* YBImageBrowserAnimatedTransitioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBImageBrowserAnimatedTransitioning.m; sourceTree = "<group>"; };
 		4655037F20A1976300E8C8B2 /* YBImageBrowserFunctionBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBImageBrowserFunctionBar.h; sourceTree = "<group>"; };
@@ -250,15 +259,6 @@
 		465503A020A1976300E8C8B2 /* YBImageBrowser.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = YBImageBrowser.bundle; sourceTree = "<group>"; };
 		4655041920A4285000E8C8B2 /* PhotoProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoProgressView.h; sourceTree = "<group>"; };
 		4655041A20A4285000E8C8B2 /* PhotoProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoProgressView.m; sourceTree = "<group>"; };
-		4655042F20A5874100E8C8B2 /* ZZCACircleProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZCACircleProgress.m; sourceTree = "<group>"; };
-		4655043020A5874100E8C8B2 /* NSTimer+timerBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+timerBlock.m"; sourceTree = "<group>"; };
-		4655043120A5874100E8C8B2 /* ZZCircleProgress.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZZCircleProgress.bundle; sourceTree = "<group>"; };
-		4655043220A5874100E8C8B2 /* ZZCircleProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZCircleProgress.h; sourceTree = "<group>"; };
-		4655043320A5874100E8C8B2 /* ZZCountingLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZCountingLabel.m; sourceTree = "<group>"; };
-		4655043420A5874100E8C8B2 /* NSTimer+timerBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+timerBlock.h"; sourceTree = "<group>"; };
-		4655043520A5874100E8C8B2 /* ZZCACircleProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZCACircleProgress.h; sourceTree = "<group>"; };
-		4655043620A5874100E8C8B2 /* ZZCountingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZCountingLabel.h; sourceTree = "<group>"; };
-		4655043720A5874100E8C8B2 /* ZZCircleProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZCircleProgress.m; sourceTree = "<group>"; };
 		4699B67020A93AF7008E1E87 /* RecommendMusicCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecommendMusicCell.h; sourceTree = "<group>"; };
 		4699B67120A93AF7008E1E87 /* RecommendMusicCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecommendMusicCell.m; sourceTree = "<group>"; };
 		4699B67420A967AB008E1E87 /* MusicCDView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicCDView.h; sourceTree = "<group>"; };
@@ -646,6 +646,22 @@
 			path = Video;
 			sourceTree = "<group>";
 		};
+		4643207820C50E0E005E62F7 /* ZZCircleProgress */ = {
+			isa = PBXGroup;
+			children = (
+				4643207920C50E0E005E62F7 /* ZZCACircleProgress.m */,
+				4643207A20C50E0E005E62F7 /* NSTimer+timerBlock.m */,
+				4643207B20C50E0E005E62F7 /* ZZCircleProgress.bundle */,
+				4643207C20C50E0E005E62F7 /* ZZCircleProgress.h */,
+				4643207D20C50E0E005E62F7 /* ZZCountingLabel.m */,
+				4643207E20C50E0E005E62F7 /* NSTimer+timerBlock.h */,
+				4643207F20C50E0E005E62F7 /* ZZCACircleProgress.h */,
+				4643208020C50E0E005E62F7 /* ZZCountingLabel.h */,
+				4643208120C50E0E005E62F7 /* ZZCircleProgress.m */,
+			);
+			path = ZZCircleProgress;
+			sourceTree = "<group>";
+		};
 		4655037A20A1976300E8C8B2 /* YBImageBrowser */ = {
 			isa = PBXGroup;
 			children = (
@@ -731,23 +747,6 @@
 				4655039E20A1976300E8C8B2 /* YBImageBrowserProgressBar.h */,
 			);
 			path = AssistBar;
-			sourceTree = "<group>";
-		};
-		4655042E20A5874100E8C8B2 /* ZZCircleProgress */ = {
-			isa = PBXGroup;
-			children = (
-				4655042F20A5874100E8C8B2 /* ZZCACircleProgress.m */,
-				4655043020A5874100E8C8B2 /* NSTimer+timerBlock.m */,
-				4655043120A5874100E8C8B2 /* ZZCircleProgress.bundle */,
-				4655043220A5874100E8C8B2 /* ZZCircleProgress.h */,
-				4655043320A5874100E8C8B2 /* ZZCountingLabel.m */,
-				4655043420A5874100E8C8B2 /* NSTimer+timerBlock.h */,
-				4655043520A5874100E8C8B2 /* ZZCACircleProgress.h */,
-				4655043620A5874100E8C8B2 /* ZZCountingLabel.h */,
-				4655043720A5874100E8C8B2 /* ZZCircleProgress.m */,
-			);
-			name = ZZCircleProgress;
-			path = ../../../../../../../Downloads/ZZCircleProgress/ZZCircleProgressDemo/ZZCircleProgress;
 			sourceTree = "<group>";
 		};
 		4699B67320A96785008E1E87 /* MusicViews */ = {
@@ -939,7 +938,7 @@
 		46EFA9EB2096AB1100AC1D41 /* PhotoContanier */ = {
 			isa = PBXGroup;
 			children = (
-				4655042E20A5874100E8C8B2 /* ZZCircleProgress */,
+				4643207820C50E0E005E62F7 /* ZZCircleProgress */,
 				4643205720C4E22E005E62F7 /* MNPhotoContainerView.h */,
 				4643205820C4E22E005E62F7 /* MNPhotoContainerView.m */,
 				4655041920A4285000E8C8B2 /* PhotoProgressView.h */,
@@ -1088,12 +1087,12 @@
 				46B20B5A20BFEAF00030741C /* test1.js in Resources */,
 				46B20B5B20BFEAF00030741C /* test.css in Resources */,
 				4619BE25207C577A00065016 /* image.xcassets in Resources */,
-				4655043A20A5874100E8C8B2 /* ZZCircleProgress.bundle in Resources */,
 				46B20B5220BF910B0030741C /* ITCAvantGardeStd-XLtObl.otf in Resources */,
 				4619BDFF207C4D5200065016 /* LaunchScreen.storyboard in Resources */,
 				4619BDFA207C4D4F00065016 /* Main.storyboard in Resources */,
 				46EFA9D0209438C800AC1D41 /* RCConfig.plist in Resources */,
 				46EFA9D620943A2A00AC1D41 /* ITCAvantGardeStd-Bk.otf in Resources */,
+				4643208420C50E0F005E62F7 /* ZZCircleProgress.bundle in Resources */,
 				46184AA52092D08D00D076B3 /* ACActionSheet.bundle in Resources */,
 				465503B020A1976400E8C8B2 /* YBImageBrowser.bundle in Resources */,
 			);
@@ -1162,7 +1161,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				46184AA02090328400D076B3 /* MNShareMoreView.m in Sources */,
-				4655043B20A5874100E8C8B2 /* ZZCountingLabel.m in Sources */,
 				461D3FE120873F5900F3FBA1 /* UIView+Additions.m in Sources */,
 				46184930208B322B00D076B3 /* RecommendNetWork.m in Sources */,
 				46B20B4120BE84390030741C /* DiscoverModel.m in Sources */,
@@ -1185,12 +1183,12 @@
 				46B20B3920BE47DB0030741C /* JKRouterExtension.m in Sources */,
 				464173B420897AAD006595EE /* RecommendVM.m in Sources */,
 				46B20B4720BE8A240030741C /* DiscoverNetWork.m in Sources */,
-				4655043820A5874100E8C8B2 /* ZZCACircleProgress.m in Sources */,
 				46EFA9D92095A46600AC1D41 /* AdLaunchManager.m in Sources */,
 				465503A520A1976300E8C8B2 /* YBImageBrowser.m in Sources */,
 				46184A9D20902CE400D076B3 /* UIView+SDAutoLayout.m in Sources */,
 				465503A120A1976300E8C8B2 /* YBImageBrowserAnimatedTransitioning.m in Sources */,
 				46184948208E196900D076B3 /* RecommendCellTitleView.m in Sources */,
+				4643208320C50E0F005E62F7 /* NSTimer+timerBlock.m in Sources */,
 				46B20B5820BFA7270030741C /* MBSwitch.m in Sources */,
 				46EFA9E22095BCD600AC1D41 /* CommendMethod.m in Sources */,
 				46184945208E194000D076B3 /* RecommendReadCell.m in Sources */,
@@ -1206,13 +1204,14 @@
 				46184960208EFA4500D076B3 /* MBProgressHUD+Message.m in Sources */,
 				46184939208DBD8500D076B3 /* MNRefreshFooter.m in Sources */,
 				4699B67A20A98882008E1E87 /* MNMusicPlayer.m in Sources */,
-				4655043C20A5874100E8C8B2 /* ZZCircleProgress.m in Sources */,
+				4643208620C50E0F005E62F7 /* ZZCircleProgress.m in Sources */,
 				4618493F208DCD5600D076B3 /* NSArray+MHAdd.m in Sources */,
 				465503A420A1976300E8C8B2 /* YBImageBrowserToolBar.m in Sources */,
 				464173B720897D07006595EE /* RecommendModel.m in Sources */,
 				4643205320C0EA35005E62F7 /* FileManager.m in Sources */,
 				46B20B1D20BD35570030741C /* WebNavTitleView.m in Sources */,
 				4699B67620A967AB008E1E87 /* MusicCDView.m in Sources */,
+				4643208220C50E0F005E62F7 /* ZZCACircleProgress.m in Sources */,
 				46EFA9DC2095AA6000AC1D41 /* AdModel.m in Sources */,
 				4619BE74207CF8C100065016 /* CommunityVC.m in Sources */,
 				465503AE20A1976300E8C8B2 /* YBImageBrowserPromptBar.m in Sources */,
@@ -1222,11 +1221,11 @@
 				4699B68420B25F49008E1E87 /* RecommendVideoCell.m in Sources */,
 				46184A8D20900A4900D076B3 /* CommunicateBottomView.m in Sources */,
 				4699B68820B3E811008E1E87 /* RecommendPicturesCell.m in Sources */,
-				4655043920A5874100E8C8B2 /* NSTimer+timerBlock.m in Sources */,
 				465503AD20A1976300E8C8B2 /* YBImageBrowserDownloader.m in Sources */,
 				465503AA20A1976300E8C8B2 /* YBImageBrowserCopywriter.m in Sources */,
 				46184A8A208F28CC00D076B3 /* UIColor+Additions.m in Sources */,
 				46B20B3820BE47DB0030741C /* UIViewController+JKRouter.m in Sources */,
+				4643208520C50E0F005E62F7 /* ZZCountingLabel.m in Sources */,
 				4619BE77207CF8D800065016 /* MineVC.m in Sources */,
 				46184A84208F0E5D00D076B3 /* YYWeakProxy.m in Sources */,
 				46184954208EBCEF00D076B3 /* NSDictionary+Additions.m in Sources */,
@@ -1420,7 +1419,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6EUCP69KUN;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/xumaohuai/Documents/高仿MONO/高仿MONO/Macro/MNPrefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/高仿MONO/Macro/MNPrefix.pch";
 				INFOPLIST_FILE = "/Users/xumaohuai/Documents/高仿MONO/高仿MONO/Resource/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1442,7 +1441,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6EUCP69KUN;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/xumaohuai/Documents/高仿MONO/高仿MONO/Macro/MNPrefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/高仿MONO/Macro/MNPrefix.pch";
 				INFOPLIST_FILE = "/Users/xumaohuai/Documents/高仿MONO/高仿MONO/Resource/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
