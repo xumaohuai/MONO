@@ -9,7 +9,7 @@ pod 'YYModel'
 pod 'YYCache'
 pod 'YYCategory'
 pod 'YYWebImage'
-pod 'YYText'
+#pod 'YYText'
 pod 'FreeStreamer', '~> 3.8.3'#音乐播放
 pod 'ZFPlayer', '~> 2.1.6'
 #pod 'JKRouter'

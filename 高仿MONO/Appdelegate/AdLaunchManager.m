@@ -14,18 +14,18 @@
 @interface AdLaunchManager()<XHLaunchAdDelegate>
 @end
 @implementation AdLaunchManager
-//+(void)load{
-//    [self shareManager];
-//}
++(void)load{
+    [self shareManager];
+}
 
-//+(AdLaunchManager *)shareManager{
-//    static AdLaunchManager *instance = nil;
-//    static dispatch_once_t oneToken;
-//    dispatch_once(&oneToken,^{
-//        instance = [[AdLaunchManager alloc] init];
-//    });
-//    return instance;
-//}
++(AdLaunchManager *)shareManager{
+    static AdLaunchManager *instance = nil;
+    static dispatch_once_t oneToken;
+    dispatch_once(&oneToken,^{
+        instance = [[AdLaunchManager alloc] init];
+    });
+    return instance;
+}
 - (instancetype)init{
     self = [super init];
     if (self) {

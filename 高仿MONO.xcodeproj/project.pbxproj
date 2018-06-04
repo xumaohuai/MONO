@@ -99,7 +99,6 @@
 		46D543102083382B00C38643 /* MNNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D5430F2083382A00C38643 /* MNNetworkTool.m */; };
 		46E67BD1207E55E20089AD25 /* SPPageMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E67BCF207E55E20089AD25 /* SPPageMenu.m */; };
 		46EFA9D0209438C800AC1D41 /* RCConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46EFA9CF209438C800AC1D41 /* RCConfig.plist */; };
-		46EFA9D42094390600AC1D41 /* Info1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46EFA9D32094390600AC1D41 /* Info1.plist */; };
 		46EFA9D620943A2A00AC1D41 /* ITCAvantGardeStd-Bk.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46EFA9D520943A2A00AC1D41 /* ITCAvantGardeStd-Bk.otf */; };
 		46EFA9D92095A46600AC1D41 /* AdLaunchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EFA9D82095A46600AC1D41 /* AdLaunchManager.m */; };
 		46EFA9DC2095AA6000AC1D41 /* AdModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EFA9DB2095AA6000AC1D41 /* AdModel.m */; };
@@ -313,7 +312,6 @@
 		46E67BCF207E55E20089AD25 /* SPPageMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPageMenu.m; sourceTree = "<group>"; };
 		46E67BD0207E55E20089AD25 /* SPPageMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPageMenu.h; sourceTree = "<group>"; };
 		46EFA9CF209438C800AC1D41 /* RCConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RCConfig.plist; sourceTree = "<group>"; };
-		46EFA9D32094390600AC1D41 /* Info1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info1.plist; sourceTree = "<group>"; };
 		46EFA9D520943A2A00AC1D41 /* ITCAvantGardeStd-Bk.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ITCAvantGardeStd-Bk.otf"; sourceTree = "<group>"; };
 		46EFA9D72095A46600AC1D41 /* AdLaunchManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdLaunchManager.h; sourceTree = "<group>"; };
 		46EFA9D82095A46600AC1D41 /* AdLaunchManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdLaunchManager.m; sourceTree = "<group>"; };
@@ -488,7 +486,6 @@
 			children = (
 				46B20B5120BF910B0030741C /* ITCAvantGardeStd-XLtObl.otf */,
 				46EFA9D520943A2A00AC1D41 /* ITCAvantGardeStd-Bk.otf */,
-				46EFA9D32094390600AC1D41 /* Info1.plist */,
 				46EFA9CF209438C800AC1D41 /* RCConfig.plist */,
 				4619BE00207C4D5200065016 /* Info.plist */,
 				464173B8208987BC006595EE /* Video */,
@@ -1094,7 +1091,6 @@
 				4655043A20A5874100E8C8B2 /* ZZCircleProgress.bundle in Resources */,
 				46B20B5220BF910B0030741C /* ITCAvantGardeStd-XLtObl.otf in Resources */,
 				4619BDFF207C4D5200065016 /* LaunchScreen.storyboard in Resources */,
-				46EFA9D42094390600AC1D41 /* Info1.plist in Resources */,
 				4619BDFA207C4D4F00065016 /* Main.storyboard in Resources */,
 				46EFA9D0209438C800AC1D41 /* RCConfig.plist in Resources */,
 				46EFA9D620943A2A00AC1D41 /* ITCAvantGardeStd-Bk.otf in Resources */,
@@ -1426,12 +1422,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "/Users/xumaohuai/Documents/高仿MONO/高仿MONO/Macro/MNPrefix.pch";
 				INFOPLIST_FILE = "/Users/xumaohuai/Documents/高仿MONO/高仿MONO/Resource/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.MONO.star.--MONO";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MONO.star;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1448,12 +1444,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "/Users/xumaohuai/Documents/高仿MONO/高仿MONO/Macro/MNPrefix.pch";
 				INFOPLIST_FILE = "/Users/xumaohuai/Documents/高仿MONO/高仿MONO/Resource/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.MONO.star.--MONO";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MONO.star;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

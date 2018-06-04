@@ -185,6 +185,7 @@
 
 -(void)getVideoUrlWithId:(NSString *)Id Success:(void (^)(NSString *))success
 {
+    //视频链接
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://mmmono.com/g/meow/%@/get_video/",Id]];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     request.HTTPMethod = @"GET";

@@ -48,7 +48,6 @@ PODS:
     - YYImage/Core (= 1.0.4)
   - YYImage/Core (1.0.4)
   - YYModel (1.0.4)
-  - YYText (1.0.7)
   - YYWebImage (1.0.5):
     - YYCache
     - YYImage
@@ -73,7 +72,6 @@ DEPENDENCIES:
   - YYCache
   - YYCategory
   - YYModel
-  - YYText
   - YYWebImage
   - ZFPlayer (~> 2.1.6)
 
@@ -99,7 +97,6 @@ SPEC REPOS:
     - YYCategory
     - YYImage
     - YYModel
-    - YYText
     - YYWebImage
     - ZFPlayer
 
@@ -124,10 +121,9 @@ SPEC CHECKSUMS:
   YYCategory: d85135b05d2806c90930a5bbadfc1501396a3db9
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
-  YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
   ZFPlayer: 833cb3974b619bfd01a0ec1ebaabfe6f629e85b4
 
-PODFILE CHECKSUM: 0a8f33ad00e0f9e6b87376aa9da891c563c8be1d
+PODFILE CHECKSUM: 07220fc439e5f54335ef0de2dce162c0c82fda63
 
 COCOAPODS: 1.5.0
