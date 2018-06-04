@@ -259,7 +259,7 @@
     } else {
         [self addDoNotBackupAttribute:path];
     }
-    XHLaunchAdLog(@"XHLaunchAdCachePath = %@",path);
+//    XHLaunchAdLog(@"XHLaunchAdCachePath = %@",path);
 }
 
 + (void)addDoNotBackupAttribute:(NSString *)path {

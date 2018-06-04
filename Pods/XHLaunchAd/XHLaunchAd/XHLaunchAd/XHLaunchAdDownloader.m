@@ -206,7 +206,7 @@ didFinishDownloadingToURL:(NSURL *)location {
         _downloadVideoQueue = [NSOperationQueue new];
         _downloadVideoQueue.maxConcurrentOperationCount = 3;
         _downloadVideoQueue.name = @"com.it7090.XHLaunchAdDownloadVideoQueue";
-        XHLaunchAdLog(@"XHLaunchAdCachePath:%@",[XHLaunchAdCache xhLaunchAdCachePath]);
+//        XHLaunchAdLog(@"XHLaunchAdCachePath:%@",[XHLaunchAdCache xhLaunchAdCachePath]);
     }
     return self;
 }
