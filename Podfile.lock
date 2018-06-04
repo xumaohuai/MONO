@@ -14,7 +14,6 @@ PODS:
   - AFNetworking/Serialization (3.2.0)
   - AFNetworking/UIKit (3.2.0):
     - AFNetworking/NSURLSession
-  - CYLTabBarController (1.17.6)
   - DZNEmptyDataSet (1.8.1)
   - FDFullscreenPopGesture (1.1)
   - FLAnimatedImage (1.0.12)
@@ -56,7 +55,6 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 3.2.0)
-  - CYLTabBarController (~> 1.17.6)
   - DZNEmptyDataSet (~> 1.8.1)
   - FDFullscreenPopGesture (~> 1.1)
   - FreeStreamer (~> 3.8.3)
@@ -78,7 +76,6 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
-    - CYLTabBarController
     - DZNEmptyDataSet
     - FDFullscreenPopGesture
     - FLAnimatedImage
@@ -102,7 +99,6 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
-  CYLTabBarController: c374643dea6dadece8bdff9c70f7387f8ffd7d08
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
@@ -124,6 +120,6 @@ SPEC CHECKSUMS:
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
   ZFPlayer: 833cb3974b619bfd01a0ec1ebaabfe6f629e85b4
 
-PODFILE CHECKSUM: 07220fc439e5f54335ef0de2dce162c0c82fda63
+PODFILE CHECKSUM: bd1ad267ffaa1b801cf052c55288b5d240656d35
 
 COCOAPODS: 1.5.0

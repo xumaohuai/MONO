@@ -205,10 +205,6 @@ typedef NS_OPTIONS(NSUInteger, YYImageCacheType) {
               withType:(YYImageCacheType)type
              withBlock:(void(^)(UIImage * _Nullable image, YYImageCacheType type))block;
 
-- (void)getImageAndDataForKey:(NSString *)key
-              withType:(YYImageCacheType)type
-             withBlock:(void(^)(UIImage * _Nullable image,NSData *imageData, YYImageCacheType type))block;
-
 /**
  Returns the image data associated with a given key.
  This method may blocks the calling thread until file read finished.
@@ -226,9 +222,6 @@ typedef NS_OPTIONS(NSUInteger, YYImageCacheType) {
  */
 - (void)getImageDataForKey:(NSString *)key
                  withBlock:(void(^)(NSData * _Nullable imageData))block;
-
-
-
 
 @end
 

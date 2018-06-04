@@ -209,7 +209,7 @@
     if(view.frame.size.height > view.frame.size.width) {
         min = view.frame.size.width;
     }
-    view.layer.cornerRadius = min/4.0;
+    view.layer.cornerRadius = min/2.0;
     view.layer.masksToBounds = YES;
 }
 

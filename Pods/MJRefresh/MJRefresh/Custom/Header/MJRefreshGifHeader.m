@@ -76,7 +76,6 @@
 
 - (void)setPullingPercent:(CGFloat)pullingPercent
 {
-    self.alpha = pullingPercent;
     [super setPullingPercent:pullingPercent];
     NSArray *images = self.stateImages[@(MJRefreshStateIdle)];
     if (self.state != MJRefreshStateIdle || images.count == 0) return;
@@ -109,13 +108,11 @@
         self.gifView.mj_w = self.mj_w * 0.5 - textWidth * 0.5 - self.labelLeftInset;
     }
 }
--(void)scrollViewContentOffsetDidChange:(NSDictionary *)change
-{
-    [super scrollViewContentOffsetDidChange:change];
-}
+
 - (void)setState:(MJRefreshState)state
 {
     MJRefreshCheckState
+    
     // 根据状态做事情
     if (state == MJRefreshStatePulling || state == MJRefreshStateRefreshing) {
         NSArray *images = self.stateImages[@(state)];
@@ -129,9 +126,7 @@
             self.gifView.animationDuration = [self.stateDurations[@(state)] doubleValue];
             [self.gifView startAnimating];
         }
-        self.mj_y = 0;
     } else if (state == MJRefreshStateIdle) {
-        self.mj_y = 0;
         [self.gifView stopAnimating];
     }
 }
