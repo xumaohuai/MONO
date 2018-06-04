@@ -18,6 +18,7 @@
     UIButton *_praiseBtn;//点赞按钮
     UIButton *_communicateBtn;//交流按钮
     UIButton *_moreBtn;//更多
+    UIButton *_backBtn;//返回按钮
     UIImageView *_likeImageView;//收藏动画图片
     UIImageView *_dislikeImageView;//取消收藏动画图片
     NSMutableArray *_likeAnmations;//收藏动画
@@ -29,6 +30,7 @@
     UIImage *_collectImage;
     UIImage *_priaiseImage;
     UIImage *_communicateImage;
+    UIImage *_backImage;
     UIImage *_moreImage;
     UIImage *_priaiseSelectedImage;
 }
@@ -56,6 +58,12 @@ const NSInteger kButtonHeight = 50;
         case CommunicateBottomTypeCellWhite:
             [self setViewByCommunicateBottomTypeCellWhite];
             break;
+        case CommunicateBottomTypeDetailGray:
+            [self setViewByCommunicateBottomTypeDetailGray];
+            break;
+        case CommunicateBottomTypeDetailWhite:
+            [self setViewByCommunicateBottomTypeDetailWhite];
+            break;
         default:
             break;
     }
@@ -65,20 +73,24 @@ const NSInteger kButtonHeight = 50;
 {
     switch (commicateBottomType) {
         case CommunicateBottomTypeCellGray:
+        case CommunicateBottomTypeDetailGray:
             _shareImage = [UIImage imageNamed:@"item-btn-share-black"];
             _collectImage = [UIImage imageNamed:@"item-btn-like-black"];
             _priaiseImage = [UIImage imageNamed:@"item-btn-thumb-black"];
             _communicateImage = [UIImage imageNamed:@"item-btn-comment-black"];
             _moreImage = [UIImage imageNamed:@"icon-more-grey"];
             _priaiseSelectedImage = [UIImage imageNamed:@"item-btn-thumb-black-on"];
+            _backImage = [UIImage imageNamed:@"btn-topback-active"];
             break;
         case CommunicateBottomTypeCellWhite:
+        case CommunicateBottomTypeDetailWhite:
             _shareImage = [UIImage imageNamed:@"item-btn-share-white"];
             _collectImage = [UIImage imageNamed:@"item-btn-like-white"];
             _priaiseImage = [UIImage imageNamed:@"item-btn-thumb-white"];
             _communicateImage = [UIImage imageNamed:@"item-btn-comment-white"];
             _moreImage = [UIImage imageNamed:@"icon-more-white"];
             _priaiseSelectedImage = [UIImage imageNamed:@"item-btn-thumb-white-on"];
+            _backImage = [UIImage imageNamed:@"btn-top-backwhite"];
             break;
         default:
             break;
@@ -95,6 +107,9 @@ const NSInteger kButtonHeight = 50;
     [_shareBtn setImage:_shareImage forState:UIControlStateNormal];
     _collectBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [_collectBtn setImage:_collectImage forState:UIControlStateNormal];
+    
+    _backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [_backBtn setImage:_backImage forState:UIControlStateNormal];
     
     _likeAnmations = @[].mutableCopy;
     _dislikeAnmations = @[].mutableCopy;
@@ -132,10 +147,10 @@ const NSInteger kButtonHeight = 50;
     _moreBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [_moreBtn setImage:_moreImage forState:UIControlStateNormal];
     
-    NSArray *views = @[_lineView,_shareBtn,_collectBtn,_praiseBtn,_communicateBtn,_moreBtn,_bottomView,_dislikeImageView,_likeImageView];
+    NSArray *views = @[_lineView,_shareBtn,_collectBtn,_praiseBtn,_communicateBtn,_moreBtn,_bottomView,_dislikeImageView,_likeImageView,_backBtn];
     [self sd_addSubviews:views];
 }
-
+//cell灰色
 -(void)setViewByCommunicateBottomTypeCellGray
 {
     _lineView.hidden = NO;
@@ -153,14 +168,44 @@ const NSInteger kButtonHeight = 50;
     _bottomView.sd_layout.leftEqualToView(self).rightEqualToView(self).topSpaceToView(_shareBtn, 0).heightIs(10);
     _likeImageView.sd_layout.bottomEqualToView(_shareBtn).leftEqualToView(_collectBtn).widthIs(45).heightIs(90);
     //55 54
-  _dislikeImageView.sd_layout.bottomEqualToView(_shareBtn).leftEqualToView(_collectBtn).widthIs(55).heightIs(54);
+   _dislikeImageView.sd_layout.bottomEqualToView(_shareBtn).leftEqualToView(_collectBtn).widthIs(55).heightIs(54);
 }
-
+//cell白色
 -(void)setViewByCommunicateBottomTypeCellWhite
 {
     [self setViewByCommunicateBottomTypeCellGray];
     _lineView.hidden = YES;
     self.backgroundColor = [UIColor clearColor];
+    [_praiseBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [_communicateBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+}
+//详情灰色
+-(void)setViewByCommunicateBottomTypeDetailGray
+{
+    _lineView.hidden = NO;
+    self.backgroundColor = [UIColor whiteColor];
+    [_praiseBtn setTitleColor:[UIColor colorWithRed:0.7 green:0.7 blue:0.7 alpha:1] forState:UIControlStateNormal];
+    [_communicateBtn setTitleColor:[UIColor colorWithRed:0.7 green:0.7 blue:0.7 alpha:1] forState:UIControlStateNormal];
+    
+    _lineView.sd_layout.topEqualToView(self).leftSpaceToView(self, 0).rightSpaceToView(self, 0).heightIs(0.5);
+    _backBtn.sd_layout.leftSpaceToView(self, 0).topEqualToView(_lineView).widthIs(kButtonHeight).heightIs(kButtonHeight);
+    _moreBtn.sd_layout.rightEqualToView(self).topSpaceToView(_lineView, 0).widthIs(4 * KMarginRight).heightIs(kButtonHeight);
+    _communicateBtn.sd_layout.rightSpaceToView(_moreBtn, 0).topSpaceToView(_lineView, 0).widthIs(kButtonWidth).heightIs(kButtonHeight);
+    [_communicateBtn setupAutoSizeWitImagehHorizontalPadding:4 buttonHeight:kButtonHeight];
+    _praiseBtn.sd_layout.rightSpaceToView(_communicateBtn, 0).topSpaceToView(_lineView, 0).widthIs(kButtonWidth).heightIs(kButtonHeight);
+    [_praiseBtn setupAutoSizeWitImagehHorizontalPadding:4 buttonHeight:kButtonHeight];
+    _collectBtn.sd_layout.rightSpaceToView(_praiseBtn, 0).topSpaceToView(_lineView, 0).widthIs(kButtonWidth).heightIs(kButtonHeight);
+    _shareBtn.sd_layout.rightSpaceToView(_collectBtn,0).topSpaceToView(_lineView, 0).widthIs(kButtonWidth).heightIs(kButtonHeight);
+    
+    _likeImageView.sd_layout.bottomEqualToView(_shareBtn).leftEqualToView(_collectBtn).widthIs(45).heightIs(90);
+    //55 54
+    _dislikeImageView.sd_layout.bottomEqualToView(_shareBtn).leftEqualToView(_collectBtn).widthIs(55).heightIs(54);
+}
+-(void)setViewByCommunicateBottomTypeDetailWhite
+{
+    [self setViewByCommunicateBottomTypeDetailGray];
+    _lineView.hidden = YES;
+    self.backgroundColor = [UIColor blackColor];
     [_praiseBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [_communicateBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 }
@@ -171,6 +216,9 @@ const NSInteger kButtonHeight = 50;
         MNShareMoreView *moreView = [[MNShareMoreView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
         moreView.delegate = self;
         [moreView appear];
+    }];
+    [[_backBtn rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
+        [JKRouter pop:YES];
     }];
     @weakify(self)
     [[_collectBtn rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {

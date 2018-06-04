@@ -17,7 +17,7 @@ NSString * const YBImageBrowserFunctionModel_ID_savePictureToAlbum = @"YBImageBr
     YBImageBrowserFunctionModel *model = [YBImageBrowserFunctionModel new];
     model.name = @"保存图片";
     model.ID = YBImageBrowserFunctionModel_ID_savePictureToAlbum;
-    model.image = [UIImage imageWithContentsOfFile:[[NSBundle yBImageBrowserBundle] pathForResource:@"ybImageBrowser_save" ofType:@"png"]];
+    model.image = [UIImage imageNamed:@"browser-more-white"];
     return model;
 }
 

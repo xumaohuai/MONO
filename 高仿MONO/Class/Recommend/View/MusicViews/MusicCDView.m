@@ -9,6 +9,7 @@
 #import "MusicCDView.h"
 #import <YYWebImage.h>
 #import "RecommendModel.h"
+#import "FileManager.h"
 @interface MusicCDView()
 {
     UIView *_blackHoleView;
@@ -83,23 +84,26 @@
 
 -(void)playMusic
 {
-    if (self.alpha == 1) {
-        return;
+//    [[FileManager manager].musicListArr insertObject:_model atIndex:0];
+//    [[FileManager manager]cacheSelf];
+    for (RecommendModel *model in [FileManager manager].musicListArr) {
+        NSLog(@"%@",model.music_url);
     }
-    [UIView animateWithDuration:0.5 animations:^{
-        self.alpha = 1;
-    }];
+    if (self.alpha != 1) {
+        [UIView animateWithDuration:0.5 animations:^{
+            self.alpha = 1;
+        }];
+    }
     [self.layer addAnimation:_anim forKey:@"rotaion"];
 }
 
 -(void)stopMusic
 {
-    if (self.alpha == 0) {
-        return;
+    if (self.alpha != 0) {
+        [UIView animateWithDuration:0.5 animations:^{
+            self.alpha = 0;
+        }];
     }
-    [UIView animateWithDuration:0.5 animations:^{
-        self.alpha = 0;
-    }];
     [self.layer removeAnimationForKey:@"rotaion"];
 }
 @end

@@ -11,4 +11,5 @@
 @interface CommendMethod : NSObject
 +(NSAttributedString *)getAttributedStringWithString:(NSString *)string lineSpace:(CGFloat)lineSpace;
 +(NSString *)getMMSSFromSS:(unsigned)totalTime;
++(NSString *)getTime:(unsigned)totalTime;
 @end

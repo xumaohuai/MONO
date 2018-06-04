@@ -30,4 +30,12 @@
  隐藏加载动画与失败页面
  */
 - (void)endPageLoadingProgress;
+/**
+ *  添加导航栏左侧按钮
+ *
+ *  @param image  按钮图片
+ *  @param target self
+ *  @param action 按钮执行方法
+ */
+-(void)addNavigationBarLeftButtonItemWithInfo:(UIImage*)image target:(id)target action:(SEL)action;
 @end

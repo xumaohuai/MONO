@@ -44,9 +44,13 @@ typedef NS_ENUM(NSInteger, SPItemImagePosition) {
 - (void)pageMenu:(SPPageMenu *)pageMenu itemSelectedFromIndex:(NSInteger)fromIndex toIndex:(NSInteger)toIndex;
 
 @end
+@interface SPItem : UIButton
 
+@property (nonatomic, assign) CGFloat imageRatio;
+@property (nonatomic, assign) SPItemImagePosition imagePosition;
+@end
 @interface SPPageMenu : UIView
-
+@property (nonatomic, weak) SPItem *functionButton;
 // 创建pagMenu
 + (instancetype)pageMenuWithFrame:(CGRect)frame trackerStyle:(SPPageMenuTrackerStyle)trackerStyle;
 - (instancetype)initWithFrame:(CGRect)frame trackerStyle:(SPPageMenuTrackerStyle)trackerStyle;

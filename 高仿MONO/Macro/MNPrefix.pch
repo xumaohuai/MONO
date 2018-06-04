@@ -20,6 +20,7 @@
 #import "CommendMethod.h"
 #import "MNMusicPlayer.h"
 #import "MonoEnum.h"
+#import "JKRouter.h"
 #endif 
 
 #ifndef dispatch_main_async_safe

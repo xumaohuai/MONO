@@ -1,41 +1,19 @@
 //
-//  SDWeiXinPhotoContainerView.m
-//  SDAutoLayout 测试 Demo
+//  MNPhotoContainerView.m
+//  高仿MONO
 //
-//  Created by gsd on 15/12/23.
-//  Copyright © 2015年 gsd. All rights reserved.
+//  Created by 徐茂怀 on 2018/6/4.
+//  Copyright © 2018年 徐茂怀. All rights reserved.
 //
 
-
-/*
- 
- *********************************************************************************
- *
- * GSD_WeiXin
- *
- * QQ交流群: 362419100(2群) 459274049（1群已满）
- * Email : gsdios@126.com
- * GitHub: https://github.com/gsdios/GSD_WeiXin
- * 新浪微博:GSD_iOS
- *
- * 此“高仿微信”用到了很高效方便的自动布局库SDAutoLayout（一行代码搞定自动布局）
- * SDAutoLayout地址：https://github.com/gsdios/SDAutoLayout
- * SDAutoLayout视频教程：http://www.letv.com/ptv/vplay/24038772.html
- * SDAutoLayout用法示例：https://github.com/gsdios/SDAutoLayout/blob/master/README.md
- *
- *********************************************************************************
- 
- */
-
-#import "SDWeiXinPhotoContainerView.h"
+#import "MNPhotoContainerView.h"
 #import "RecommendModel.h"
 #import "UIView+SDAutoLayout.h"
 #import <YYWebImage.h>
 #import "YBImageBrowser.h"
 #import "PhotoProgressView.h"
-//#import "LKImageKit.h"
 
-@interface SDWeiXinPhotoContainerView () <YBImageBrowserDataSource>
+@interface MNPhotoContainerView()<YBImageBrowserDataSource>
 {
     NSInteger _currentIndex;
 }
@@ -44,7 +22,7 @@
 
 @end
 
-@implementation SDWeiXinPhotoContainerView
+@implementation MNPhotoContainerView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -79,7 +57,7 @@
     
     for (long i = _picPathStringsArray.count; i < self.imageViewsArray.count; i++) {
         PhotoProgressView *imageView = [self.imageViewsArray objectAtIndex:i];
-//        imageView.imageView.image = nil;
+        //        imageView.imageView.image = nil;
         imageView.hidden = YES;
     }
     
@@ -121,7 +99,7 @@
         }
         photoView.imageUrl = thumb.raw;
     }
-
+    
     CGFloat w = perRowItemCount * itemW + (perRowItemCount - 1) * margin;
     int columnCount = ceilf(_picPathStringsArray.count * 1.0 / perRowItemCount);
     CGFloat h = columnCount * itemH + (columnCount - 1) * margin;
@@ -135,7 +113,7 @@
 - (UIImage *)imageDataFromDiskCacheWithKey:(NSString *)key {
     
     YYImage *img = [YYImage imageWithData:[[YYImageCache sharedCache]getImageDataForKey:key]];
-   return img;
+    return img;
 }
 
 - (CGFloat)itemWidthForPicPathArray:(NSArray *)array

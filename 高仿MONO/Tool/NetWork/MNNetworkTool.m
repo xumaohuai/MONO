@@ -68,12 +68,11 @@
         if ([cache containsObjectForKey:@"token"]) {
              [self.requestSerializer setValue:(NSString *)[cache objectForKey:@"token"] forHTTPHeaderField:@"HTTP-AUTHORIZATION"];
         }
-//        self.requestSerializer = [AFHTTPRequestSerializer serializer];
-//
-//        self.responseSerializer = [AFHTTPResponseSerializer serializer];
+        [self.requestSerializer setValue:@"api-client/1.0 com.mmmono.mono/3.6.8 iOS/11.3 iPhone8,1" forHTTPHeaderField:@"MONO-USER-AGENT"];
+        self.responseSerializer = [AFHTTPResponseSerializer serializer];
+        self.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", @"text/xml", @"text/plain", nil];
         self.requestSerializer.timeoutInterval = 10.f;//设置请求超时的时间
-//        self.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", @"text/xml", @"text/plain", nil];
-   
+
     }
     return self;
 }
@@ -102,11 +101,19 @@
         }
         if (mnnetSet.requestMothed == MNRequestMothedGET) {
             [[MNNetworkTool shareService] GET:urlString parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                if (mnnetSet.saveCache && ![responseObject safeBoolForKey:@"is_last_page"]) {
-                    [cache setObject:responseObject forKey:url];
+                NSString *jsonString = [[ NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+                if ([jsonString hasPrefix:@"{"]) {
+                    NSError *err;
+                    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject
+                                                                        options:NSJSONReadingMutableContainers
+                                                                          error:&err];
+                    if (mnnetSet.saveCache && ![dic safeBoolForKey:@"is_last_page"]) {
+                        [cache setObject:dic forKey:url];
+                    }
+                    success(dic);
+                }else{
+                    success(jsonString);
                 }
-                NSLog(@"%@",responseObject);
-                success(responseObject);
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 failed();
                 if (![cache containsObjectForKey:@"token"]) {

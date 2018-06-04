@@ -8,6 +8,17 @@
 
 #import "MNBaseModel.h"
 
+@implementation Sort
+@end
+
+@implementation User
+@end
+
+@implementation Thumb
+@end
+@implementation Group
+@end
+
 @implementation MNBaseModel
 + (NSDictionary *)modelCustomPropertyMapper{
     return @{@"Id" : @"id",@"descrip":@"description"};

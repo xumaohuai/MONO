@@ -14,18 +14,11 @@
 #import "RecommendVideoCell.h"
 #import "RecommendPicturesCell.h"
 #import "RecommendTeaCell.h"
-@implementation Sort
-@end
 
-@implementation User
-@end
-
-@implementation Thumb
-@end
 
 @implementation RecommendModel
 +(NSDictionary *)modelContainerPropertyGenericClass {
-    return @{@"user":[User class],@"category":[Sort class],@"thumb":[Thumb class],@"pics":[Thumb class],@"album_cover":[Thumb class],@"logo_url_thumb":[Thumb class],@"images":[Thumb class]};
+    return @{@"user":[User class],@"category":[Sort class],@"thumb":[Thumb class],@"pics":[Thumb class],@"album_cover":[Thumb class],@"logo_url_thumb":[Thumb class],@"images":[Thumb class],@"group":[Group class]};
 }
 -(NSString *)cellIdentifier
 {

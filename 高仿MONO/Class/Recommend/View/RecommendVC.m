@@ -11,6 +11,7 @@
 #import "NSArray+MHAdd.h"
 #import "RecommendTypeVC.h"
 #import "YYFPSLabel.h"
+#import "PlayMusicController.h"
 @interface RecommendVC ()<SPPageMenuDelegate,UIScrollViewDelegate>{
     UIButton *rightBarButton;
 }
@@ -30,9 +31,8 @@
      self.pageMenu.bridgeScrollView = self.scrollView;
     // pageMenu.selectedItemIndex就是选中的item下标 选中下标
     [self setupView:self.pageMenu.selectedItemIndex];
-    
-    _fpsLabel = [[YYFPSLabel alloc]initWithFrame:CGRectMake(15, self.view.height - 200, 60, 40)];
-    [self.view addSubview:_fpsLabel];
+//    _fpsLabel = [[YYFPSLabel alloc]initWithFrame:CGRectMake(15, self.view.height - 200, 60, 40)];
+//    [self.view addSubview:_fpsLabel];
 }
 
 #pragma mark - 懒加载
@@ -42,7 +42,6 @@
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - NaviH  - KTabBarHeight)];
     scrollView.delegate = self;
     scrollView.pagingEnabled = YES;
-    //scrollView.contentInset = UIEdgeInsetsMake(CGRectGetMaxY(_pageMenu.frame), 0, 0, 0);
     scrollView.showsHorizontalScrollIndicator = NO;
         scrollView.showsVerticalScrollIndicator = NO;
     scrollView.scrollsToTop = NO;
@@ -53,6 +52,12 @@
     _scrollView = scrollView;
     }
     return _scrollView;
+}
+
+-(void)pageMenu:(SPPageMenu *)pageMenu functionButtonClicked:(UIButton *)functionButton
+{
+    PlayMusicController *vc = [[PlayMusicController alloc]init];
+    
 }
 
 -(SPPageMenu *)pageMenu

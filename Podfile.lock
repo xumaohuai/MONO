@@ -20,6 +20,7 @@ PODS:
   - FLAnimatedImage (1.0.12)
   - FreeStreamer (3.8.3):
     - Reachability (~> 3.0)
+  - JKDataHelper (0.1.6)
   - LTNavigationBar (2.1.9)
   - Masonry (1.1.0)
   - MJRefresh (3.1.15.3)
@@ -34,6 +35,8 @@ PODS:
   - RTRootNavigationController (0.6.6):
     - RTRootNavigationController/Core (= 0.6.6)
   - RTRootNavigationController/Core (0.6.6)
+  - SDCycleScrollView (1.75):
+    - SDWebImage (>= 4.0.0)
   - SDWebImage (4.3.3):
     - SDWebImage/Core (= 4.3.3)
   - SDWebImage/Core (4.3.3)
@@ -58,11 +61,13 @@ DEPENDENCIES:
   - DZNEmptyDataSet (~> 1.8.1)
   - FDFullscreenPopGesture (~> 1.1)
   - FreeStreamer (~> 3.8.3)
+  - JKDataHelper
   - LTNavigationBar (~> 2.1.9)
   - MJRefresh (~> 3.1.15.3)
   - Reachability (~> 3.2)
   - ReactiveCocoa (~> 2.5)
   - RTRootNavigationController (~> 0.6.6)
+  - SDCycleScrollView (~> 1.75)
   - SDWebImage (~> 4.3.3)
   - XHLaunchAd (~> 3.9.7)
   - YYCache
@@ -80,12 +85,14 @@ SPEC REPOS:
     - FDFullscreenPopGesture
     - FLAnimatedImage
     - FreeStreamer
+    - JKDataHelper
     - LTNavigationBar
     - Masonry
     - MJRefresh
     - Reachability
     - ReactiveCocoa
     - RTRootNavigationController
+    - SDCycleScrollView
     - SDWebImage
     - XHLaunchAd
     - YYCache
@@ -103,12 +110,14 @@ SPEC CHECKSUMS:
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   FreeStreamer: b205b0bf6a2e7855f935369145498f930eb27cac
+  JKDataHelper: 755d72b6ecbf22191b9b32322f075f4a22bf1bec
   LTNavigationBar: c278785bed344862e18146b5f06792932e4feacc
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   RTRootNavigationController: 1429554f853e8319a383849befed73d5dc58a108
+  SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
   XHLaunchAd: 0dc50c5af00ee5d9e734b9dce6eece7acaa71122
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
@@ -119,6 +128,6 @@ SPEC CHECKSUMS:
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
   ZFPlayer: 833cb3974b619bfd01a0ec1ebaabfe6f629e85b4
 
-PODFILE CHECKSUM: ecd241919c989f891f0084ebbfada4f7080c33db
+PODFILE CHECKSUM: 0a8f33ad00e0f9e6b87376aa9da891c563c8be1d
 
 COCOAPODS: 1.5.0

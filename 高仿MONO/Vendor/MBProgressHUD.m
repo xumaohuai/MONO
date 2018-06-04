@@ -101,7 +101,7 @@ static const CGFloat MBDefaultDetailsLabelFontSize = 12.f;
 
     // Default color, depending on the current iOS version
     BOOL isLegacy = kCFCoreFoundationVersionNumber < kCFCoreFoundationVersionNumber_iOS_7_0;
-    _contentColor = isLegacy ? [UIColor whiteColor] : [UIColor colorWithWhite:0.f alpha:0.7f];
+    _contentColor = isLegacy ? [UIColor whiteColor] : [UIColor colorWithWhite:1.f alpha:0.7f];
     // Transparent background
     self.opaque = NO;
     self.backgroundColor = [UIColor clearColor];

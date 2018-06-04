@@ -15,7 +15,7 @@
 #import "YBImageBrowserViewLayout.h"
 #import "YBImageBrowserDownloader.h"
 #import "NSBundle+YBImageBrowser.h"
-
+#import "ACActionSheet.h"
 static CGFloat _maxDisplaySize = 3500;
 static BOOL _showStatusBar = NO;    //改控制器是否需要隐藏状态栏
 static BOOL _isControllerPreferredForStatusBar = YES; //状态栏是否是控制器优先
@@ -334,16 +334,12 @@ static BOOL _statusBarIsHideBefore = NO;    //状态栏在模态切换之前是�
 #pragma mark YBImageBrowserToolBarDelegate
 
 - (void)yBImageBrowserToolBar:(YBImageBrowserToolBar *)imageBrowserToolBar didClickRightButton:(UIButton *)button {
-    if (!self.fuctionDataArray.count) return;
-    if (self.fuctionDataArray.count == 1 && [self.fuctionDataArray[0].ID isEqualToString:YBImageBrowserFunctionModel_ID_savePictureToAlbum]) {
-        //直接保存图片
-        [self savePhotoToAlbumWithCurrentIndex];
-    } else {
-        //弹出功能栏
-        if (_functionBar) {
-            [_functionBar show];
+    ACActionSheet *actionSheet = [[ACActionSheet alloc]initWithTitle:@"" cancelButtonTitle:@"取消" destructiveButtonTitle:@"" otherButtonTitles:@[@"保存图片"] actionSheetBlock:^(NSInteger buttonIndex) {
+        if (buttonIndex == 0) {
+            [self savePhotoToAlbumWithCurrentIndex];
         }
-    }
+    }];
+    [actionSheet show];
 }
 
 #pragma mark YBImageBrowserFunctionBarDelegate

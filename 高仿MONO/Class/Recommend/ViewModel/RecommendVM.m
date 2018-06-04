@@ -16,6 +16,7 @@
 #import "RecommendVideoCell.h"
 #import "RecommendPicturesCell.h"
 #import "RecommendTeaCell.h"
+
 @interface RecommendVM()<UITableViewDelegate,UITableViewDataSource>
 {
     CGFloat _bgCellY;//将要加载时的RecommendImageBgCell的Y值
@@ -127,6 +128,14 @@
         [_bgCell shineText];
         _bgCellY = -10;
     }
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    RecommendModel *model = self.dataArray[indexPath.row];
+    NSDictionary *params = @{@"recommendModel":model};
+    RouterOptions *options = [RouterOptions optionsWithDefaultParams:params];
+     [JKRouter open:@"MNWebViewController" options:options];
 }
 
 @end

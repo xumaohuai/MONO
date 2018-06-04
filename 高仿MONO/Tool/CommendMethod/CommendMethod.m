@@ -35,4 +35,13 @@
     
     return format_time;
 }
+
++(NSString *)getTime:(unsigned)totalTime
+{
+//    NSTimeInterval _interval = [timeStamp doubleValue];
+    NSDate  *date = [NSDate dateWithTimeIntervalSince1970:totalTime];
+    NSDateFormatter *objDateformat = [[NSDateFormatter alloc] init];
+    [objDateformat setDateFormat:@"yyyy.MM.dd"];
+    return [objDateformat stringFromDate: date];
+}
 @end

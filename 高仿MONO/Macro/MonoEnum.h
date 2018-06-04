@@ -25,7 +25,7 @@ typedef NS_ENUM(NSInteger,MeowType){
     MeowTypeImageBg = 2,//一张大图
     MeowTypeVideo = 7,//视频
     MeowTypeTea = 1,
-    MeowTypePictures
+    MeowTypePictures = 9
 };
 
 #endif /* MonoEnum_h */

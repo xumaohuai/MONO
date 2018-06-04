@@ -15,6 +15,7 @@
     UIImageView *loadingImageView;
     UILabel *loadingLabel;
     UIView *_failureHintView;
+    UIButton *_leftBarButton;
 }
 @end
 
@@ -24,6 +25,12 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithRed:0.86 green:0.89 blue:0.91 alpha:1];
      self.navigationController.navigationBar.translucent = NO;
+    [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc]init]
+                                                  forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setShadowImage:[[UIImage alloc]init]];
+}
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 -(UITableView *)tableView
@@ -107,6 +114,16 @@
 - (void)endPageLoadingProgress{
         [pageLoadingView removeFromSuperview];
         [pageLoadingView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+}
+
+-(void)addNavigationBarLeftButtonItemWithInfo:(UIImage *)image target:(id)target action:(SEL)action
+{
+    _leftBarButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    _leftBarButton.frame = CGRectMake(0, 0, 24, 24);
+    [_leftBarButton addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    [_leftBarButton setImage:[image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
+    UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithCustomView:_leftBarButton];
+    self.navigationItem.leftBarButtonItem = item;
 }
 
 @end

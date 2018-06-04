@@ -37,11 +37,7 @@
 
 @end
 
-@interface SPItem : UIButton
 
-@property (nonatomic, assign) CGFloat imageRatio;
-@property (nonatomic, assign) SPItemImagePosition imagePosition;
-@end
 
 @implementation SPItem
 
@@ -200,7 +196,7 @@
 @property (nonatomic, weak) UIView *backgroundView;
 @property (nonatomic, strong) UIImageView *dividingLine;
 @property (nonatomic, weak) UIScrollView *itemScrollView;
-@property (nonatomic, weak) SPItem *functionButton;
+
 @property (nonatomic, weak) CALayer *shadowLine;
 @property (nonatomic, strong) NSMutableArray *buttons;
 @property (nonatomic, strong) SPItem *selectedButton;

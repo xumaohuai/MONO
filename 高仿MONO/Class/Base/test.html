@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"XQIOVFBVGwsDVVFVAgg="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"d5a12eb95f","agent":"","transactionName":"M1FSbBdVWkdQUUUMWAobdk0LV0BdXlweE14BQx5VBF1aDlZAXhBHO1lVVxJrQl1URQ==","applicationID":"8310759","errorBeacon":"bam.nr-data.net","applicationTime":69}</script>
+        <meta name="keywords" content="求职路上被“坑”的年轻人，从来不只李文星一个人, 杂志, 文化, MONO, 猫弄，新媒体, 文艺, 小站, 主题站, 讨论, 小组">
+            <meta name="description" content="76%的职场人遭遇过求职骗局，其中4成人是在走出校园以后求职时被骗，还有3成是在第二次求职时被骗。求职心切加上粗心大意是求职被骗的主要原因。, 杂志, 文化, MONO, 猫弄，新媒体, 文艺, 小站, 主题站, 讨论, 小组">
+                <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+                    <meta name="apple-mobile-web-app-capable" content="yes">
+                        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+                            <meta data-react-helmet="true" name="apple-itunes-app" content="app-id=902977856, app-argument=mmmono://meow/g/1144215/">
+                                <meta name="format-detection" content="telephone=no">
+                                    <link rel="shortcut icon" href="http://mc.mmmono.com/static/img/favicon.ico?v=167783947">
+                                        <link rel="stylesheet" href="http://mc.mmmono.com/static/css/build_meow-6398030825.css"><!--[if lt IE 9]>
+                                                                                                                                 <script src="http://mc.mmmono.com/static/js/lib/fix_ie.min-420527566.js"></script><![endif]-->
+                                        <title>阅读模式
+                                        </title>
+                                        <script>var white_list = ["si00.fatepair.com", "mi0.mmmono.com", "sec.video.qq.com", "www.google-analytics.com", "www.googleadservices.com", "js-agent.newrelic.com", "mmmono.com", "bam.nr-data.net", "hm.baidu.com", "mc.mmmono.com", "h5vv.video.qq.com", "123.59.68.252", "play.youku.com", "mmmono.qiniudn.com", "v.mmmono.com", "wmc.mmmono.com", "wmv.mmmono.com", "wmi0.mmmono.com", "7xqc0r.com2.z0.glb.qiniucdn.com"];
+                                            </script>
+                                        <script>var total_mono_hijack_stat={event:"mono_hijack_stat",data:{string:"",url:"",location:"",total:0}};!function(a,b){var c=b.write,d=/^(?:([A-Za-z]+):)?(\/{0,3})([0-9.\-A-Za-z]+)(?::(\d+))?(?:\/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?$/;b.write=function(a){var b=/<script.*?src\=["']?([^"'\s>]+)/gi.exec(a)[1];if(b){var e=d.exec(b),f=e[3];if(white_list.indexOf(f)!==-1)try{c.call(this,a)}catch(b){c(a)}else if(a.indexOf("mono-player")!==-1)try{c.call(this,a)}catch(b){c(a)}else total_mono_hijack_stat.data.string=a,total_mono_hijack_stat.data.url=b,total_mono_hijack_stat.data.location=location.href,total_mono_hijack_stat.data.total++}else try{c.call(this,a)}catch(b){c(a)}}}(window,document);
+                                                                                                                                                                                                                                                                                                                              
+                                        </script>
+</head>
+<body class="">
+    <article>
+        <div class="container">
+            <article class="content-main">
+                <div class="inner read-mode in-app">
+                    <h1 class="h-title">求职路上被“坑”的年轻人，从来不只李文星一个人</h1><div>
+                        <div>
+                            <p class="get-video" data-vid="p0532lkls6s" data-provider="tencent"><iframe class="video_iframe" style="display: none; width: 370px !important; height: 208.125px !important; overflow: hidden;" src="http://v.qq.com/iframe/player.html?vid=p0532lkls6s&amp;&amp;25&amp;auto=0" width="300" height="150" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen" data-ratio="1.7666666666666666" data-vh="208.125" data-vidtype="2" data-vw="370" data-w="848"></iframe><span class="load">M</span></p>
+                        </div>
+                        <p>&nbsp;</p>
+                        <p><strong>如果不是那一班从北京开往天津的城际高铁，去年刚从东北大学毕业的李文星，会像众多&ldquo;北漂&rdquo;的毕业生、求职年轻人一样，继续搜索着各种招聘网站，&ldquo;想找个好工作&rdquo;。而一份本以为是上市公司敲门砖的Offer，最终却引李文星走向了生命的尽头。</strong></p>
+                        <p>&nbsp;</p>
+                        <p>2017年5月15日，李文星在&ldquo;boss直聘&rdquo;平台上发送简历。唯一收到的回复来自&ldquo;北京科蓝&rdquo;人事部的薛婷婷。五天后，李文星拿着聘用通知函从北京前往天津入职。7月14日，李文星尸体在天津静海区被发现。</p>
+                        <p>&nbsp;</p>
+                        <p>23岁的李文星，刚开始准备奋斗，在这次求职中就&ldquo;栽了个大坑&rdquo;，再也没有起来。</p>
+                        <p>&nbsp;</p>
+                        <p>家人和朋友都怀疑李文星是被传销组织以招聘的名义骗去了天津静海，但是李文星的死亡原因至今不明。BOSS直聘官方回应此事称，将积极配合有关部门和家属，找出真相。</p>
+                        <p>&nbsp;</p>
+                        <p>事实上，像李文星这样刚刚步入社会的大学毕业生，他们往往社会阅历浅，并且急于找到一份工作在大城市生存下去，对招聘者缺乏警惕性并且不能识破骗局。</p>
+                        <p>&nbsp;</p>
+                        <p>一份来自于2014年英才网联的&ldquo;3.15职场骗局大调查&rdquo;中，76%的职场人遭遇过求职骗局。其中4成人是在走出校园以后求职时被骗，还有3成是在第二次求职时被骗。56%的人认为求职心切加上粗心大意是求职被骗的主要原因。</p>
+                        <p>&nbsp;</p>
+                        <p>下面这些故事的主人公，都是正在求职或者已经工作了，但曾经在求职路上被骗的年轻人，他们中有些人经历过心惊胆战的骗局至今想起都&ldquo;后怕&rdquo;，也有些人在看似云淡风轻的&ldquo;吐槽&rdquo;中分享那些被&ldquo;坑&rdquo;的求职经历。</p>
+                        <p>&nbsp;</p>
+                        <p>据了解，2017年高校毕业生达790万，2018年将超过800万，希望这八百万甚至更多的职场新人们，看过这些故事后，擦亮眼睛，走好求职这条&ldquo;命运多舛&rdquo;的路。</p>
+                        <p>&nbsp;</p>
+                        <p><strong>我只是想找个好工作，</strong></p>
+                        <p><strong>却没想到&hellip;&hellip;</strong></p>
+                        <p><img src="http://mi0.mmmono.com/63f19cd3a72478799167fe25b7a6acf8" alt="" /></p>
+                        <p>&nbsp;</p>
+                        <p>梳理 | 毛景慧 曹媛（实习）</p>
+                        <p>编辑&nbsp;|&nbsp;王怡波</p>
+                        <p>&nbsp;</p>
+                        <p><img src="http://mi0.mmmono.com/81ac8040576f80d5d8f39093455bbad5" alt="" /></p>
+                        <p><strong>面试工作却签了份贷款合同</strong></p>
+                        <p><strong><strong>&nbsp;</strong></strong></p>
+                        <p>@小毛&nbsp;| 说是正规企业，签了上岗协议后欠一屁股债</p>
+                        <p><img src="http://mi0.mmmono.com/d563b086e6f9d4b4ae7171c6116b851b" alt="" /></p>
+                        <p>&nbsp;</p>
+                        <p>小毛因腿部受伤长时间在家养伤，辞去了上份工作。去年冬天，正在找工作的他在网上发了简历，次日突然收到一个电话。&ldquo;说是正规企业，要求我拿着身份证和银行卡去面试。&rdquo;</p>
+                        <p>&nbsp;</p>
+                        <p>次日，他去了北京国信清软科技有限公司（以下简称&ldquo;国信清软&rdquo;）面试，对方称公司可以帮助他学习软件编程，花51天时间学成后，包分配工作。&ldquo;当时觉得学习编程也挺好的，而且现在找工作本来就难，这边还包分配，承诺工资在5000元以上。&rdquo;在工作人员引导下，他很快就签了一份《参加培训及安置上岗协议》。</p>
+                        <p>&nbsp;</p>
+                        <p>但签了这份协议之后他才被告知，协议上有15000多元的贷款，本息将近20000块，工作人员还说，这些贷款他不需要操心。&ldquo;他说在培训期间，由公司来负责偿还前几个月的贷款，等我找到工作后，剩下的由我来还。&rdquo;随后，工作人员复印了他的银行卡和身份证。</p>
+                        <p>&nbsp;</p>
+                        <p>回家后，小毛将这件事情告诉母亲，说到贷款时，母亲立即察觉到这可能有问题。怎么找工作去面试，却被要求培训和贷款？随后，她立即带小毛去了报名处决定退出。&ldquo;那边负责人还没来得及在协议上盖章，就同意我把协议撕掉，说作废。&rdquo;小毛和母亲都以为这样就结束了，不料一个多月后，小毛突然接到了合同上的课栈网的催收短信，要求他还款400多元。对此，国信清软的工作人员解释，虽合同作废，但贷款已成立。&ldquo;商量之后，他们说每个月由公司把钱转给我，让我来还贷。&rdquo;国信清软出示的责任证明也证实该说法。</p>
+                        <p>&nbsp;</p>
+                        <p>小毛母亲说，就这样过了7个月，一直都正常。但今年5月还款时间已到，却久久没有等到国信清软的转账，几次联系对方也都无果，他们却一直收到催还贷信息。</p>
+                        <p>&nbsp;</p>
+                        <p>除小毛这类未上课或已办理退学的学员外，还有一部分学员参加了培训班。据学员小白介绍，他同样在找工作时遇到国信清软，并在工作人员的&ldquo;忽悠下&rdquo;加入培训班。</p>
+                        <p>&nbsp;</p>
+                        <p>&ldquo;来上课了之后，才发现根本不是一回事儿。&rdquo;在该培训机构学习期间，住宿等都是培训班安排的，只有吃饭和生活费需要花钱，但他觉得老师上课质量特别差。&ldquo;当时承诺我们在参加培训期间公司转钱给我们还贷，但刚两个月后人就消失了。不管是在报名处还是上课的地方，所有老师都突然人间蒸发了。&rdquo;</p>
+                        <p>&nbsp;</p>
+                        <p>不少学员发现问题后都选择在中途离开公司，小白说，该公司却以合同中&ldquo;因个人原因退学，公司不退还任何费用&rdquo;为由，要么拒退学费，要么要求学员支付高昂违约金。而所谓的&ldquo;包分配，工资5000元以上&rdquo;在合同中也变成了帮忙推荐工作。&ldquo;本来说给我们找软件编程相关的工作，但之前毕业的人中，干什么的都有，还有干保安的。&rdquo;</p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p><img src="http://mi0.mmmono.com/81ac8040576f80d5d8f39093455bbad5" alt="" /></p>
+                        <p><strong>求职被骗传销窝 上厕所都有人"陪着"</strong></p>
+                        <p><strong><strong>&nbsp;</strong></strong></p>
+                        <p>@ 小许&nbsp;| 答应月薪过万，误入传销组织，逃跑被打</p>
+                        <p>&nbsp;</p>
+                        <p>前段时间，大学生小许（化名）急于找工作，就四处打听，一日小许吉安老家的中学同学小谭（化名）打电话联系小许，称自己在湖北荆门市找到了一份很好的工作，月薪过万，答应帮小许引荐求职，两人还可以叙旧。</p>
+                        <p>&nbsp;</p>
+                        <p>小许听完后，便趁着清明节临近课业较少，独自坐火车前往湖北武汉，再从武汉坐大巴前往荆门。</p>
+                        <p>&nbsp;</p>
+                        <p>小许到达该公司后，小谭称清明节老板回老家了，先带着小许在市里游玩几天。相处的前几天小许并未发现任何异常，只觉得小谭出手阔绰，但到了第3天小许觉得奇怪，无论自己和小谭走到哪里总有两三个凶神恶煞的男人在附近出现，好像在监视自己。</p>
+                        <p>&nbsp;</p>
+                        <p>眼看清明节都过了，小许觉得不对劲，便私下找小谭询问高薪求职的事，小谭随后带着小许前往&ldquo;公司&rdquo;进行引荐，小许到&ldquo;公司&rdquo;后，才知道所谓的工作其实就是听课。接下来的几天，小许被轰炸式&ldquo;上课&rdquo;洗脑。</p>
+                        <p>&nbsp;</p>
+                        <p>小许在察觉不对劲后曾找机会逃跑，但被传销人员抓住痛打了一顿，他的手机、行李、身份证都被没收了，并且被24小时监视，根本离不开传销窝点，小许只能被迫接受洗脑教育。他们让小许发展&ldquo;下线&rdquo;，把自己的亲戚朋友想办法&ldquo;骗&rdquo;来，就可以有自由。不知不觉过了10多天，小许彻底绝望了，自己已经身陷传销组织无法脱身了。</p>
+                        <p>&nbsp;</p>
+                        <p>2017年4月10日22时许，南昌红角洲派出所接到辖区高校一名家长来电，称自己的孩子在南昌读大学，有很长一段时间没有和家里联系，赶到学校寻找才发现，他儿子已经失踪近半个月了。 接警后，办案民警立即组成专案调查小组，通过分析，研判出这名失踪大学生小许曾在湖北荆门有活动轨迹，判定小许极有可能是被传销组织控制了。4月11日上午，民警驱车700余公里，长途行驶8个小时，赶到湖北荆门市。第二天上午，在当地公安部门的协助下，警方决定开展营救行动。13日下午，一举捣毁该传销窝点，不但解救了失联多日的大学生小许，还同时解救了其他17名身陷传销的被控人员。</p>
+                        <p>&nbsp;</p>
+                        <p>@朱先生 | 年轻漂亮的女孩子说两年能赚一千万</p>
+                        <p>&nbsp;</p>
+                        <p>2014年8月份，一位朋友说在安徽合肥包了一个工地，让我去帮几天忙，因为我本身就是建筑专业毕业的，而且跟朋友关系太好，我没有一点怀疑就买了去合肥的火车票。</p>
+                        <p>&nbsp;</p>
+                        <p>等我到了之后已经是晚上了，在他那里休息一夜之后，他带我乘公交在合肥逛了一天，晚上又带我去KTV里唱歌喝酒，当时我仍然没有感到一点不妥。</p>
+                        <p>&nbsp;</p>
+                        <p>第三天一早他说带我去工地，但是却带我去了一个小区，我问他干啥去，他说带我去见个人，我以为见他的朋友就去了。进了屋子后，有一个中年妇女，开始给我谈话了，各种大趋势、各种我不知道的东西。</p>
+                        <p>&nbsp;</p>
+                        <p>随后他又带我去了另外一个房间，是一个年轻漂亮的女孩子，她开始给我讲所谓的生财之道，两年就赚1000多万，我当时确定了，这就是传销！</p>
+                        <p>&nbsp;</p>
+                        <p>出来后，我和我朋友闹起来了，我就报警了，警察说让我回家。但是我朋友却认为那是组织在调控，只为不让太多人进来！我和我朋友吵得很凶，当时就买了回家的车票！现在他......欠了很多钱！整天有人追债。</p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p><img src="http://mi0.mmmono.com/81ac8040576f80d5d8f39093455bbad5" alt="" /></p>
+                        <p><strong>进京&ldquo;闯事业&rdquo;却被骗3万</strong></p>
+                        <p><strong><strong>&nbsp;</strong></strong></p>
+                        <p>@&nbsp;小梁&nbsp;| 来京应聘，没想到两天就损失了三万元</p>
+                        <p>&nbsp;</p>
+                        <p>今年24岁的小梁是广东珠海人。毕业后，他参与录制多部电视剧，积攒了一些工作经验。今年春节过后，他在求职网站上相中一份沈阳某演艺公司北京分公司的摄像师工作。本想借此闯荡一番，但他抵京后的第一天，便被对方骗签了一份价值两万多元的合同，吓得他立即报警。</p>
+                        <p>&nbsp;</p>
+                        <p>小梁称，求职网站的信息很诱人。公司不仅承诺&ldquo;包吃包住&rdquo;，每月工资还达到税后四千元。由于工作对口，小梁发送简历后，迅速获得面试邀请。2月28日，他信心满满，直接坐飞机来到北京，并按地址找到这家位于北京西站某快捷酒店内的公司。</p>
+                        <p>&nbsp;</p>
+                        <p>该公司看着寒酸，感觉不正规。但进入面试流程后，面试官们却一表人才，提问专业。半小时后，他被一名女士领到公司总监处，总监称他已通过筛选，可签约为正式员工。</p>
+                        <p>&nbsp;</p>
+                        <p>小梁回忆，这位总监拿出合同，询问他支付宝里有多少余额，随后称根据合同规定，演艺公司对外&ldquo;接活儿&rdquo;时，需要产生关系疏通费用、媒体公关费用，还要对小梁进行岗前培训，因此要支付2.4万元才能签约。</p>
+                        <p>&nbsp;</p>
+                        <p>小梁称，这份合同有十页内容，他没学过法律，根本看不懂。所以只要总监说的，他就以为合同里有。看完合同后，小梁应对方要求，在合同末尾处的备注栏里摁了红手印。对此，他曾质疑为何在此摁手印，但对方称，&ldquo;反正都是空白的，摁哪里无所谓&rdquo;。不料，当小梁乖乖照办后，该总监迅速在备注里写下&ldquo;未进剧组者、自动离职者、擅自离开者，拒绝退还任何费用&rdquo;的字样。小梁当即感觉被骗，但此时骗局还未结束。</p>
+                        <p>&nbsp;</p>
+                        <p>2月28日晚，小梁在宾馆暂住一夜后，于昨天上午按要求前往大兴区京安路一家影视基地内报到。但见到基地王主任后，对方让他再交7200元一年的场地使用费，否则不能使用拍摄器械。小梁此时恍然大悟：&ldquo;我不能再投钱了，这是个无底洞！&rdquo;另一名面试者也证实，向王主任支付费用后，还要给后面的剧组导演交费。</p>
+                        <p>小梁立即返回公司要求退款，但对方拿出合同称是他自己违约。有民警到场调解此事后，也称&ldquo;白纸黑字和手印&rdquo;都在，没法立即维权，只能到法院起诉对方。</p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p><img src="http://mi0.mmmono.com/81ac8040576f80d5d8f39093455bbad5" alt="" /></p>
+                        <p><strong>&ldquo;大门面&rdquo;公司，进来就要交入职费</strong></p>
+                        <p><strong><strong>&nbsp;</strong></strong></p>
+                        <p>@&nbsp;鱼的蜥蜴 | 被骗交入职费，警察也管不了</p>
+                        <p>&nbsp;</p>
+                        <p><img src="http://mi0.mmmono.com/e0390fca7735448e6fd0393338cb3b10" alt="" /></p>
+                        <p>◇员工入职协议（受害人提供）</p>
+                        <p>&nbsp;</p>
+                        <p>我在&ldquo;58同城&rdquo;上看招聘信息，我想着挺大门面，就去面试了。然后那里的一个人就说要交押金，刚毕业，什么都不懂，被一个经理忽悠过去了，我是带着我一个朋友，一个人交600，两个人就是1200。</p>
+                        <p>&nbsp;</p>
+                        <p>在无锡租了房子，去那里第一天就被调遣到锡山东亭溪洲花园大酒店，其实当时进去五、六天都没什么怀疑，直到第七天，一个做了两个多月的和我们差不多大的人跟我们讲，做这个骗取入职费，他说经理用的是假名。</p>
+                        <p>&nbsp;</p>
+                        <p>我进去一个礼拜，招我进去的经理不在，只有一个姓叶的经理带我们的。我当时整个人都崩塌了，特别懵，谁都不信，第二天就没去上班想办法。百度搜&ldquo;能不能要到被骗的入职费&rdquo;。我的小姐妹在知道被骗前一天还招了一个人，跟我们一样大， 然后我们三个人第二天就去了警察局，警察局说他们不管这个事情。</p>
+                        <p>&nbsp;</p>
+                        <p>然后去了劳动局，劳动局的人说合同都没有章，没有法律效应。一开始带我来的经理和我坦白说，当他知道被骗后，都没再去那个地方，我连他都不信。之后我在溪洲花园大酒店报警， 然后警察来了，我说是传销，提到入职费，他们就不管了。</p>
+                        <p>&nbsp;</p>
+                        <p>叶经理说一个月后会给我们退钱，但那之后就没人影了。</p>
+                        <p>&nbsp;</p>
+                        <p><img src="http://mi0.mmmono.com/00fb8b866414509952af2a67b9836227" alt="" /></p>
+                        <p>◇离职申请书（受害人提供）</p>
+                        <p>&nbsp;</p>
+                        <p>@王自旭 | 跟警察出去查车，抓嫖客，抓小偷，干的都是些扯淡的事儿</p>
+                        <p>&nbsp;</p>
+                        <p>毕业时候在&ldquo;58&rdquo;上看到北京招聘跟大车的工作。工资待遇高、不累还有各种外出补助之类的，很诱人。我就报名去了北京，对方以跟车人员需要进行消防等培训为由，给了我一个地址，在大红门派出所附近培训。之后收了我的身份证，住在一个十几人的大宿舍，发了一套特勤的服装，白天没有任何培训教育。有时会跟派出所的警察出去查车，抓嫖客，抓小偷，帮人家干没用的活。到晚上骑电动车出去巡逻，都是些扯淡的事儿，待了一个星期不让走，不给身份证。最后身上最后的二百块钱给了那个所谓的培训机构的头头，才拿到身份证去下一个地点。</p>
+                        <p>&nbsp;</p>
+                        <p>南六环的一个物流机构，到地方没安排住处，已经下午六点多，就派到一个物流公司卸货。十二吨书，卸完十点多，刚回到地方，立刻又被派去卸货大概有三十吨的大车，一车化学物品。我真干不动了，就罢工走人了。晚上住在他们安排的宿舍大概里面住了50人，臭气熏天，两张床住三个人。</p>
+                        <p>&nbsp;</p>
+                        <p>第二天借钱逃离了北京。</p>
+                        <p>&nbsp;</p>
+                        <p>@内黄少年 | 电话里双休、底薪3500，去了后一切都是浮云</p>
+                        <p>&nbsp;</p>
+                        <p>由于特别原因，在今年的9月中旬，我离开了之前的公司。10月7号，我从老家来武汉，然后在网络上挂上了自己的简历。朋友劝我说让我主动去投简历这样会快很多，我拒绝了。因为，网络上很多的公司自己描述的职位都不是很清楚，还有很多公司挂羊头卖狗肉，所以为了避免不必要的麻烦，我只是简单的挂了一份简历。</p>
+                        <p>&nbsp;</p>
+                        <p>十月八号一大早，我就接到电话，说是某某科技集团有限公司，问我对软件开发感不感兴趣，工资4000到8000，我说我没有从事过类似的工作，没有经验，电话那头的&ldquo;HR&rdquo;说没有问题，他们提供岗前实训。这一类说招培训生的其实就是让你过去，简单的交谈，然后说你技能不合格，要你在公司培训，培训完你还是要找工作。</p>
+                        <p>&nbsp;</p>
+                        <p>之后各种销售的电话打来，对方说双休，无责底薪3500，等去了，双休变单休，无责变有责任.....</p>
+                        <p>&nbsp;</p>
+                        <p>印象最深的一个，电话里说无责底薪3500双休，我很疑惑，问了确定是不是无责底薪3500？&ldquo;HR&rdquo;回答说是的。然后我去了，经理又说无责底薪2400。</p>
+                        <p><strong><strong>&nbsp;</strong></strong></p>
+                        <p><img src="http://mi0.mmmono.com/81ac8040576f80d5d8f39093455bbad5" alt="" /></p>
+                        <p><strong>职场骗局&ldquo;防不胜防&rdquo;</strong></p>
+                        <p><strong><strong>&nbsp;</strong></strong></p>
+                        <p>@相关新闻评论区留言</p>
+                        <p>&nbsp;</p>
+                        <p>除了上述较为完整的职场骗局，还有更多的求职青年遭遇了形形色色的被&ldquo;坑&rdquo;经历，面对职场骗局可谓是&ldquo;防不胜防&rdquo;&hellip;&hellip;</p>
+                        <p>&nbsp;</p>
+                        <p><img src="http://mi0.mmmono.com/e4b8db2a8b637088857a0f5402ca7485" alt="" /></p>
+                        <p>◇&nbsp;招聘网站骗子多，防不胜防。</p>
+                        <p>&nbsp;</p>
+                        <p><img src="http://mi0.mmmono.com/c8a2be7f8460c1b85582428fd75deb67" alt="" /></p>
+                        <p>◇找工作交了几千块的中介费。</p>
+                        <p>&nbsp;</p>
+                        <p><img src="http://mi0.mmmono.com/971e70d441650b615fb43a8c45122423" alt="" /></p>
+                        <p>◇&nbsp;&ldquo;高大上&rdquo;的分公司其实根本不存在。</p>
+                        <p>&nbsp;</p>
+                        <p><img src="http://mi0.mmmono.com/96d0846f4e243f146d72349aa44c364c" alt="" /></p>
+                        <p>◇&nbsp;传销骗局：不交钱就要卖你的肾。</p>
+                        <p>&nbsp;</p>
+                        <p><img src="http://mi0.mmmono.com/3f9c59f78add893339dd418280772168" alt="" /></p>
+                        <p>◇&nbsp;说好的3000工资到手不到1500.</p>
+                        <p>&nbsp;</p>
+                        <p><img src="http://mi0.mmmono.com/338a9c6d6fb0a564144d22405d0a6636" alt="" /></p>
+                        <p>◇ 求职坑就坑在合同里，仔细看再签！</p>
+                        <p>&nbsp;</p>
+                        <p>（文中梳理的骗局素材来自网络。）</p>
+                        <p>&nbsp;</p>
+                        <p><img src="http://mi0.mmmono.com/e2e741edb255ffaa80ab1887198f9215" alt="" /></p>
+                        <p>&nbsp;</p>
+                        <p><img src="http://mi0.mmmono.com/206933166bc07ed2c4669afbd0054c4a" alt="" /></p>
+                        <p><img src="http://mi0.mmmono.com/647a9028ae88a1977b39b8f9783deeb3" alt="" /></p>
+                        <p><img src="http://mi0.mmmono.com/355dad4c2085acd7f34c5135427befc2" alt="" /></p>
+                        <p>&nbsp;</p>
+                    </div>
+                    
+                </div>
+            </article>
+            <div class="group-info ">
+                <div class="header">
+                    <p class="h1"><svg width="94" height="29" viewBox="0 0 188 29" xmlns="http://www.w3.org/2000/svg"><path d="M4.126 28V4.924L10.282 28h2.952l5.832-23.076V28h3.204V1.36h-5.364l-5.148 20.988L6.286 1.36H.922V28h3.204zm21.888-13.32c0 7.992 3.276 13.824 9.72 13.824 6.84 0 9.72-6.516 9.72-13.824 0-7.992-3.276-13.824-9.72-13.824-6.444 0-9.72 5.832-9.72 13.788v.036zm3.636 0c0-7.02 2.268-10.548 6.084-10.548s6.048 3.528 6.048 10.548-2.232 10.548-6.048 10.548S29.65 21.7 29.65 14.716v-.036zM53.158 1.36h-3.96V28h3.204V7.048L62.302 28h3.6V1.36h-3.204v20.16l-9.54-20.16zm16.524 13.32c0 7.992 3.276 13.824 9.72 13.824 6.84 0 9.72-6.516 9.72-13.824 0-7.992-3.276-13.824-9.72-13.824-6.444 0-9.72 5.832-9.72 13.788v.036zm3.636 0c0-7.02 2.268-10.548 6.084-10.548S85.45 7.66 85.45 14.68s-2.232 10.548-6.048 10.548-6.084-3.528-6.084-10.512v-.036zm27.468 5.652c.108 5.364 3.132 8.172 7.884 8.172 4.572 0 8.064-3.024 8.064-7.848 0-5.22-3.564-6.768-5.904-7.632-3.24-1.116-5.976-1.836-5.94-5.04 0-2.376 1.44-4.14 3.852-4.14 2.772 0 3.78 2.088 3.96 4.032h3.456c-.648-4.86-3.276-7.02-7.56-7.02-4.428 0-7.416 2.952-7.38 7.704 0 4.716 3.528 6.156 6.012 7.056 2.7.936 5.868 1.728 5.868 5.184 0 2.808-1.836 4.536-4.428 4.536-2.124 0-4.104-1.296-4.356-5.004h-3.528zM120.514 1.36V28h3.564V17.74h2.268c2.844 0 4.896-.54 6.516-1.944 1.584-1.332 2.556-3.6 2.556-6.228 0-2.628-.972-4.932-2.556-6.264-1.62-1.404-3.636-1.944-6.516-1.944h-5.832zm3.564 3.276h2.232c2.016 0 3.132.252 4.104 1.116.828.72 1.368 2.124 1.368 3.816 0 1.656-.504 3.06-1.368 3.78-1.008.9-2.088 1.116-4.104 1.116h-2.232V4.636zm15.444 16.38h7.38l1.98 6.984h3.636L144.85 1.36h-3.42L133.942 28h3.636l1.944-6.984zm6.444-3.276h-5.544l2.772-11.52 2.772 11.52zm21.384 1.08c-.144 3.06-1.224 6.3-4.896 6.3-3.42 0-5.976-3.096-5.976-10.26 0-6.84 1.98-10.62 5.976-10.62 3.456 0 4.824 2.916 4.896 6.768h3.6c.036-5.4-2.88-10.152-8.748-10.152-6.012 0-9.36 5.112-9.36 13.824 0 9.108 3.636 13.824 9.36 13.824 5.832 0 8.748-4.644 8.748-9.684h-3.6zm7.308 9.18h12.636v-3.276h-9.072v-8.82h9.072v-3.276h-9.072V4.636h9.072V1.36h-12.636V28z" fill="#333" fill-rule="evenodd"/></svg>
+                    
+                    </p>
+                    <p class="h2">内容来自</p>
+                </div>
+                <div class="inner">
+                    <div class="logo"><a href="/group/128483"><img data-id="128483" width="40" height="40" data-original="http://mi0.mmmono.com/c8c98fc7f44f548ad46a3cd4aaf27b8b.jpeg?imageMogr2/thumbnail/!80x80r" alt="谷雨实验室" class="lazy open-group"/></a>
+                    </div>
+                    <div data-id="128483" class="cont open-group">
+                        <h2 class="name"><a href="/group/128483">谷雨实验室</a>
+                        </h2>
+                        <p class="prop">
+                        MONO 主题站
+                        </p>
+                    </div>
+                    <a href="/group/128483" data-id="128483" class="add btn open-group">
+                        <span class="ico">+</span>去关注</a>
+                    
+                </div>
+            </div>
+            <div class="hot-meow-list hot-part ">
+                <div class="title">MONO推荐你看</div>
+                <ul>
+                    <li><a href="http://mmmono.com/g/meow/109008/" data-id="109008" data-domain_type="3" class="open-meow "><img alt="扮起来，女高里的美少年们！" data-original="http://mmmono.qiniudn.com/3cd922c4e19c2e576f7b6e6f34954410.png?imageMogr2/thumbnail/!260x180r/gravity/Center/crop/260x180" class="pic lazy"/>
+                        <div class="cont">
+                            <h3 class="t">扮起来，女高里的美少年们！</h3><span class="n">TOPYS</span>
+                        </div></a>
+                    </li>
+                    <li><a href="http://mmmono.com/g/meow/106935/" data-id="106935" data-domain_type="3" class="open-meow "><img alt="PS达人示范如何拍出高逼格自拍" data-original="http://jandan.qiniudn.com/11a467f5d8c740894781d4c220053485.jpg?imageMogr2/thumbnail/!260x180r/gravity/Center/crop/260x180" class="pic lazy"/>
+                        <div class="cont">
+                            <h3 class="t">PS达人示范如何拍出高逼格自拍</h3><span class="n">煎蛋</span>
+                        </div></a>
+                    </li>
+                    <li><a href="http://mmmono.com/g/meow/919314/" data-id="919314" data-domain_type="3" class="open-meow "><img alt="入殓师和他的摇滚梦" data-original="http://mi0.mmmono.com/04ad6daf69c3ac6b08a5e61e63074e2b.jpg?imageMogr2/thumbnail/!260x180r/gravity/Center/crop/260x180" class="pic lazy"/>
+                        <div class="cont">
+                            <h3 class="t">入殓师和他的摇滚梦</h3><span class="n">裸体午餐</span>
+                        </div></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="meow-split"></div>
+            <div class="comments">
+                <div data-id="1144215" data-domain_type="3" class="cmt-head open-more-comments open-comment-page">评论 4</div>
+                <ul class="cmt-list">
+                    <li><span data-id="55efeca208c2a911d3b09222" class="pic comment-user-avatar open-user"><img alt="LiangJay30" data-original="http://mi0.mmmono.com/FvhgluNeZWYJd_M6cSmhF1qpDwHh?imageMogr2/thumbnail/!80x80r" width="40" height="40" class="lazy radius"/></span>
+                        <div class="info">
+                            <p class="name comment-user-avatar"><a data-id="55efeca208c2a911d3b09222" href="#" class="open-user">LiangJay30</a>
+                            </p>
+                            <p class="time">保密
+                            ·
+                            天蝎
+                            
+                            
+                            </p>
+                            <div data-id="1144215" data-domain_type="3" class="text open-comment-page">
+                                <p>这篇东西挺不错的，我也是今年在上海找工作，一开始面试没经验，但是本着天上不会有馅饼，一旦面试官说的天花乱坠我就离开了，大部分都是什么网络培训Java开发什么的，这些都是假的，让你交学费，分期付款，年轻出门在外，心里要能分辨是非，社会太凶险，而且警察一般是不管的</p>
+                            </div>
+                            <div class="bang open-more-comments">2017年8月13日
+                            </div>
+                        </div>
+                    </li>
+                    <li><span data-id="5870f4f1844e2931bf00a90b" class="pic comment-user-avatar open-user"><img alt="懒羊羊要变瘦" data-original="http://mi0.mmmono.com/FsLSMNZl7sno6Ft3clu76IhZLuYX?imageMogr2/thumbnail/!80x80r" width="40" height="40" class="lazy radius"/></span>
+                        <div class="info">
+                            <p class="name comment-user-avatar"><a data-id="5870f4f1844e2931bf00a90b" href="#" class="open-user">懒羊羊要变瘦</a>
+                            </p>
+                            <p class="time">天津市
+                            ·
+                            巨蟹
+                            ·
+                            需要男盆友
+                            </p>
+                            <div data-id="1144215" data-domain_type="3" class="text open-comment-page">
+                                <p>我，，，，都不敢去面试，了</p>
+                            </div>
+                            <div class="bang open-more-comments">2017年8月13日
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="all-cmt open-more-comments"><span data-id="1144215" data-domain_type="3" class="open-comment-page"><i class="g-icon-comment"></i>&ensp;查看全部</span>
+                </div>
+            </div>
+        </div>
+    </article>
+    <footer class="footer">
+        <p>&copy; 2016 mmmono.com All Rights Reserved.</p>
+    </footer>
+    <script src="http://mc.mmmono.com/static/js/lib/jquery.min-1110003273.js"></script>
+    <script>var is_dev_mode = false;
+        var is_lazy_mode = false;
+        var is_mono_app  = true;
+        var can_play_youku = true;
+        var can_play_inline_video_v2 = true;
+        var is_coolpad  = false;
+        $('.container iframe').each(function(){
+                                    var iframe = $(this);
+                                    iframe.removeAttr('width');
+                                    iframe.removeAttr('height');
+                                    iframe.removeAttr('style');
+                                    });
+        </script>
+    
+    <script>var is_ios_app = true;
+        </script>
+    <script src="http://mc.mmmono.com/static/js/build_bridge-8243982952.js"></script>
+    <script>$(function(){
+              "use strict";
+              $('.qr_code_pc_img').qrcode({
+                                          'size': 102,
+                                          "color": "#3a3",
+                                          "text": "http://mmmono.com/g/meow/1144215/"
+                                          });
+              });
+        </script>
+    <script>var meow_id = "1144215";
+        
+        </script>
+    <script src="http://mc.mmmono.com/static/js/build_meow-5183479106.js"></script>
+    <script>$.post('/j/meow_event_stats/view',
+                   { 'meow_id': 1144215, 'domain_type': 3 },
+                   function(ret) {
+                   // alert('统计发送成功');
+                   },'json');
+        </script>
+    <script>var loading_img = "data:image/gif;base64,R0lGODlhWAKQAZEDANfX18DAwO7u7v///yH/C05FVFNDQVBFMi4wAwEAAAAh/wtYTVAgRGF0YVhNUDw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkQ4REI0QTA3OTMwRjExRTRCOUQ0QzU2NkRFRTAxQjY4IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkQ4REI0QTA4OTMwRjExRTRCOUQ0QzU2NkRFRTAxQjY4Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RDhEQjRBMDU5MzBGMTFFNEI5RDRDNTY2REVFMDFCNjgiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RDhEQjRBMDY5MzBGMTFFNEI5RDRDNTY2REVFMDFCNjgiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4B//79/Pv6+fj39vX08/Lx8O/u7ezr6uno5+bl5OPi4eDf3t3c29rZ2NfW1dTT0tHQz87NzMvKycjHxsXEw8LBwL++vby7urm4t7a1tLOysbCvrq2sq6qpqKempaSjoqGgn56dnJuamZiXlpWUk5KRkI+OjYyLiomIh4aFhIOCgYB/fn18e3p5eHd2dXRzcnFwb25tbGtqaWhnZmVkY2JhYF9eXVxbWllYV1ZVVFNSUVBPTk1MS0pJSEdGRURDQkFAPz49PDs6OTg3NjU0MzIxMC8uLSwrKikoJyYlJCMiISAfHh0cGxoZGBcWFRQTEhEQDw4NDAsKCQgHBgUEAwIBAAAh+QQFFAADACwAAAAAWAKQAQAC/5SPqcvtD6OctNqLs968+w+G4kiW5omm6sq27gvH8kzX9o3n+s73/g8MCofEovGITCqXzKbzCY1Kp9Sq9YrNarfcrvcLDovH5LL5jE6r1+y2+w2Py+f0uv2Oz+v3/L7/DxgoOEhYaHiImKi4yNjo+AgZKTlJWWl5iZmpucnZ6fkJGio6SlpqeoqaqrrK2ur6ChsrO0tba3uLm6u7y9vr+wscLDxMXGx8jJysvMzc7PwMHS09TV1tfY2drb3N3e39DR4uPk5ebn6Onq6+zt7u/g4fLz9PX29/j5+vv8/f7/8PMKDAgQQLGjyIMKHChQwbOnwIMaLEiRQrWryIMaPGjf8cO3r8CDKkyJEkS5o8iTKlypUsW7p8CTOmzJk0a9q8iTOnzp08e/r8CTSo0KFEixo9ijSp0qVMmzp9CjWq1KlUq1q9ijWr1q1cu3r9Cjas2LFky5o9izat2rVs27p9Czeu3Ll069q9izev3r18+/r9Cziw4MGECxs+jDix4sWMGzt+DDmy5MmUK1u+jDmz5s2cO3v+DDq06NGkS5s+jTq16tWsW7t+DTu27Nm0a9u+jTu37t28e/v+DTy48OHEixs/jjy58uXMmzt/Dj269OnUq1u/jj279u3cu3v/Dj68+PHky5tXCCCA+gAAPgB43949/PMz1tsPwAG+/vga9s//p+/Cfff1599/GBRoIIAppCfgevxZgOB7BCKo4AoNDnhBhAlSoKGEFaJwoX0Hdjiihh+CGKJ6JUa4IoUnmpCiihmSOKOJL5bA4IUPVmBji/vdeEKKExY4pH9ABtlgfkRu4OKRJuTInnweeqCfk1ZeiWWWWm7JZZdefglmmGKOSWaZZp6JZppqrslmm26+CWeccs5JZ5123olnnnruyWeffv4JaKCCDkpooYYeimiiii7KaKOOPgpppJJOSmmlll6Kaaaabsppp55+Cmqooo5Kaqmmnopqqqquymqrrr4Ka6yyzkprrbbeimuuuu7Ka6++/gpssMIOS2yxxh6LbLLKZi7LbLPOPgtttNJOS2211l6Lbbbabsttt95+C2644o5Lbrnmnotuuuquy2677r4Lb7zyzktvvfbei2+++u7Lb7/+/gtwwAIPTHDBBh+McMIKL8xwww4/DHHEEk9MccUWX4xxxi4UAAAh+QQFFAADACwGAcIALAAMAAACQZQFCcftb0CYYTGFLdyN+nBkGUcK3xeJSrlJJ6WK7PN+MTY7tXevObOD9TQ/UxDUK16Ci6TyEAypnp2XA0e98g4FACH5BAUUAAMALCYBwgAsAAwAAAJBlAUJx+1vQJhhMYUt3I36cGQZRwrfF4lKuUknpYrs834xNju1d685s4P1ND9TENQrXoKLpPIQDKmenZcDR73yDgUAOw==";
+        
+        function WifiGprsToggle($wrap){
+            $wrap.find("img").on("click",function(){
+                                 
+                                 var self = this;
+                                 
+                                 if(!$(self).hasClass("mobile_network")){
+                                 var src = $(self).data("original");
+                                 
+                                 $(self).attr("src",loading_img);
+                                 $("<img />").attr("src",src).load(function(){
+                                                                   $(self).attr("src",src);
+                                                                   $(self).addClass("mobile_network");
+                                                                   })
+                                 }
+                                 return false;
+                                 
+                                 });
+        }
+    
+    function lazy_image_mode(){
+        $("img.lazy").lazyload({
+                               threshold : 100,
+                               event : 'scroll',
+                               effect : "fadeIn",
+                               placeholder_data_img:loading_img
+                               });
+    }
+    
+    if(!is_lazy_mode){
+        lazy_image_mode()
+    }else{
+        WifiGprsToggle($(".content-main .inner"))
+        $(".group-info img.lazy,.hot-meow-list img.lazy,.hot-campaign-part img.lazy").lazyload({
+                                                                                               threshold : 100,
+                                                                                               event : 'scroll',
+                                                                                               effect : "fadeIn",
+                                                                                               placeholder_data_img:loading_img
+                                                                                               });
+    }
+    </script>
+    <script>;(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+              ga('create', 'UA-55579043-1', 'auto');
+              ga('send', 'pageview');
+        </script>
+    <script>var total_hijack_dom_stat={event:"hijack_dom_stat",data:{string:"",url:"",location:"",total:0}};var changedHandler=function(a){var d=a.outerHTML;if(d){var e=/(http:\/\/|https:\/\/)((\w|=|\?|\.|\/|&|-)+)/g;var g=d.match(e);if(g&&g.length){for(var c=0;c<g.length;c++){var b=g[c];var f=b.split("//")[1].split("/")[0];if(white_list.indexOf(f)==-1){if(a.id == 'mono-player_html5_api' || a.id == "mono-player"){return false;}if(a.parentNode){a.parentNode.removeChild(a)} }}}}};var MutationObserver=window.MutationObserver||window.WebKitMutationObserver||window.MozMutationObserver;var observer=MutationObserver?new MutationObserver(function(a){a.forEach(function(b){if(b.addedNodes.length&&b.addedNodes[0].nodeType==1){changedHandler(b.addedNodes[0])}})}):undefined;if(observer){observer.observe(document.documentElement,{childList:true,subtree:true})}setTimeout(function(){observer.disconnect();observer.takeRecords();if(total_hijack_dom_stat.data.total){hijack_stat(total_hijack_dom_stat)}if(total_mono_hijack_stat.data.total){hijack_stat(total_mono_hijack_stat)}},10000);
+        
+        </script>
+</body>

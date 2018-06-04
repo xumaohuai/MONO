@@ -30,6 +30,7 @@
     RecommendVC *firstViewController = [[RecommendVC alloc] init];
     MNNavigationController *firstNavigationController = [[MNNavigationController alloc]
                                                    initWithRootViewController:firstViewController];
+    firstNavigationController.navigationBar.barTintColor = [UIColor colorWithRed:0.13 green:0.13 blue:0.14 alpha:1];
     firstNavigationController.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil image:[[UIImage imageNamed:@"tab-recommend"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"tab-recommend-active"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     firstNavigationController.tabBarItem.imageInsets = UIEdgeInsetsMake(0, 0, -10, 0);
     

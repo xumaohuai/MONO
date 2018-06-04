@@ -10,12 +10,12 @@
 #import "RecommendCellTitleView.h"
 #import "CommunicateBottomView.h"
 #import "RecommendModel.h"
-#import "SDWeiXinPhotoContainerView.h"
+#import "MNPhotoContainerView.h"
 @interface RecommendImagesCell()
 {
     RecommendCellTitleView *_titleView;
     CommunicateBottomView *_bottomView;
-    SDWeiXinPhotoContainerView *_picContainerView;
+    MNPhotoContainerView *_picContainerView;
     UIView *_lineView;
     UILabel *_titleLabel;
     UILabel *_descripLabel;
@@ -47,7 +47,7 @@
     _descripLabel.textColor = [UIColor blackColor];
     _descripLabel.isAttributedContent = YES;
     _descripLabel.numberOfLines = 2;
-    _picContainerView = [SDWeiXinPhotoContainerView new];
+    _picContainerView = [MNPhotoContainerView new];
     _contentView = self.contentView;
     NSArray *views = @[_titleView,_bottomView,_lineView,_picContainerView,_titleLabel,_descripLabel];
     [_contentView sd_addSubviews:views];
