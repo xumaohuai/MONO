@@ -23,6 +23,5 @@ pod 'LTNavigationBar','~>2.1.9'
 pod 'Reachability','~>3.2'
   target '高仿MONOTests' do
     inherit! :search_paths
-    # Pods for testing
   end
 end
