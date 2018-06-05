@@ -55,7 +55,6 @@
 		4643208420C50E0F005E62F7 /* ZZCircleProgress.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4643207B20C50E0E005E62F7 /* ZZCircleProgress.bundle */; };
 		4643208520C50E0F005E62F7 /* ZZCountingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4643207D20C50E0E005E62F7 /* ZZCountingLabel.m */; };
 		4643208620C50E0F005E62F7 /* ZZCircleProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 4643208120C50E0E005E62F7 /* ZZCircleProgress.m */; };
-		464320D420C6865E005E62F7 /* libPods-高仿MONO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 464320D320C6865D005E62F7 /* libPods-高仿MONO.a */; };
 		465503A120A1976300E8C8B2 /* YBImageBrowserAnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 4655037D20A1976300E8C8B2 /* YBImageBrowserAnimatedTransitioning.m */; };
 		465503A220A1976300E8C8B2 /* YBImageBrowserFunctionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4655038020A1976300E8C8B2 /* YBImageBrowserFunctionModel.m */; };
 		465503A320A1976300E8C8B2 /* YBImageBrowserFunctionBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4655038120A1976300E8C8B2 /* YBImageBrowserFunctionBar.m */; };
@@ -105,6 +104,7 @@
 		46EFA9E22095BCD600AC1D41 /* CommendMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EFA9E12095BCD600AC1D41 /* CommendMethod.m */; };
 		46EFA9E720960A5100AC1D41 /* RQShineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EFA9E520960A5100AC1D41 /* RQShineLabel.m */; };
 		46EFA9EA2096A9AC00AC1D41 /* RecommendImagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EFA9E92096A9AC00AC1D41 /* RecommendImagesCell.m */; };
+		F32AEF373ABABF531789A361 /* libPods-高仿MONO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC183F150C2C571F8B7BC729 /* libPods-高仿MONO.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +125,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0485C679BF6EEF99B13F787E /* libPods-高仿MONOTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-高仿MONOTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EB01A41710D1FA94CA97BC6 /* Pods-高仿MONO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-高仿MONO.release.xcconfig"; path = "Pods/Target Support Files/Pods-高仿MONO/Pods-高仿MONO.release.xcconfig"; sourceTree = "<group>"; };
 		4618492E208B322B00D076B3 /* RecommendNetWork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecommendNetWork.h; sourceTree = "<group>"; };
 		4618492F208B322B00D076B3 /* RecommendNetWork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecommendNetWork.m; sourceTree = "<group>"; };
@@ -222,7 +223,6 @@
 		4643207F20C50E0E005E62F7 /* ZZCACircleProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZCACircleProgress.h; sourceTree = "<group>"; };
 		4643208020C50E0E005E62F7 /* ZZCountingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZCountingLabel.h; sourceTree = "<group>"; };
 		4643208120C50E0E005E62F7 /* ZZCircleProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZCircleProgress.m; sourceTree = "<group>"; };
-		464320D320C6865D005E62F7 /* libPods-高仿MONO.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libPods-高仿MONO.a"; sourceTree = "<group>"; };
 		4655037C20A1976300E8C8B2 /* YBImageBrowserAnimatedTransitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBImageBrowserAnimatedTransitioning.h; sourceTree = "<group>"; };
 		4655037D20A1976300E8C8B2 /* YBImageBrowserAnimatedTransitioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBImageBrowserAnimatedTransitioning.m; sourceTree = "<group>"; };
 		4655037F20A1976300E8C8B2 /* YBImageBrowserFunctionBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBImageBrowserFunctionBar.h; sourceTree = "<group>"; };
@@ -321,6 +321,8 @@
 		46EFA9E82096A9AC00AC1D41 /* RecommendImagesCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecommendImagesCell.h; sourceTree = "<group>"; };
 		46EFA9E92096A9AC00AC1D41 /* RecommendImagesCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecommendImagesCell.m; sourceTree = "<group>"; };
 		5243C0A2A91906272ED2C674 /* Pods-高仿MONO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-高仿MONO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-高仿MONO/Pods-高仿MONO.debug.xcconfig"; sourceTree = "<group>"; };
+		F3B1967B1A214406558A4F20 /* libPods-高仿MONOUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-高仿MONOUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC183F150C2C571F8B7BC729 /* libPods-高仿MONO.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-高仿MONO.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,7 +330,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				464320D420C6865E005E62F7 /* libPods-高仿MONO.a in Frameworks */,
+				F32AEF373ABABF531789A361 /* libPods-高仿MONO.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -953,7 +955,9 @@
 		D2F38477866417EDCCBEF3EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				464320D320C6865D005E62F7 /* libPods-高仿MONO.a */,
+				FC183F150C2C571F8B7BC729 /* libPods-高仿MONO.a */,
+				0485C679BF6EEF99B13F787E /* libPods-高仿MONOTests.a */,
+				F3B1967B1A214406558A4F20 /* libPods-高仿MONOUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1412,10 +1416,6 @@
 				INFOPLIST_FILE = "$(SRCROOT)/高仿MONO/Resource/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.MONO.star;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1435,10 +1435,6 @@
 				INFOPLIST_FILE = "$(SRCROOT)/高仿MONO/Resource/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.MONO.star;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
