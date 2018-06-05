@@ -8,7 +8,6 @@
 
 #import "MNWebViewController.h"
 #import <WebKit/WebKit.h>
-#import <YYModel.h>
 #import "RecommendModel.h"
 #import "MNNetworkTool.h"
 #import "WebNavTitleView.h"
