@@ -55,7 +55,11 @@
 		4643208420C50E0F005E62F7 /* ZZCircleProgress.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4643207B20C50E0E005E62F7 /* ZZCircleProgress.bundle */; };
 		4643208520C50E0F005E62F7 /* ZZCountingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4643207D20C50E0E005E62F7 /* ZZCountingLabel.m */; };
 		4643208620C50E0F005E62F7 /* ZZCircleProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 4643208120C50E0E005E62F7 /* ZZCircleProgress.m */; };
-		4643209220C63C75005E62F7 /* 77.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4643209120C63C71005E62F7 /* 77.gif */; };
+		4643208B20C634E0005E62F7 /* 4.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4643208720C634DF005E62F7 /* 4.gif */; };
+		4643208C20C634E0005E62F7 /* 5.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4643208820C634DF005E62F7 /* 5.gif */; };
+		4643208D20C634E0005E62F7 /* 2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4643208920C634DF005E62F7 /* 2.gif */; };
+		4643208E20C634E0005E62F7 /* 3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4643208A20C634E0005E62F7 /* 3.gif */; };
+		4643209020C634ED005E62F7 /* 1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4643208F20C634ED005E62F7 /* 1.gif */; };
 		465503A120A1976300E8C8B2 /* YBImageBrowserAnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 4655037D20A1976300E8C8B2 /* YBImageBrowserAnimatedTransitioning.m */; };
 		465503A220A1976300E8C8B2 /* YBImageBrowserFunctionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4655038020A1976300E8C8B2 /* YBImageBrowserFunctionModel.m */; };
 		465503A320A1976300E8C8B2 /* YBImageBrowserFunctionBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4655038120A1976300E8C8B2 /* YBImageBrowserFunctionBar.m */; };
@@ -226,7 +230,11 @@
 		4643207F20C50E0E005E62F7 /* ZZCACircleProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZCACircleProgress.h; sourceTree = "<group>"; };
 		4643208020C50E0E005E62F7 /* ZZCountingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZCountingLabel.h; sourceTree = "<group>"; };
 		4643208120C50E0E005E62F7 /* ZZCircleProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZCircleProgress.m; sourceTree = "<group>"; };
-		4643209120C63C71005E62F7 /* 77.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 77.gif; sourceTree = "<group>"; };
+		4643208720C634DF005E62F7 /* 4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 4.gif; sourceTree = "<group>"; };
+		4643208820C634DF005E62F7 /* 5.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 5.gif; sourceTree = "<group>"; };
+		4643208920C634DF005E62F7 /* 2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 2.gif; sourceTree = "<group>"; };
+		4643208A20C634E0005E62F7 /* 3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 3.gif; sourceTree = "<group>"; };
+		4643208F20C634ED005E62F7 /* 1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 1.gif; sourceTree = "<group>"; };
 		4655037C20A1976300E8C8B2 /* YBImageBrowserAnimatedTransitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBImageBrowserAnimatedTransitioning.h; sourceTree = "<group>"; };
 		4655037D20A1976300E8C8B2 /* YBImageBrowserAnimatedTransitioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBImageBrowserAnimatedTransitioning.m; sourceTree = "<group>"; };
 		4655037F20A1976300E8C8B2 /* YBImageBrowserFunctionBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBImageBrowserFunctionBar.h; sourceTree = "<group>"; };
@@ -500,7 +508,11 @@
 		464173A22088478E006595EE /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				4643209120C63C71005E62F7 /* 77.gif */,
+				4643208F20C634ED005E62F7 /* 1.gif */,
+				4643208920C634DF005E62F7 /* 2.gif */,
+				4643208A20C634E0005E62F7 /* 3.gif */,
+				4643208720C634DF005E62F7 /* 4.gif */,
+				4643208820C634DF005E62F7 /* 5.gif */,
 				4619BE24207C577900065016 /* image.xcassets */,
 			);
 			path = Images;
@@ -1087,12 +1099,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4643209220C63C75005E62F7 /* 77.gif in Resources */,
+				4643208E20C634E0005E62F7 /* 3.gif in Resources */,
+				4643208C20C634E0005E62F7 /* 5.gif in Resources */,
 				46B20B5A20BFEAF00030741C /* test1.js in Resources */,
 				46B20B5B20BFEAF00030741C /* test.css in Resources */,
+				4643208D20C634E0005E62F7 /* 2.gif in Resources */,
 				4619BE25207C577A00065016 /* image.xcassets in Resources */,
 				46B20B5220BF910B0030741C /* ITCAvantGardeStd-XLtObl.otf in Resources */,
 				4619BDFF207C4D5200065016 /* LaunchScreen.storyboard in Resources */,
+				4643209020C634ED005E62F7 /* 1.gif in Resources */,
+				4643208B20C634E0005E62F7 /* 4.gif in Resources */,
 				4619BDFA207C4D4F00065016 /* Main.storyboard in Resources */,
 				46EFA9D0209438C800AC1D41 /* RCConfig.plist in Resources */,
 				46EFA9D620943A2A00AC1D41 /* ITCAvantGardeStd-Bk.otf in Resources */,
