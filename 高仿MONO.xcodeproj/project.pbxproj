@@ -93,8 +93,6 @@
 		46B20B5020BF86270030741C /* WebThirdTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B20B4F20BF86270030741C /* WebThirdTitleView.m */; };
 		46B20B5220BF910B0030741C /* ITCAvantGardeStd-XLtObl.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46B20B5120BF910B0030741C /* ITCAvantGardeStd-XLtObl.otf */; };
 		46B20B5820BFA7270030741C /* MBSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B20B5620BFA7260030741C /* MBSwitch.m */; };
-		46B20B5A20BFEAF00030741C /* test1.js in Resources */ = {isa = PBXBuildFile; fileRef = 4699B69120B656F8008E1E87 /* test1.js */; };
-		46B20B5B20BFEAF00030741C /* test.css in Resources */ = {isa = PBXBuildFile; fileRef = 46B20B1720BCEC840030741C /* test.css */; };
 		46B20B5F20C0DC440030741C /* PlayMusicController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B20B5E20C0DC440030741C /* PlayMusicController.m */; };
 		46D543102083382B00C38643 /* MNNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D5430F2083382A00C38643 /* MNNetworkTool.m */; };
 		46E67BD1207E55E20089AD25 /* SPPageMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E67BCF207E55E20089AD25 /* SPPageMenu.m */; };
@@ -278,9 +276,6 @@
 		4699B68B20B3F9F4008E1E87 /* RecommendTeaCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecommendTeaCell.m; sourceTree = "<group>"; };
 		4699B68D20B54F22008E1E87 /* MNWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNWebViewController.h; sourceTree = "<group>"; };
 		4699B68E20B54F22008E1E87 /* MNWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNWebViewController.m; sourceTree = "<group>"; };
-		4699B69020B654FA008E1E87 /* test.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
-		4699B69120B656F8008E1E87 /* test1.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = test1.js; sourceTree = "<group>"; };
-		46B20B1720BCEC840030741C /* test.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = test.css; sourceTree = "<group>"; };
 		46B20B1B20BD35570030741C /* WebNavTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebNavTitleView.h; sourceTree = "<group>"; };
 		46B20B1C20BD35570030741C /* WebNavTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebNavTitleView.m; sourceTree = "<group>"; };
 		46B20B2E20BE47DB0030741C /* JKJSONHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKJSONHandler.m; sourceTree = "<group>"; };
@@ -574,7 +569,6 @@
 				4643205520C0EFD6005E62F7 /* BaseModel.m */,
 				46184940208E183900D076B3 /* MNBaseTableViewCell.h */,
 				46184941208E183900D076B3 /* MNBaseTableViewCell.m */,
-				4699B69020B654FA008E1E87 /* test.html */,
 				4643205120C0EA35005E62F7 /* FileManager.h */,
 				4643205220C0EA35005E62F7 /* FileManager.m */,
 			);
@@ -787,8 +781,6 @@
 				46B20B1C20BD35570030741C /* WebNavTitleView.m */,
 				46B20B4E20BF86270030741C /* WebThirdTitleView.h */,
 				46B20B4F20BF86270030741C /* WebThirdTitleView.m */,
-				4699B69120B656F8008E1E87 /* test1.js */,
-				46B20B1720BCEC840030741C /* test.css */,
 			);
 			path = WebView;
 			sourceTree = "<group>";
@@ -1087,8 +1079,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46B20B5A20BFEAF00030741C /* test1.js in Resources */,
-				46B20B5B20BFEAF00030741C /* test.css in Resources */,
 				4619BE25207C577A00065016 /* image.xcassets in Resources */,
 				46B20B5220BF910B0030741C /* ITCAvantGardeStd-XLtObl.otf in Resources */,
 				4619BDFF207C4D5200065016 /* LaunchScreen.storyboard in Resources */,
