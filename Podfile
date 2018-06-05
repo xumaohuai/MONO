@@ -22,6 +22,6 @@ pod 'RTRootNavigationController','~>0.6.6'
 pod 'LTNavigationBar','~>2.1.9'
 pod 'Reachability','~>3.2'
   target '高仿MONOTests' do
-    inherit! :search_paths
+#    inherit! :search_paths
   end
 end
