@@ -92,9 +92,9 @@
         CGFloat scale = ((CGFloat)height / width) / (photoView.height / photoView.width);
         if ( isnan(scale)) {
             photoView.imageView.layer.contentsRect = CGRectMake(0, 0, 1, 1);
-        }else if(scale < 0.99 ){// 宽图把左右两边裁掉
+        }else if(scale < 0.99 ){// 宽图把左右两边裁掉留中间
             photoView.imageView.layer.contentsRect = CGRectMake((1 -(float)height / width) / 2, 0, (float)height / width, 1);
-        } else { // 高图把上下裁掉
+        } else { // 高图把上下裁掉留中间
             photoView.imageView.layer.contentsRect = CGRectMake(0, (1- (float)width / height) / 2, 1, (float)width / height);
         }
         photoView.imageUrl = thumb.raw;

@@ -220,8 +220,7 @@
             [self.readWebView loadHTMLString:_htmlStr baseURL:nil];
     }else{
     [[MNNetworkTool shareService]requstWithUrl:[NSString stringWithFormat:@"http://mmmono.com/g/meow/%@/",_recommendModel.Id] Param:nil Success:^(id responseObj) {
-        NSMutableString *str = [[NSMutableString alloc]initWithString:responseObj];
-        [self.readWebView loadHTMLString:[self getZZwithString:str] baseURL:nil];
+        [self.readWebView loadHTMLString:responseObj baseURL:nil];
     } Failed:^{
     }];
     }
@@ -238,8 +237,7 @@
         [[MNNetworkTool shareService]requstWithUrl:[NSString stringWithFormat:@"g/meow/%@/",[subArr objectAtIndex:subArr.count - 2]] Param:nil Success:^(id responseObj) {
             RecommendModel *model = [RecommendModel yy_modelWithJSON:responseObj];
             [[MNNetworkTool shareService]requstWithUrl:[NSString stringWithFormat:@"http://mmmono.com/g/meow/%@/",model.Id] Param:nil Success:^(id responseObj) {
-                NSMutableString *str = [[NSMutableString alloc]initWithString:responseObj];
-                NSDictionary *params = @{@"recommendModel":model,@"htmlStr":[self getZZwithString:str]};
+                NSDictionary *params = @{@"recommendModel":model,@"htmlStr":responseObj};
                 RouterOptions *options = [RouterOptions optionsWithDefaultParams:params];
                 [JKRouter open:@"MNWebViewController" options:options];
                 [MBProgressHUD hideProgress];
@@ -255,12 +253,7 @@
     }
 }
 
-//去掉网页头尾部
--(NSString *)getZZwithString:(NSMutableString *)string{
-    NSRange range = [string rangeOfString:@"</head>"];
-    [string insertString:@"<style>.web-download-bar{display:none;}\n.author-info{display:none;}#gallery-seg{display:none}</style>" atIndex:range.location];
-    return string;
-}
+
 //注销监听
 - (void)dealloc {
     [_readWebView removeObserver:self forKeyPath:@"estimatedProgress"];

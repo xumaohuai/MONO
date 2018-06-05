@@ -9,7 +9,6 @@
 #import "MusicCDView.h"
 #import <YYWebImage.h>
 #import "RecommendModel.h"
-#import "FileManager.h"
 @interface MusicCDView()
 {
     UIView *_blackHoleView;
@@ -48,6 +47,7 @@
     _coverImageView.sd_layout.centerXEqualToView(self).centerYEqualToView(self).widthIs((SCREEN_WIDTH - 84) / 3).heightIs((SCREEN_WIDTH - 84) / 3);
     _blackHoleView.sd_layout.centerYEqualToView(self).centerXEqualToView(self).widthIs(10).heightIs(10);
     
+    //创建一个全局的动画
     _anim = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
     _anim.fromValue = [NSNumber numberWithFloat:0.f];
     _anim.toValue = [NSNumber numberWithFloat: M_PI *2];
@@ -55,8 +55,9 @@
     _anim.autoreverses = NO;
     _anim.fillMode = kCAFillModeForwards;
     _anim.repeatCount = MAXFLOAT;
-//    self.hidden = YES;
+    
     self.alpha = 0;
+    //当收到通知时执行的操作
     @weakify(self)
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"stopMusic" object:nil] subscribeNext:^(NSNotification *notification) {
         @strongify(self)
@@ -64,6 +65,7 @@
     }];
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"playMusic" object:nil] subscribeNext:^(NSNotification *notification) {
         @strongify(self)
+        //播放音乐的URL和此URL地址相同时才播放
         if ([notification.object isEqualToString:self.model.music_url]) {
             [self playMusic];
         }
@@ -82,13 +84,9 @@
     _coverImageView.yy_imageURL = [NSURL URLWithString:coverUrl];
 }
 
+//播放音乐
 -(void)playMusic
 {
-//    [[FileManager manager].musicListArr insertObject:_model atIndex:0];
-//    [[FileManager manager]cacheSelf];
-    for (RecommendModel *model in [FileManager manager].musicListArr) {
-        NSLog(@"%@",model.music_url);
-    }
     if (self.alpha != 1) {
         [UIView animateWithDuration:0.5 animations:^{
             self.alpha = 1;
@@ -96,7 +94,7 @@
     }
     [self.layer addAnimation:_anim forKey:@"rotaion"];
 }
-
+//暂停音乐
 -(void)stopMusic
 {
     if (self.alpha != 0) {

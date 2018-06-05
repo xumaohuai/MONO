@@ -14,28 +14,7 @@ typedef NS_ENUM(NSInteger,MNLoopState){
     MNRandomLoop//随机播放
 };
 @interface MNMusicPlayer : FSAudioStream
-/**
- *
- 播放列表
- *
- **/
-@property (nonatomic,strong) NSMutableArray *musicListArray;
-/**
- 当前播放歌曲的歌词
- */
-@property (nonatomic,strong) NSMutableArray *musicLRCArray;
-/**
- *
- 当前播放
- *
- **/
-@property (nonatomic,assign,readonly) NSUInteger currentIndex;
-/**
- *
- 当前播放的音乐的标题
- *
- **/
-@property (nonatomic,strong) NSString *currentTitle;
+
 /**
  是否是暂停状态
  */
@@ -49,19 +28,6 @@ typedef NS_ENUM(NSInteger,MNLoopState){
  *
  **/
 + (instancetype)defaultPlayer;
-/**
- 播放队列中的指定的文件
-
- */
-//- (void)playMusicWithUrl:(NSString *)urlString;
-/**
- 播放前一首
- */
-- (void)playFont;
-/**
- 播放下一首
- */
-- (void)playNext;
 
 /**
  更新播放进度

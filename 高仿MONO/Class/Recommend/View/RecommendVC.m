@@ -10,12 +10,10 @@
 #import "SPPageMenu.h"
 #import "NSArray+MHAdd.h"
 #import "RecommendTypeVC.h"
-#import "YYFPSLabel.h"
 #import "PlayMusicController.h"
 @interface RecommendVC ()<SPPageMenuDelegate,UIScrollViewDelegate>{
     UIButton *rightBarButton;
 }
-@property(nonatomic,strong) YYFPSLabel *fpsLabel;
 @property(nonatomic,strong) SPPageMenu *pageMenu;
 @property(nonatomic,strong) UIScrollView *scrollView;
 @property(nonatomic,strong) NSMutableArray *myChildViewControllers;
@@ -29,10 +27,7 @@
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0.13 green:0.13 blue:0.14 alpha:1];
     _dataArr = @[@"早午茶",@"我的关注",@"猜你喜欢",@"视频",@"音乐",@"画册"];
      self.pageMenu.bridgeScrollView = self.scrollView;
-    // pageMenu.selectedItemIndex就是选中的item下标 选中下标
     [self setupView:self.pageMenu.selectedItemIndex];
-//    _fpsLabel = [[YYFPSLabel alloc]initWithFrame:CGRectMake(15, self.view.height - 200, 60, 40)];
-//    [self.view addSubview:_fpsLabel];
 }
 
 #pragma mark - 懒加载

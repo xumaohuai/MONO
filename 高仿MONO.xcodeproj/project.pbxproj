@@ -106,7 +106,6 @@
 		46EFA9E22095BCD600AC1D41 /* CommendMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EFA9E12095BCD600AC1D41 /* CommendMethod.m */; };
 		46EFA9E720960A5100AC1D41 /* RQShineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EFA9E520960A5100AC1D41 /* RQShineLabel.m */; };
 		46EFA9EA2096A9AC00AC1D41 /* RecommendImagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EFA9E92096A9AC00AC1D41 /* RecommendImagesCell.m */; };
-		96E18DD4A076A5192394E29D /* libPods-高仿MONOTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0485C679BF6EEF99B13F787E /* libPods-高仿MONOTests.a */; };
 		F32AEF373ABABF531789A361 /* libPods-高仿MONO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC183F150C2C571F8B7BC729 /* libPods-高仿MONO.a */; };
 /* End PBXBuildFile section */
 
@@ -327,8 +326,6 @@
 		46EFA9E82096A9AC00AC1D41 /* RecommendImagesCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecommendImagesCell.h; sourceTree = "<group>"; };
 		46EFA9E92096A9AC00AC1D41 /* RecommendImagesCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecommendImagesCell.m; sourceTree = "<group>"; };
 		5243C0A2A91906272ED2C674 /* Pods-高仿MONO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-高仿MONO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-高仿MONO/Pods-高仿MONO.debug.xcconfig"; sourceTree = "<group>"; };
-		88937ACF5211B4A044ADAFD3 /* Pods-高仿MONOTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-高仿MONOTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-高仿MONOTests/Pods-高仿MONOTests.release.xcconfig"; sourceTree = "<group>"; };
-		B91DC63A3470D8B16BDE4745 /* Pods-高仿MONOTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-高仿MONOTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-高仿MONOTests/Pods-高仿MONOTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F3B1967B1A214406558A4F20 /* libPods-高仿MONOUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-高仿MONOUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC183F150C2C571F8B7BC729 /* libPods-高仿MONO.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-高仿MONO.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -346,7 +343,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96E18DD4A076A5192394E29D /* libPods-高仿MONOTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -979,8 +975,6 @@
 			children = (
 				5243C0A2A91906272ED2C674 /* Pods-高仿MONO.debug.xcconfig */,
 				1EB01A41710D1FA94CA97BC6 /* Pods-高仿MONO.release.xcconfig */,
-				B91DC63A3470D8B16BDE4745 /* Pods-高仿MONOTests.debug.xcconfig */,
-				88937ACF5211B4A044ADAFD3 /* Pods-高仿MONOTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -1011,7 +1005,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4619BE1E207C4D5200065016 /* Build configuration list for PBXNativeTarget "高仿MONOTests" */;
 			buildPhases = (
-				8C9EDB7A75A32C060B763E9B /* [CP] Check Pods Manifest.lock */,
 				4619BE03207C4D5200065016 /* Sources */,
 				4619BE04207C4D5200065016 /* Frameworks */,
 				4619BE05207C4D5200065016 /* Resources */,
@@ -1134,24 +1127,6 @@
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-高仿MONO-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8C9EDB7A75A32C060B763E9B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-高仿MONOTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1446,8 +1421,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/高仿MONO/Macro/MNPrefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/高仿MONO/Resource/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.MONO.star;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1465,8 +1443,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/高仿MONO/Macro/MNPrefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/高仿MONO/Resource/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.MONO.star;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1475,13 +1456,16 @@
 		};
 		4619BE1F207C4D5200065016 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B91DC63A3470D8B16BDE4745 /* Pods-高仿MONOTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6EUCP69KUN;
 				INFOPLIST_FILE = "高仿MONOTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.MONO.star.--MONOTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1491,13 +1475,16 @@
 		};
 		4619BE20207C4D5200065016 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 88937ACF5211B4A044ADAFD3 /* Pods-高仿MONOTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6EUCP69KUN;
 				INFOPLIST_FILE = "高仿MONOTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.MONO.star.--MONOTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1511,7 +1498,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6EUCP69KUN;
 				INFOPLIST_FILE = "高仿MONOUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.MONO.star.--MONOUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1525,7 +1516,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6EUCP69KUN;
 				INFOPLIST_FILE = "高仿MONOUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.MONO.star.--MONOUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

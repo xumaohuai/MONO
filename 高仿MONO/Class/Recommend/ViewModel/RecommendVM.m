@@ -99,31 +99,37 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    RecommendModel *model = _dataArray[indexPath.row];
+    RecommendModel *model = _dataArray[indexPath.row];//获取model
+    //MNBaseTableViewCell为所有cell的父类
     MNBaseTableViewCell *cell;
     NSString *cellIdentifier;
+    //后台会根据内容的不同给出不同的object_type,根据这个来设置不同cell的identifier.
     cellIdentifier = model.cellIdentifier;
+    //因为给每个cell注册过了,所以这里拿到identifier就可以找到具体的cell
     cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    //这里用kvc给cell赋值
     [cell setValue:_dataArray[indexPath.row] forKey:@"recommendModel"];
-//    [cell useCellFrameCacheWithIndexPath:indexPath tableView:tableView];
     return cell;
 }
-
+//cell将要被加载
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    //判断是否是需要闪烁文字的cell
     if ([cell isKindOfClass:[RecommendImageBgCell class]]) {
         RecommendImageBgCell *bgCell = (RecommendImageBgCell *)cell;
         _bgCell = bgCell;
+        //如果tableview刚刷新出来,这个cell就在界面上的话就执行闪烁方法
         if (tableView.contentOffset.y <= 0 && bgCell.y <= 0) {
-            //当第一个cell为RecommendImageBgCell时
             [_bgCell shineText];
             return;
         }
+        //给一个全局变量来监视cell滑动情况
         _bgCellY = bgCell.y;
     }
 }
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    //当cell滑动到一定位置的时候就闪烁
     if ((_bgCellY - scrollView.contentOffset.y <= (SCREEN_HEIGHT / 4 + KTabBarHeight)) && _bgCellY > 0) {
         [_bgCell shineText];
         _bgCellY = -10;
