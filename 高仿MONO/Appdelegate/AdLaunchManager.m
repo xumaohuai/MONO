@@ -15,6 +15,9 @@
 @end
 @implementation AdLaunchManager
 +(void)load{
+    if (![[NSUserDefaults standardUserDefaults]boolForKey:@"FirstLoad"]) {
+        return;
+    }
     [self shareManager];
 }
 

@@ -13,6 +13,7 @@
 #import "MineVC.h"
 #import "MNNavigationController.h"
 #import <UIView+Sizes.h>
+#import "GGStartMovieHelper.h"
 
 #define CYL_DEPRECATED(explain) __attribute__((deprecated(explain)))
 #define CYL_IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
@@ -27,6 +28,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     RecommendVC *firstViewController = [[RecommendVC alloc] init];
     MNNavigationController *firstNavigationController = [[MNNavigationController alloc]
                                                    initWithRootViewController:firstViewController];
@@ -53,6 +55,7 @@
     fourthNavigationController.tabBarItem.imageInsets = UIEdgeInsetsMake(0, 0, -10, 0);
     [self setTabbarApperence];
     [self setViewControllers:@[firstNavigationController,secondNavigationController,thirdNavigationController,fourthNavigationController]];
+   
     
 }
 -(void)setTabbarApperence

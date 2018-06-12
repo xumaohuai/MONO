@@ -61,7 +61,6 @@ DEPENDENCIES:
   - JKDataHelper
   - LTNavigationBar (~> 2.1.9)
   - MJRefresh (~> 3.1.15.3)
-  - Reachability (~> 3.2)
   - ReactiveCocoa (~> 2.5)
   - RTRootNavigationController (~> 0.6.6)
   - SDCycleScrollView (~> 1.75)
@@ -120,6 +119,6 @@ SPEC CHECKSUMS:
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
   ZFPlayer: 833cb3974b619bfd01a0ec1ebaabfe6f629e85b4
 
-PODFILE CHECKSUM: 6db6a0dc907ae2c53f675c735d3a1436f1a97d13
+PODFILE CHECKSUM: 6f6582684cafab09125ed2443624f28eab36e7ac
 
 COCOAPODS: 1.5.0

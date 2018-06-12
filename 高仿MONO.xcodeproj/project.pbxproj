@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0278ABC0F1F8A38A95D05A97 /* libPods-高仿MONO-高仿MONOTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2439C6749C87050B9118447F /* libPods-高仿MONO-高仿MONOTests.a */; };
 		46184930208B322B00D076B3 /* RecommendNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 4618492F208B322B00D076B3 /* RecommendNetWork.m */; };
 		46184933208DB81600D076B3 /* MNRefreshBlackHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 46184932208DB81600D076B3 /* MNRefreshBlackHeader.m */; };
 		46184939208DBD8500D076B3 /* MNRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 46184938208DBD8500D076B3 /* MNRefreshFooter.m */; };
@@ -72,6 +73,14 @@
 		465503AF20A1976300E8C8B2 /* YBImageBrowserProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4655039C20A1976300E8C8B2 /* YBImageBrowserProgressBar.m */; };
 		465503B020A1976400E8C8B2 /* YBImageBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 465503A020A1976300E8C8B2 /* YBImageBrowser.bundle */; };
 		4655041B20A4285000E8C8B2 /* PhotoProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4655041A20A4285000E8C8B2 /* PhotoProgressView.m */; };
+		4655B34D20CF87C60010E50D /* GGStartMovieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4655B34720CF87C60010E50D /* GGStartMovieView.m */; };
+		4655B34E20CF87C60010E50D /* UIImage+LaunchImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4655B34820CF87C60010E50D /* UIImage+LaunchImage.m */; };
+		4655B34F20CF87C60010E50D /* GGStartMovieHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4655B34C20CF87C60010E50D /* GGStartMovieHelper.m */; };
+		4655B35120CF8C1F0010E50D /* welcome.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4655B35020CF8C1F0010E50D /* welcome.mp4 */; };
+		4655B35320CF8C350010E50D /* welcome.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4655B35220CF8C350010E50D /* welcome.mp3 */; };
+		4655B35520CF99650010E50D /* PushAnimation.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4655B35420CF99650010E50D /* PushAnimation.mp4 */; };
+		4655B35820CF9A230010E50D /* PushAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4655B35720CF9A230010E50D /* PushAnimationView.m */; };
+		4655B35A20CFA3E00010E50D /* pushsound.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 4655B35920CFA3E00010E50D /* pushsound.aiff */; };
 		4699B67220A93AF7008E1E87 /* RecommendMusicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4699B67120A93AF7008E1E87 /* RecommendMusicCell.m */; };
 		4699B67620A967AB008E1E87 /* MusicCDView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4699B67520A967AB008E1E87 /* MusicCDView.m */; };
 		4699B67A20A98882008E1E87 /* MNMusicPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4699B67920A98882008E1E87 /* MNMusicPlayer.m */; };
@@ -127,6 +136,8 @@
 /* Begin PBXFileReference section */
 		0485C679BF6EEF99B13F787E /* libPods-高仿MONOTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-高仿MONOTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EB01A41710D1FA94CA97BC6 /* Pods-高仿MONO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-高仿MONO.release.xcconfig"; path = "Pods/Target Support Files/Pods-高仿MONO/Pods-高仿MONO.release.xcconfig"; sourceTree = "<group>"; };
+		2439C6749C87050B9118447F /* libPods-高仿MONO-高仿MONOTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-高仿MONO-高仿MONOTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		302BBF9EACDE29795860652F /* Pods-高仿MONO-高仿MONOTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-高仿MONO-高仿MONOTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-高仿MONO-高仿MONOTests/Pods-高仿MONO-高仿MONOTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4618492E208B322B00D076B3 /* RecommendNetWork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecommendNetWork.h; sourceTree = "<group>"; };
 		4618492F208B322B00D076B3 /* RecommendNetWork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecommendNetWork.m; sourceTree = "<group>"; };
 		46184931208DB81600D076B3 /* MNRefreshBlackHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNRefreshBlackHeader.h; sourceTree = "<group>"; };
@@ -257,6 +268,18 @@
 		465503A020A1976300E8C8B2 /* YBImageBrowser.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = YBImageBrowser.bundle; sourceTree = "<group>"; };
 		4655041920A4285000E8C8B2 /* PhotoProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoProgressView.h; sourceTree = "<group>"; };
 		4655041A20A4285000E8C8B2 /* PhotoProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoProgressView.m; sourceTree = "<group>"; };
+		4655B34720CF87C60010E50D /* GGStartMovieView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGStartMovieView.m; sourceTree = "<group>"; };
+		4655B34820CF87C60010E50D /* UIImage+LaunchImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LaunchImage.m"; sourceTree = "<group>"; };
+		4655B34920CF87C60010E50D /* GGStartMovieHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGStartMovieHelper.h; sourceTree = "<group>"; };
+		4655B34A20CF87C60010E50D /* GGStartMovieView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGStartMovieView.h; sourceTree = "<group>"; };
+		4655B34B20CF87C60010E50D /* UIImage+LaunchImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LaunchImage.h"; sourceTree = "<group>"; };
+		4655B34C20CF87C60010E50D /* GGStartMovieHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGStartMovieHelper.m; sourceTree = "<group>"; };
+		4655B35020CF8C1F0010E50D /* welcome.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = welcome.mp4; sourceTree = "<group>"; };
+		4655B35220CF8C350010E50D /* welcome.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = welcome.mp3; sourceTree = "<group>"; };
+		4655B35420CF99650010E50D /* PushAnimation.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = PushAnimation.mp4; sourceTree = "<group>"; };
+		4655B35620CF9A230010E50D /* PushAnimationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushAnimationView.h; sourceTree = "<group>"; };
+		4655B35720CF9A230010E50D /* PushAnimationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushAnimationView.m; sourceTree = "<group>"; };
+		4655B35920CFA3E00010E50D /* pushsound.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = pushsound.aiff; sourceTree = "<group>"; };
 		4699B67020A93AF7008E1E87 /* RecommendMusicCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecommendMusicCell.h; sourceTree = "<group>"; };
 		4699B67120A93AF7008E1E87 /* RecommendMusicCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecommendMusicCell.m; sourceTree = "<group>"; };
 		4699B67420A967AB008E1E87 /* MusicCDView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicCDView.h; sourceTree = "<group>"; };
@@ -321,6 +344,7 @@
 		46EFA9E82096A9AC00AC1D41 /* RecommendImagesCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecommendImagesCell.h; sourceTree = "<group>"; };
 		46EFA9E92096A9AC00AC1D41 /* RecommendImagesCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecommendImagesCell.m; sourceTree = "<group>"; };
 		5243C0A2A91906272ED2C674 /* Pods-高仿MONO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-高仿MONO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-高仿MONO/Pods-高仿MONO.debug.xcconfig"; sourceTree = "<group>"; };
+		57DE5D39437745CDEED0D8DC /* Pods-高仿MONO-高仿MONOTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-高仿MONO-高仿MONOTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-高仿MONO-高仿MONOTests/Pods-高仿MONO-高仿MONOTests.release.xcconfig"; sourceTree = "<group>"; };
 		F3B1967B1A214406558A4F20 /* libPods-高仿MONOUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-高仿MONOUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC183F150C2C571F8B7BC729 /* libPods-高仿MONO.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-高仿MONO.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -338,6 +362,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0278ABC0F1F8A38A95D05A97 /* libPods-高仿MONO-高仿MONOTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,6 +603,10 @@
 		464173A9208848C0006595EE /* File */ = {
 			isa = PBXGroup;
 			children = (
+				4655B35920CFA3E00010E50D /* pushsound.aiff */,
+				4655B35420CF99650010E50D /* PushAnimation.mp4 */,
+				4655B35020CF8C1F0010E50D /* welcome.mp4 */,
+				4655B35220CF8C350010E50D /* welcome.mp3 */,
 				4619BDF8207C4D4F00065016 /* Main.storyboard */,
 				4619BDFD207C4D5200065016 /* LaunchScreen.storyboard */,
 				4619BE01207C4D5200065016 /* main.m */,
@@ -743,6 +772,29 @@
 			path = AssistBar;
 			sourceTree = "<group>";
 		};
+		4655B34520CF87B60010E50D /* MoviewHelper */ = {
+			isa = PBXGroup;
+			children = (
+				4655B34620CF87C60010E50D /* GGStarMovieHelper */,
+			);
+			path = MoviewHelper;
+			sourceTree = "<group>";
+		};
+		4655B34620CF87C60010E50D /* GGStarMovieHelper */ = {
+			isa = PBXGroup;
+			children = (
+				4655B34A20CF87C60010E50D /* GGStartMovieView.h */,
+				4655B34720CF87C60010E50D /* GGStartMovieView.m */,
+				4655B34920CF87C60010E50D /* GGStartMovieHelper.h */,
+				4655B34C20CF87C60010E50D /* GGStartMovieHelper.m */,
+				4655B34B20CF87C60010E50D /* UIImage+LaunchImage.h */,
+				4655B34820CF87C60010E50D /* UIImage+LaunchImage.m */,
+				4655B35620CF9A230010E50D /* PushAnimationView.h */,
+				4655B35720CF9A230010E50D /* PushAnimationView.m */,
+			);
+			path = GGStarMovieHelper;
+			sourceTree = "<group>";
+		};
 		4699B67320A96785008E1E87 /* MusicViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -870,6 +922,7 @@
 		46D5430D2083380800C38643 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				4655B34520CF87B60010E50D /* MoviewHelper */,
 				4699B67720A98866008E1E87 /* MNMusicPlayer */,
 				46EFA9E32095BCDB00AC1D41 /* CommendMethod */,
 				461D3FDC20873F5900F3FBA1 /* MHRefresh */,
@@ -958,6 +1011,7 @@
 				FC183F150C2C571F8B7BC729 /* libPods-高仿MONO.a */,
 				0485C679BF6EEF99B13F787E /* libPods-高仿MONOTests.a */,
 				F3B1967B1A214406558A4F20 /* libPods-高仿MONOUITests.a */,
+				2439C6749C87050B9118447F /* libPods-高仿MONO-高仿MONOTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -967,6 +1021,8 @@
 			children = (
 				5243C0A2A91906272ED2C674 /* Pods-高仿MONO.debug.xcconfig */,
 				1EB01A41710D1FA94CA97BC6 /* Pods-高仿MONO.release.xcconfig */,
+				302BBF9EACDE29795860652F /* Pods-高仿MONO-高仿MONOTests.debug.xcconfig */,
+				57DE5D39437745CDEED0D8DC /* Pods-高仿MONO-高仿MONOTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -997,9 +1053,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4619BE1E207C4D5200065016 /* Build configuration list for PBXNativeTarget "高仿MONOTests" */;
 			buildPhases = (
+				0CAAB882BA4321E8604BEF91 /* [CP] Check Pods Manifest.lock */,
 				4619BE03207C4D5200065016 /* Sources */,
 				4619BE04207C4D5200065016 /* Frameworks */,
 				4619BE05207C4D5200065016 /* Resources */,
+				11C681B186F3333F669209A8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1079,10 +1137,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4655B35520CF99650010E50D /* PushAnimation.mp4 in Resources */,
+				4655B35A20CFA3E00010E50D /* pushsound.aiff in Resources */,
+				4655B35320CF8C350010E50D /* welcome.mp3 in Resources */,
 				4619BE25207C577A00065016 /* image.xcassets in Resources */,
 				46B20B5220BF910B0030741C /* ITCAvantGardeStd-XLtObl.otf in Resources */,
 				4619BDFF207C4D5200065016 /* LaunchScreen.storyboard in Resources */,
 				4619BDFA207C4D4F00065016 /* Main.storyboard in Resources */,
+				4655B35120CF8C1F0010E50D /* welcome.mp4 in Resources */,
 				46EFA9D0209438C800AC1D41 /* RCConfig.plist in Resources */,
 				46EFA9D620943A2A00AC1D41 /* ITCAvantGardeStd-Bk.otf in Resources */,
 				4643208420C50E0F005E62F7 /* ZZCircleProgress.bundle in Resources */,
@@ -1108,6 +1170,44 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0CAAB882BA4321E8604BEF91 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-高仿MONO-高仿MONOTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		11C681B186F3333F669209A8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-高仿MONO-高仿MONOTests/Pods-高仿MONO-高仿MONOTests-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/ZFPlayer/ZFPlayer/ZFPlayer.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZFPlayer.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-高仿MONO-高仿MONOTests/Pods-高仿MONO-高仿MONOTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		434D4D54EE358A67576BE86F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1206,6 +1306,7 @@
 				4699B67620A967AB008E1E87 /* MusicCDView.m in Sources */,
 				4643208220C50E0F005E62F7 /* ZZCACircleProgress.m in Sources */,
 				46EFA9DC2095AA6000AC1D41 /* AdModel.m in Sources */,
+				4655B35820CF9A230010E50D /* PushAnimationView.m in Sources */,
 				4619BE74207CF8C100065016 /* CommunityVC.m in Sources */,
 				465503AE20A1976300E8C8B2 /* YBImageBrowserPromptBar.m in Sources */,
 				4619BDF4207C4D4F00065016 /* AppDelegate.m in Sources */,
@@ -1214,10 +1315,13 @@
 				4699B68420B25F49008E1E87 /* RecommendVideoCell.m in Sources */,
 				46184A8D20900A4900D076B3 /* CommunicateBottomView.m in Sources */,
 				4699B68820B3E811008E1E87 /* RecommendPicturesCell.m in Sources */,
+				4655B34F20CF87C60010E50D /* GGStartMovieHelper.m in Sources */,
+				4655B34D20CF87C60010E50D /* GGStartMovieView.m in Sources */,
 				465503AD20A1976300E8C8B2 /* YBImageBrowserDownloader.m in Sources */,
 				465503AA20A1976300E8C8B2 /* YBImageBrowserCopywriter.m in Sources */,
 				46184A8A208F28CC00D076B3 /* UIColor+Additions.m in Sources */,
 				46B20B3820BE47DB0030741C /* UIViewController+JKRouter.m in Sources */,
+				4655B34E20CF87C60010E50D /* UIImage+LaunchImage.m in Sources */,
 				4643208520C50E0F005E62F7 /* ZZCountingLabel.m in Sources */,
 				4619BE77207CF8D800065016 /* MineVC.m in Sources */,
 				46184A84208F0E5D00D076B3 /* YYWeakProxy.m in Sources */,
@@ -1443,6 +1547,7 @@
 		};
 		4619BE1F207C4D5200065016 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 302BBF9EACDE29795860652F /* Pods-高仿MONO-高仿MONOTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -1458,6 +1563,7 @@
 		};
 		4619BE20207C4D5200065016 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57DE5D39437745CDEED0D8DC /* Pods-高仿MONO-高仿MONOTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;

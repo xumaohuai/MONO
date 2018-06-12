@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MNBaseTabbarController.h"
-
+#import "GGStartMovieHelper.h"
 @interface AppDelegate ()
 
 @end
@@ -19,10 +19,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window.frame = [UIScreen mainScreen].bounds;
     self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyWindow];
     self.window.rootViewController = [[MNBaseTabbarController alloc]init];
-//    [[LKImageCacheManager defaultManager]clearAll];
-    
+    [self.window makeKeyAndVisible];
+    if (![[NSUserDefaults standardUserDefaults]boolForKey:@"FirstLoad"]) {
+        [GGStartMovieHelper showStartMovieViewWithMovieURL:@"welcome.mp4" musicURL:@"welcome.mp3"];
+        [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"FirstLoad"];
+    }
     return YES;
 }
 

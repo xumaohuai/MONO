@@ -28,6 +28,7 @@
     _dataArr = @[@"早午茶",@"我的关注",@"猜你喜欢",@"视频",@"音乐",@"画册"];
      self.pageMenu.bridgeScrollView = self.scrollView;
     [self setupView:self.pageMenu.selectedItemIndex];
+   
 }
 
 #pragma mark - 懒加载
