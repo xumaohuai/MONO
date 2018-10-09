@@ -103,8 +103,8 @@
 		46B20B5220BF910B0030741C /* ITCAvantGardeStd-XLtObl.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46B20B5120BF910B0030741C /* ITCAvantGardeStd-XLtObl.otf */; };
 		46B20B5820BFA7270030741C /* MBSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B20B5620BFA7260030741C /* MBSwitch.m */; };
 		46B20B5F20C0DC440030741C /* PlayMusicController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B20B5E20C0DC440030741C /* PlayMusicController.m */; };
+		46BE7685216C547E00C64421 /* SPPageMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BE7683216C547E00C64421 /* SPPageMenu.m */; };
 		46D543102083382B00C38643 /* MNNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D5430F2083382A00C38643 /* MNNetworkTool.m */; };
-		46E67BD1207E55E20089AD25 /* SPPageMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E67BCF207E55E20089AD25 /* SPPageMenu.m */; };
 		46EFA9D0209438C800AC1D41 /* RCConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46EFA9CF209438C800AC1D41 /* RCConfig.plist */; };
 		46EFA9D620943A2A00AC1D41 /* ITCAvantGardeStd-Bk.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46EFA9D520943A2A00AC1D41 /* ITCAvantGardeStd-Bk.otf */; };
 		46EFA9D92095A46600AC1D41 /* AdLaunchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EFA9D82095A46600AC1D41 /* AdLaunchManager.m */; };
@@ -325,10 +325,10 @@
 		46B20B5720BFA7260030741C /* MBSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBSwitch.h; sourceTree = "<group>"; };
 		46B20B5D20C0DC440030741C /* PlayMusicController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayMusicController.h; sourceTree = "<group>"; };
 		46B20B5E20C0DC440030741C /* PlayMusicController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayMusicController.m; sourceTree = "<group>"; };
+		46BE7683216C547E00C64421 /* SPPageMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPageMenu.m; sourceTree = "<group>"; };
+		46BE7684216C547E00C64421 /* SPPageMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPageMenu.h; sourceTree = "<group>"; };
 		46D5430E2083382900C38643 /* MNNetworkTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNNetworkTool.h; sourceTree = "<group>"; };
 		46D5430F2083382A00C38643 /* MNNetworkTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNNetworkTool.m; sourceTree = "<group>"; };
-		46E67BCF207E55E20089AD25 /* SPPageMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPageMenu.m; sourceTree = "<group>"; };
-		46E67BD0207E55E20089AD25 /* SPPageMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPageMenu.h; sourceTree = "<group>"; };
 		46EFA9CF209438C800AC1D41 /* RCConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RCConfig.plist; sourceTree = "<group>"; };
 		46EFA9D520943A2A00AC1D41 /* ITCAvantGardeStd-Bk.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ITCAvantGardeStd-Bk.otf"; sourceTree = "<group>"; };
 		46EFA9D72095A46600AC1D41 /* AdLaunchManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdLaunchManager.h; sourceTree = "<group>"; };
@@ -952,12 +952,12 @@
 				46184A9620902CD900D076B3 /* SDAutoLayout */,
 				46184A85208F17E600D076B3 /* MBProgressHUD.h */,
 				46184A86208F17E700D076B3 /* MBProgressHUD.m */,
+				46BE7684216C547E00C64421 /* SPPageMenu.h */,
+				46BE7683216C547E00C64421 /* SPPageMenu.m */,
 				46184A82208F0E5C00D076B3 /* YYWeakProxy.h */,
 				46184A83208F0E5D00D076B3 /* YYWeakProxy.m */,
 				46184961208F01CC00D076B3 /* YYFPSLabel.h */,
 				46184962208F01CC00D076B3 /* YYFPSLabel.m */,
-				46E67BD0207E55E20089AD25 /* SPPageMenu.h */,
-				46E67BCF207E55E20089AD25 /* SPPageMenu.m */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
@@ -1266,7 +1266,6 @@
 				465503AF20A1976300E8C8B2 /* YBImageBrowserProgressBar.m in Sources */,
 				4699B67220A93AF7008E1E87 /* RecommendMusicCell.m in Sources */,
 				464173B12089780C006595EE /* MNBaseModel.m in Sources */,
-				46E67BD1207E55E20089AD25 /* SPPageMenu.m in Sources */,
 				46B20B3A20BE47DB0030741C /* JKRouter.m in Sources */,
 				465503AC20A1976300E8C8B2 /* YBImageBrowserUtilities.m in Sources */,
 				4699B67D20AAC1DD008E1E87 /* MusicProgressView.m in Sources */,
@@ -1308,6 +1307,7 @@
 				46EFA9DC2095AA6000AC1D41 /* AdModel.m in Sources */,
 				4655B35820CF9A230010E50D /* PushAnimationView.m in Sources */,
 				4619BE74207CF8C100065016 /* CommunityVC.m in Sources */,
+				46BE7685216C547E00C64421 /* SPPageMenu.m in Sources */,
 				465503AE20A1976300E8C8B2 /* YBImageBrowserPromptBar.m in Sources */,
 				4619BDF4207C4D4F00065016 /* AppDelegate.m in Sources */,
 				4619BE71207CF8A200065016 /* DiscoverVC.m in Sources */,

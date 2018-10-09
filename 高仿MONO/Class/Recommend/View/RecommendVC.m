@@ -27,7 +27,7 @@
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0.13 green:0.13 blue:0.14 alpha:1];
     _dataArr = @[@"早午茶",@"我的关注",@"猜你喜欢",@"视频",@"音乐",@"画册"];
      self.pageMenu.bridgeScrollView = self.scrollView;
-    [self setupView:self.pageMenu.selectedItemIndex];
+//    [self setupView:self.pageMenu.selectedItemIndex];
    
 }
 
@@ -35,24 +35,23 @@
 -(UIScrollView *)scrollView
 {
     if(!_scrollView){
-    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - NaviH  - KTabBarHeight)];
-    scrollView.delegate = self;
-    scrollView.pagingEnabled = YES;
-    scrollView.showsHorizontalScrollIndicator = NO;
-        scrollView.showsVerticalScrollIndicator = NO;
-    scrollView.scrollsToTop = NO;
-    [self.view addSubview:scrollView];
-    [self.view sendSubviewToBack:scrollView];
-    scrollView.contentOffset = CGPointMake(SCREEN_WIDTH * self.pageMenu.selectedItemIndex, 0);
-    scrollView.contentSize = CGSizeMake(6 * SCREEN_WIDTH, 0);
-    _scrollView = scrollView;
+    _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - NaviH  - KTabBarHeight)];
+    _scrollView.delegate = self;
+    _scrollView.pagingEnabled = YES;
+    _scrollView.showsHorizontalScrollIndicator = NO;
+    _scrollView.showsVerticalScrollIndicator = NO;
+    _scrollView.scrollsToTop = NO;
+    [self.view addSubview:_scrollView];
+    [self.view sendSubviewToBack:_scrollView];
+    _scrollView.contentOffset = CGPointMake(SCREEN_WIDTH * self.pageMenu.selectedItemIndex, 0);
+    _scrollView.contentSize = CGSizeMake(6 * SCREEN_WIDTH, 0);
     }
     return _scrollView;
 }
 
 -(void)pageMenu:(SPPageMenu *)pageMenu functionButtonClicked:(UIButton *)functionButton
 {
-    PlayMusicController *vc = [[PlayMusicController alloc]init];
+//    PlayMusicController *vc = [[PlayMusicController alloc]init];
     
 }
 
