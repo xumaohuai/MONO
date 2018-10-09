@@ -27,7 +27,6 @@
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0.13 green:0.13 blue:0.14 alpha:1];
     _dataArr = @[@"早午茶",@"我的关注",@"猜你喜欢",@"视频",@"音乐",@"画册"];
      self.pageMenu.bridgeScrollView = self.scrollView;
-//    [self setupView:self.pageMenu.selectedItemIndex];
    
 }
 
@@ -49,11 +48,7 @@
     return _scrollView;
 }
 
--(void)pageMenu:(SPPageMenu *)pageMenu functionButtonClicked:(UIButton *)functionButton
-{
-//    PlayMusicController *vc = [[PlayMusicController alloc]init];
-    
-}
+
 
 -(SPPageMenu *)pageMenu
 {
