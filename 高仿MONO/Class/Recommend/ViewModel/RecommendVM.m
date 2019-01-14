@@ -72,8 +72,11 @@
                 }]array];
             }else{
             NSArray *data = value[@"entity_list"];
-                modelArr = [[data.rac_sequence map:^id(id value) {
-                return [RecommendModel yy_modelWithJSON:[value objectForKey:@"meow"]];
+                if (data.count == 3) {
+                    data = data.firstObject;
+                }
+                modelArr = [[data.rac_sequence map:^id(id modelValue) {
+                return [RecommendModel yy_modelWithJSON:[modelValue objectForKey:@"meow"]];
             }]array];
             }
             if([input integerValue] == 1){

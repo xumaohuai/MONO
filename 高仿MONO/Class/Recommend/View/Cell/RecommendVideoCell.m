@@ -82,9 +82,12 @@
 
 -(void)setRecommendModel:(RecommendModel *)recommendModel
 {
-     [[MNNetworkTool shareService]getVideoUrlWithId:recommendModel.Id Success:^(NSString *url) {
-         recommendModel.videoUrl = [NSURL URLWithString:url];
-    }];
+    if (recommendModel.videoUrl == nil) {
+        [[MNNetworkTool shareService]getVideoUrlWithId:recommendModel.Id Success:^(NSString *url) {
+            recommendModel.videoUrl = [NSURL URLWithString:url];
+        }];
+    }
+    
     [_timeBtn setTitle:[CommendMethod getMMSSFromSS:recommendModel.video_duration] forState:UIControlStateNormal];
     _picImageView.contentMode = UIViewContentModeCenter;
     _picImageView.layer.contentsRect = CGRectMake(0, 0, 1, 1);

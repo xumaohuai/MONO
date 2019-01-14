@@ -15,7 +15,7 @@
     NSString *url = @"";
     switch (recommendType) {
         case RecommendTypeTea:
-            url = [NSString stringWithFormat:@"tea/2018-04-28/full/"];
+            url = [NSString stringWithFormat:@"tea/2019-01-13/full/"];
             break;
         case RecommendTypeAttention:
             url = [NSString stringWithFormat:@"recommendation/?start=%ld",page];
